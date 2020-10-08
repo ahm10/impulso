@@ -1,4 +1,4 @@
-# Wiki Scrapper   :heavy_check_mark:
+# Wiki Scrapper   
 
 ## Data dictionary (output JSON):   
 
@@ -18,7 +18,7 @@
 
 
 
-# Medium_Scraper  :heavy_check_mark:
+# Medium_Scraper  
 
 ## Data dictionary (output columns):
 
@@ -85,5 +85,16 @@ Please refer : contents_op_Medium_scrape_urls_multi-tag _clean_2016-2020.csv [cs
 2. Exported graph and JSON are available for review.
 
 3. It is command line interface like SQL. So do not have instructions listed at the moment.
+
+# Medium - preprocess
+
+## Extract unique tags - steps :heavy_check_mark:
+
+- Folder : Medium_data_preprocess
+- Script to run: unique_tags.py
+- Settings in script: The script reads content files from the adjacent "data" folder. So please make sure all content files you want to process are placed in there. 
+- Output data: All unique tags with their total occurances have been logged into a CSV file in "op" folder.
+
+*P.S.* For environment setup, use the requirements.txt available in given folder.
 
  
