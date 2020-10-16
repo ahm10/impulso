@@ -63,7 +63,7 @@ There are two sub folders for 2009-16 and 2016-20.
 - Input data: Please place cleaned csv- as generated on 2nd step. (e.g. Medium_scrape_urls_multi-tag _clean_2016-2020.csv)
 - Output data: contents_op_*.csv
 
-:high_brightness: New copy of sample articles are scrapped. 
+New copy of sample articles are scrapped. 
 
 Please refer : contents_op_Medium_scrape_urls_multi-tag _clean_2016-2020.csv [csv](https://github.com/ahm10/impulso/blob/master/Medium_scrape_text_and_image/2016-2020/contents_op_Medium_scrape_urls_multi-tag%20_clean_2016-2020.csv)
 
@@ -107,7 +107,11 @@ This includes-
 - Script to run: parse_articles.py
 - Settings in script: The script reads content files from the adjacent "data" folder. So please make sure all content files you want to process are placed in there. 
 - Output data: All articles with thier UUID and sentences (in list form) have been logged into a CSV file in "op" folder in file name parsed_*...csv
+
+
 *P.S.* For environment setup, use the requirements.txt available in given folder.
-:point_right: Special instructions (if required) for spacy installment also attached in txt file besides requirements.txt
+
+
+:high_brightness:  Special instructions (if required) for spacy installment also attached in txt file besides requirements.txt
 
  
