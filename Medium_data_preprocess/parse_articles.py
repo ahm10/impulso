@@ -11,66 +11,104 @@ scraped_files = glob.glob('data/*.csv')
  
 # read each file one by one
 for file in scraped_files:
-    #all of the scraped data from different tags
-    content_df = pd.read_csv(file,usecols=['UUID','paragraphs'])
 
+  
+
+    #print("Processing...",file)
+
+    #all of the scraped data from different tags
+    content_df = pd.read_csv(file,usecols=['UUID','title','paragraphs'],encoding='utf8')
+ 
     
     print("1. Combining texts like bullet points into one para")
     print("2. Clean up step 1, remove quatations & slice the content into paras")
     print("3. Break down into sentences")
 
     content_df['sentences'] = ''
-    para_i = 0
-    for paragraphs in content_df.paragraphs:
+   
+    for index, row in content_df.iterrows():
+
+        print("..")
+
         
+        #print(index, row['UUID'], row['paragraphs'], row['sentences'])
+        paragraphs = row.paragraphs
+
+        
+        title = row.title
         
         # 1. Combining texts like bullet points into one para
 
         # Make sure it is not an empty element
 
-        paragraphs = ' ' + str(paragraphs)
+        #check charecters in article with title
 
-        if(len(paragraphs) > 1):
-
-            print("Processing...",file)
- 
-            paragraphs = utils.combiner(paragraphs)
-
-            #print("after combining---------------")
-            #print(paragraphs)
+        if(utils.check_charecters(str(title))):
             
-            # 2. Clean up step 1, remove quatations & slice the content into paras
-            
-            para_list = utils.preprocess0(paragraphs)
 
-            #3.Break down into sentences
-            content_df.at[para_i,'sentences'] = ''
-            for para in para_list:
-                #print(".....")
+            # if valid paragraph
+            if(paragraphs):
 
-                para = utils.preprocess2(para)
-                #print(para)
+                # Ensure it is english content with SPACY
+                if(utils.check_lang(paragraphs)): 
 
-                sent_list = utils.sentencer(para)
+                        UUID = row.UUID
 
-                #content_df['sentences'] = content_df['sentences'].astype('object') 
+                        # combine lists
+                        paragraphs = utils.combiner(paragraphs)
+                             
+                        paragraphs = paragraphs + ''
+                        #print("after combining---------------")
+                        #print(paragraphs)
                 
-                content_df.at[para_i,'sentences']  = content_df.at[para_i,'sentences'] +  ''.join(sent_list) 
+                        # 2. Clean up step 1, remove quatations & slice the content into paras
+                
+                        para_list = utils.preprocess0(paragraphs)
 
-                #print(sent_list)
+                        #3.Break down into sentences
+                        #content_df.at[para_i,'sentences'] = ''
+                        for para in para_list:
+                            #print(".....")
 
-            para_i = para_i + 1
+                            para = utils.preprocess2(para)
+                            #print(para)
 
-        #print(content_df.head())
+                            sent_list = utils.sentencer(para)
+
+                            #content_df['sentences'] = content_df['sentences'].astype('object') 
+                            #sent_list = ['a','b']
+                            mask = (content_df['UUID']==UUID)
+                            old = content_df.loc[mask,'sentences']
+
+                            content_df.loc[mask,'sentences']  = old +  ''.join(sent_list) 
+ 
 
         orginal_file_name = os.path.basename(file)
 
         op_file = './op/' + "parsed_" + orginal_file_name
-
-        # write parsed sentences for each article
+        
         content_df.loc[:,['UUID','sentences']].to_csv(op_file,index=False)
 
-        print("Parsed content stored in ", op_file)
+        #print(content_df.head())
+
+        # create clean o/p file
+
+        op_df = pd.read_csv(op_file)
+
+        op_df = op_df.dropna()
+
+        # ensure propoer index
+        op_df = op_df.reset_index(drop=True)
+
+        op_df.to_csv(op_file,index=False)
+
+
+
+    print("Parsed results in stored in ", op_file)
+
+    
+
+  
 
     
     

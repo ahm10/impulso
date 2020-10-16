@@ -1,4 +1,28 @@
+from langdetect import detect
 import re
+
+import spacy
+from spacy_langdetect import LanguageDetector
+nlp = spacy.load('en')
+
+def check_charecters(txt):
+
+       return all(ord(c) < 128 for c in txt)
+        
+
+def check_lang(txt):
+    txt = str(txt) + ' '
+    # create a pipe if not already created 
+    if "language_detector" not in nlp.pipe_names:
+        nlp.add_pipe(LanguageDetector(), name='language_detector', last=True)
+
+    doc = nlp(txt)
+# document level language detection. Think of it like average language of the document!
+    if(doc._.language['language']=='en'):
+        return txt
+    else:
+        return ''
+ 
 
 def preprocess0(tag_list):
 
@@ -74,7 +98,7 @@ def sentencer(txt):
         #txt = re.split(r'\.(?<!\d)\.(?!\d)',txt)
 
 
-    return sent_list
+    return sent_list[:-1]
 
 
 
