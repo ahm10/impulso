@@ -95,6 +95,18 @@ Please refer : contents_op_Medium_scrape_urls_multi-tag _clean_2016-2020.csv [cs
 - Settings in script: The script reads content files from the adjacent "data" folder. So please make sure all content files you want to process are placed in there. 
 - Output data: All unique tags with their total occurances have been logged into a CSV file in "op" folder.
 
+## Article content preprocessing
+This includes- 
+1. Cleaning,
+
+2. Organizing 
+
+3. Breaking it down into sentences. 
+
+- Folder : Medium_data_preprocess
+- Script to run: parse_articles.py
+- Settings in script: The script reads content files from the adjacent "data" folder. So please make sure all content files you want to process are placed in there. 
+- Output data: All articles with thier UUID and sentences (in list form) have been logged into a CSV file in "op" folder in file name parsed_*...csv
 *P.S.* For environment setup, use the requirements.txt available in given folder.
 
  
