@@ -1,5 +1,4 @@
 import pandas as pd 
-import dask.dataframe as dd
 import utils
 import re
 import glob
@@ -30,7 +29,7 @@ for file in scraped_files:
         # Make sure it is not an empty element
 
         paragraphs = ' ' + str(paragraphs)
-        
+
         if(len(paragraphs) > 1):
 
             print("Processing...",file)
