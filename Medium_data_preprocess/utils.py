@@ -6,7 +6,7 @@ def preprocess0(tag_list):
     end = ']'
 
     tags = []
-    # remove brackets
+    # remove brackets from the string
     if (start in tag_list and end in tag_list): # a valid list
 
         tag_contents = tag_list.split(start)[1].split(end)[0]
