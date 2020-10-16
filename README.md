@@ -108,5 +108,6 @@ This includes-
 - Settings in script: The script reads content files from the adjacent "data" folder. So please make sure all content files you want to process are placed in there. 
 - Output data: All articles with thier UUID and sentences (in list form) have been logged into a CSV file in "op" folder in file name parsed_*...csv
 *P.S.* For environment setup, use the requirements.txt available in given folder.
+:point_right: Special instructions (if required) for spacy installment also attached in txt file besides requirements.txt
 
  
