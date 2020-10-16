@@ -88,14 +88,14 @@ Please refer : contents_op_Medium_scrape_urls_multi-tag _clean_2016-2020.csv [cs
 
 # Medium - preprocess
 
-## Extract unique tags - steps :heavy_check_mark:
+## Extract unique tags - steps 
 
 - Folder : Medium_data_preprocess
 - Script to run: unique_tags.py
 - Settings in script: The script reads content files from the adjacent "data" folder. So please make sure all content files you want to process are placed in there. 
 - Output data: All unique tags with their total occurances have been logged into a CSV file in "op" folder.
 
-## Article content preprocessing
+## Article content preprocessing :heavy_check_mark:
 This includes- 
 1. Cleaning,
 
