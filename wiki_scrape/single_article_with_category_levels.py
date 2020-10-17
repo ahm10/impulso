@@ -23,12 +23,14 @@ def arrange_sections(sections,level=0):
 
 # Please update all the tags you want to scrap for 
 
-#topics = ['Artificial intelligence','Machine learning']
+#topics = ['Python_(programming_language)','Artificial intelligence','Machine learning']
 
 # alternative code - read from csv
 filename = "ML.csv" # place the name of the CSV to be scrapped
 tags_df = pd.read_csv(filename)
 topics = list(tags_df['title'])
+
+
 
 # Scrap all tags one by one and create JSON for each
 
