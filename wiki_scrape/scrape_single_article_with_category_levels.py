@@ -60,8 +60,9 @@ for topic in topics:
     
     # create a topic JSON
     
+    # store it in data folder
                                         
-    filename = "wiki_content_" + topic + ".json" 
+    filename = './scrapped_data/'+ "wiki_content_" + topic + ".json" 
     
     # write the content of the topic in the JSON
     
