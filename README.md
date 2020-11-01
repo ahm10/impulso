@@ -23,7 +23,7 @@ Get the headers for each topic. This can be done using *parse_wiki_article.py*, 
 
 Similar to step 1, a list of topics is available in *wiki_multi_tree_graph.py*. The combined data tree will be stored under *structured_data* folder. For testing purpose, the graph figures have been created in *figures* folder. The code is commented for the moment. 
 Example tree can be seen below,
-![Example_tree](./wiki_scrape/figures/Machine_learning_knowledge_graph.png)
+![Example_tree](./wiki_scrape/figures/Machine_learning_knowledge_graph.png =250x250)
 
 # Grakn Knowledge base design :heavy_check_mark:
 
