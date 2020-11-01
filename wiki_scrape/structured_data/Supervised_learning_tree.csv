@@ -1,0 +1,17 @@
+,child,parent,color
+0,History,Supervised_learning,red
+1,Regression model,Supervised_learning,red
+2,Underlying assumptions,Supervised_learning,red
+3,Linear regression,Supervised_learning,red
+4,Nonlinear regression,Supervised_learning,red
+5,Interpolation and extrapolation,Supervised_learning,red
+6,Power and sample size calculations,Supervised_learning,red
+7,Other methods,Supervised_learning,red
+8,Software,Supervised_learning,red
+9,See also,Supervised_learning,red
+10,References,Supervised_learning,red
+11,Further reading,Supervised_learning,red
+12,External links,Supervised_learning,red
+13,General linear model,Linear regression,blue
+14,Diagnostics,Linear regression,blue
+15,Limited dependent variables,Linear regression,blue
