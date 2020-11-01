@@ -28,7 +28,7 @@ Example tree can be seen below,
 # Grakn Knowledge base design :heavy_check_mark:
 
 ## Steps
-- Folder : Grakn
+- Folder : grakn
 
 1. Download and install Grakn console and Grakn workbase 
 
