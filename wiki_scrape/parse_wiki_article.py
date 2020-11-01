@@ -33,13 +33,13 @@ def cleanup(text):
     return processed
 
 # import wikipedia sentences
-filename =   "wiki_content_Machine learning.json"
+filename =   "wiki_content_Regression_analysis.json"
 candidate_sentences = pd.read_json("scrapped_data/" + filename)
 base_full_text = candidate_sentences.fulltext[1]
 
 print("length of base text", len(base_full_text))
 
-N = 15000
+N = 25000
 
 print("considering ",N, "words for testing")
 

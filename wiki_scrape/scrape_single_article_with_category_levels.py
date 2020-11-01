@@ -23,12 +23,12 @@ def arrange_sections(sections,level=0):
 
 # Please update all the tags you want to scrap for 
 
-#topics = ['Python_(programming_language)','Artificial intelligence','Machine learning']
+topics = ['Machine_learning','Supervised_learning','Regression_analysis']
 
 # alternative code - read from csv
-filename = "ML.csv" # place the name of the CSV to be scrapped
-tags_df = pd.read_csv(filename)
-topics = list(tags_df['title'])
+#filename = "ML.csv" # place the name of the CSV to be scrapped
+#tags_df = pd.read_csv(filename)
+#topics = list(tags_df['title'])
 
 
 

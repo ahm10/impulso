@@ -1,4 +1,4 @@
-# Wiki Scrapper   
+# Wiki Scrapping and graph tree structure construction
 
 ## Data dictionary (output JSON):   
 
@@ -8,15 +8,26 @@
 1. full_text : entire text body
 
 
-## Steps
+## Steps 
 - Folder : wiki_scrape
-- Script to run: single_article_with_category_levels.py
-- Settings in script: List of tags to scrap. Please add all the tags you want in this list. 
-- Or you can also use CSV read. The code is added with a sample ML.CSV. You would need to place the CSV in the same folder and specify the CSV name inside the script under the variable filename. :heavy_check_mark:
-- Output data: A JSON containing above mentioned attributes. You can review example file - wiki_content_Machine learning.json
+- 1. Scrapping the topics 
+    A list of topics are available on the file scrape_single_article_with_category_levels.py.
+    The script will scrape the data and store it under scrapped_data folder. 
+- 1. Parse the data
+    Get the headers for each topic. This can be done using parse_wiki_article.py, by setting 'filename' to the scrapped file to be parsed. The output is stored in parsed_data folder.
+- 1. structure the data into tree
+    Similar to step 1, a list of topics is available in wiki_multi_tree_graph.py. The combined data tree will be stored under structured_data folder. For testing purpose, the graph figures have been created in figures folder. The code is commented for the moment. 
 
+# Grakn Knowledge base design
 
+## Steps
+- Folder : Grakn
+- 1. Download and install Grakn console and Grakn workbase
+- 1. Initiate the Grakn console and define a keyspace with schema file schema_zeitlabs3.gql
 
+### Schema version 1
+
+![Screenshot](./grakn/image.png)
 
 # Medium_Scraper  
 
