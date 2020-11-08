@@ -10,13 +10,13 @@
 
 ## Steps 
 - Folder : wiki_scrape
-### 1. Scrapping the topics 
+### 1. Scrapping the topics :heavy_check_mark:
 
 - A list of topics are available on the file *scrape_single_article_with_category_levels.py*.
 
 - The script will scrape the data and store it under *scrapped_data* folder. 
 
-### 2. Parse the data 
+### 2. Parse the data :heavy_check_mark:
 
 - Get the headers for each topic. 
 
@@ -35,7 +35,7 @@
 - Example tree can be seen below,
 ![Example_tree](./wiki_scrape/figures/Machine_learning_knowledge_graph.png)
 
-# Grakn Knowledge base design 
+# Grakn Knowledge base design :heavy_check_mark:
 
 ## Steps
 - Folder : grakn
@@ -46,7 +46,7 @@
 
 2. Initiate the Grakn console and define a keyspace with schema file /zeitlabs/schema_zeitlabs3.gql :pencil: 
 
-### Current Schema :
+### Current Schema : :heavy_check_mark:
 
 ![View_grakn_schema](./grakn/zeitlabs/grakn_schema.PNG)
 
@@ -62,15 +62,14 @@ This file traverses both folders, creates the tree structure org, ingests and an
 Custom functions required are scripted under grakn_utils.py.
 
 4. View data. :heavy_check_mark:
-- Folder : /zeitlabs
-- Script to run : view_zeitlabs.py
-
-The script shows data extracted from the graph for test cases such as,
-
 ### View data: 
 
 ![View_grakn_data](./grakn/zeitlabs/test_q.png)
 
+- Folder : /zeitlabs
+- Script to run : view_zeitlabs.py
+
+The script shows data extracted from the graph for test cases such as,
 
 # Medium_Scraper  
 
