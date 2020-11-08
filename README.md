@@ -48,7 +48,7 @@
 
 ### Current Schema :
 
-![View_grakn_schema](./grakn/zeitlabs/grakn_schema.png)
+![View_grakn_schema](./grakn/zeitlabs/grakn_schema.PNG)
 
 
 3. Ingest the data. :heavy_check_mark:
