@@ -1,20 +1,20 @@
-,child,parent,color
-0,Steps,Regression_analysis,red
-1,Algorithm choice,Regression_analysis,red
-2,How supervised learning algorithms work,Regression_analysis,red
-3,Generative training,Regression_analysis,red
-4,Generalizations,Regression_analysis,red
-5,Approaches and algorithms,Regression_analysis,red
-6,Applications,Regression_analysis,red
-7,General issues,Regression_analysis,red
-8,See also,Regression_analysis,red
-9,References,Regression_analysis,red
-10,External links,Regression_analysis,red
-11,Bias-variance tradeoff,Algorithm choice,blue
-12,Function complexity and amount of training data,Algorithm choice,blue
-13,Dimensionality of the input space,Algorithm choice,blue
-14,Noise in the output values,Algorithm choice,blue
-15,Other factors to consider,Algorithm choice,blue
-16,Algorithms,Algorithm choice,blue
-17,Empirical risk minimization,How supervised learning algorithms work,blue
-18,Structural risk minimization,How supervised learning algorithms work,blue
+,child,parent,color,rel_level
+0,Steps,Regression_analysis,red,1
+1,Algorithm choice,Regression_analysis,red,1
+2,How supervised learning algorithms work,Regression_analysis,red,1
+3,Generative training,Regression_analysis,red,1
+4,Generalizations,Regression_analysis,red,1
+5,Approaches and algorithms,Regression_analysis,red,1
+6,Applications,Regression_analysis,red,1
+7,General issues,Regression_analysis,red,1
+8,See also,Regression_analysis,red,1
+9,References,Regression_analysis,red,1
+10,External links,Regression_analysis,red,1
+11,Bias-variance tradeoff,Algorithm choice,blue,2
+12,Function complexity and amount of training data,Algorithm choice,blue,2
+13,Dimensionality of the input space,Algorithm choice,blue,2
+14,Noise in the output values,Algorithm choice,blue,2
+15,Other factors to consider,Algorithm choice,blue,2
+16,Algorithms,Algorithm choice,blue,2
+17,Empirical risk minimization,How supervised learning algorithms work,blue,2
+18,Structural risk minimization,How supervised learning algorithms work,blue,2

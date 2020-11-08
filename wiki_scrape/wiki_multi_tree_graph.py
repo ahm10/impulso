@@ -9,6 +9,7 @@ nlp_blank = spacy.blank('en')
 from spacy.matcher import PhraseMatcher
 
 
+
 ### name of topics to be constructed tree for (would be replaced with unique tags sets later) 
 
 topics = ['Machine_learning','Supervised_learning','Regression_analysis']
@@ -20,7 +21,7 @@ relations_list = []
 
 #### Get the hierarchy first
 
-combined_df = pd.DataFrame(columns=['parent','child','color'])
+combined_df = pd.DataFrame(columns=['parent','child','rel_level','color'])
 
 for filename in glob.glob('./scrapped_data/*.json'): 
 
@@ -65,6 +66,7 @@ for filename in glob.glob('./scrapped_data/*.json'):
         graph_df.loc[k,'child'] = df.loc[l1,'heading']
         graph_df.loc[k,'parent'] = topic # the base topic
         graph_df.loc[k,'color'] = 'red'
+        graph_df.loc[k,'rel_level'] = 1
         k = k + 1
 
     # define edge colors for level 0-1
@@ -91,6 +93,7 @@ for filename in glob.glob('./scrapped_data/*.json'):
                         graph_df.loc[k,'child'] = df.loc[l2,'heading']
                         graph_df.loc[k,'parent'] = df.loc[l1_start,'heading']
                         graph_df.loc[k,'color'] = 'blue'
+                        graph_df.loc[k,'rel_level'] = 2
                         k = k + 1
 
     # leve2 - level3 child parent relations
@@ -114,12 +117,20 @@ for filename in glob.glob('./scrapped_data/*.json'):
                         graph_df.loc[k,'child'] = df.loc[l3,'heading']
                         graph_df.loc[k,'parent'] = df.loc[l2_start,'heading']
                         graph_df.loc[k,'color'] = 'green'
+                        graph_df.loc[k,'rel_level'] = 3
                         k = k + 1
 
 
-    print("> No. of nodes added...",k)
-    # save each topic tree file for structured data folder
-    #graph_df.to_csv("./structured_data/"+topic+"_tree.csv")
+    print("> No. of edges added...",k)
+
+    # set relation levels as integers
+
+    graph_df['rel_level'] = graph_df['rel_level'].astype('int')
+
+    ## set levels to int type
+    graph_df['rel_level'].astype('int')
+    #save each topic tree file for structured data folder
+    graph_df.to_csv("./structured_data/"+topic+"_tree.csv")
 
 
     # make a combined data file 
@@ -146,20 +157,20 @@ for filename in glob.glob('./scrapped_data/*.json'):
 
 
 
-
-combined_data_file = "./structured_data/"+"combined_tree.csv"
-combined_df.to_csv(combined_data_file)
+# 
+# combined_data_file = "./structured_data/"+"combined_tree.csv"
+# combined_df.to_csv(combined_data_file)
 
 print("\n----------------------------")
 
 print("Total No.of topics added..",t)
-print("Total no of nodes..", len(combined_df))
-print("Combined data tree written at ",combined_data_file)
+print("Total no of edges (pairs)..", len(combined_df))
+# print("Combined data tree written at ",combined_data_file)
 ### combined graph 
 
-G1 = nx.from_pandas_edgelist(combined_df, source='parent',target='child')
-plt.figure(figsize=(12,12))
-pos = nx.spring_layout(G1)
-nx.draw(G1, with_labels=True, edge_color=combined_df['color'])
-#plt.show()
-plt.savefig('./figures/' + 'combined' + '_knowledge_graph.png')
+# G1 = nx.from_pandas_edgelist(combined_df, source='parent',target='child')
+# plt.figure(figsize=(12,12))
+# pos = nx.spring_layout(G1)
+# nx.draw(G1, with_labels=True, edge_color=combined_df['color'])
+# #plt.show()
+# plt.savefig('./figures/' + 'combined' + '_knowledge_graph.png')

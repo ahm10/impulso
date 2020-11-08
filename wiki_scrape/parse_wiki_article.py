@@ -1,9 +1,10 @@
 import re
 import pandas as pd
 import bs4
+import os
 import requests
 import spacy
-from spacy import displacy
+import wikipediaapi
 import json
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -12,102 +13,104 @@ from spacy.lang.en import English
 nlp = English()
 sbd = nlp.create_pipe('sentencizer')
 nlp.add_pipe(sbd)
-
+import utils
+ 
 
 pd.set_option('display.max_colwidth', 200)
 
-def sentencizer(text):
-    doc = nlp(text)
-
-    sents_list = []
-    for sent in doc.sents:
-        sents_list.append(sent.text)
-
-    return sents_list
-
 def cleanup(text):
-    processed = text.lower()  
-    processed = re.sub('[^a-zA-Z]', ' ', processed )  
-    processed= re.sub(r'\s+', ' ', processed)
 
-    return processed
+    # replace new lines with bullets
 
-# import wikipedia sentences
-filename =   "wiki_content_Regression_analysis.json"
-candidate_sentences = pd.read_json("scrapped_data/" + filename)
-base_full_text = candidate_sentences.fulltext[1]
+    text = text.replace("\n", " \u2022 ")
 
-print("length of base text", len(base_full_text))
+    # replace quotations with `
 
-N = 25000
+    text = text.replace('"', '`')
 
-print("considering ",N, "words for testing")
+    text = text.replace("'", '`')
 
-base_full_text = base_full_text[:N]
+    return text
 
-print("slicing paras")
+scrapped_data_path = "./scrapped_data/"
+for sfile in os.listdir(scrapped_data_path):
+    file_path = scrapped_data_path + sfile 
+    print("Parsing...",file_path)
 
-para_list = base_full_text.split('\n\n')
+    with open(file_path) as f:
+        data = json.load(f)
 
-print("No. of paras", len(para_list))
 
-print("------------")
+    # candidate_sentences = pd.read_json("./scrapped_data/" + filename,orient='records')
+    base_full_text = data['fulltext'].split("\n\n")
+    sections = data['sections']
 
-print("slicing headers and paras")
+    # for s in sections[:2]: 
+
+    #     print(">>>> ",s)
+
+    initial_text = base_full_text[:1]
+
+
+    rest_text = base_full_text[1:]
+    combined = dict()
+
+
+    combined['introduction'] = cleanup(" ".join(initial_text))
+
+    # retrieve structure
+    
+    topic = sfile.split("wiki_content_")[-1].split(".json")[0]
  
-headings = [] 
-cont = []
-remaining = ''
-for para in para_list:
-    
 
-    combined = para.split("\n")
-
-    heading = combined[0]
-
-    if(':' in heading):
-        [heading,remaining] = heading.split(':')
-      
-
-    if(len(combined[0]) > 200): 
-        heading = 'General'
-    
-
-    # process content into sentences
-    sub_cont = sentencizer(remaining + combined[-1])
-
-    cont.append(sub_cont) # add additional description into content
-    headings.append(heading)
+    wiki_wiki = wikipediaapi.Wikipedia(language='en', extract_format=wikipediaapi.ExtractFormat.WIKI)
 
 
-combined_dict = dict(zip(headings,cont))
+    pg = wiki_wiki.page(topic)
 
+    headings = []
+    for sect in sections:
 
-# second level parting within content
-# newheadings = []
-# newcontents = []
-# for head,sent_list in combined_dict.items():
+        s = ''+ list(sect.values())[0]     
+        headings.append(s)
 
-    
-#     for sent in sent_list:
-        
-#         if(":" in sent):
+    # print(">>",headings)
 
-#             [newheading,newcontent] = sent.split(':')
-#             newheadings.append(newheading)
-#             newcontents.append(newcontent)
+    for txt in rest_text:
+
+        # print(txt)
+        # print("..................")
+
+        h = txt.split("\n")[0]
+        t = txt.split("\n")[1:]
+
+        if(t):
+
+            t = " ".join(t)
+
+            # print(t)
+
             
+            # print(".......")
+            # print(utils.summarize(t))
 
-# extra = dict(zip(newheadings,newcontents))                
+            if (h in headings): 
 
-# # add new ones in dict
+                t =  utils.summarise(t) # summerized text body
 
-# combined_dict.update(extra)
+                t = cleanup(t) # replace new lines 
 
-opfile = './parsed_data/' + "parsed_" + filename
+                combined[h] = t
 
-with open(opfile, 'w') as f:
-    json.dump(combined_dict, f)
-    
+    # print("headings in ",topic)    
 
-    
+    # print(len(combined.keys()))
+                
+ 
+    #write the combined into json
+
+    opfile = "./parsed_data/"+"parsed_"+topic+".json" 
+    with open(opfile, 'w') as fp:
+        json.dump(combined, fp, indent=4)
+
+    print("parsed data + summerized text written in ",opfile)

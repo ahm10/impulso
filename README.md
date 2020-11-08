@@ -16,7 +16,7 @@
 
 - The script will scrape the data and store it under *scrapped_data* folder. 
 
-### 2. Parse the data :heavy_check_mark:
+### 2. Parse the data 
 
 - Get the headers for each topic. 
 
@@ -35,7 +35,7 @@
 - Example tree can be seen below,
 ![Example_tree](./wiki_scrape/figures/Machine_learning_knowledge_graph.png)
 
-# Grakn Knowledge base design :heavy_check_mark:
+# Grakn Knowledge base design 
 
 ## Steps
 - Folder : grakn
@@ -44,11 +44,33 @@
 
 *(The entire setup for windows is ready within the folder so no extra installation should be required)*
 
-2. Initiate the Grakn console and define a keyspace with schema file schema_zeitlabs3.gql
+2. Initiate the Grakn console and define a keyspace with schema file /zeitlabs/schema_zeitlabs3.gql :pencil: 
 
-### Schema version 1
+### Current Schema :
 
-![image](./grakn/image.png)
+![View_grakn_schema](./grakn/zeitlabs/grakn_schema.png)
+
+
+3. Ingest the data. :heavy_check_mark:
+
+- Folder : /zeitlabs
+- Script to run : data_ingestion_zeitlabs.py 
+- Input  : For each topic, there should be a file created in parsed_data and structured_data folders. 
+
+This file traverses both folders, creates the tree structure org, ingests and anizes the data inside this structure. 
+
+Custom functions required are scripted under grakn_utils.py.
+
+4. View data. :heavy_check_mark:
+- Folder : /zeitlabs
+- Script to run : view_zeitlabs.py
+
+The script shows data extracted from the graph for test cases such as,
+
+### View data: 
+
+![View_grakn_data](./grakn/zeitlabs/test_q.png)
+
 
 # Medium_Scraper  
 

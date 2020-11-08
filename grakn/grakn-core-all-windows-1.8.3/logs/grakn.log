@@ -754,3 +754,1386 @@ io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
+2020-11-04 17:34:59,032 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2020-11-04 17:35:02,997 [main] INFO  grakn.core.server.Grakn - Grakn started in 3.884 s
+2020-11-04 18:06:39,531 [grpc-request-handler-4] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: name doesn't have an 'isa', a 'sub' or an 'id'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: name doesn't have an 'isa', a 'sub' or an 'id'
+2020-11-04 18:10:24,124 [grpc-request-handler-3] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: `$topic has txt "machine_learning";` doesn't have an 'isa', a 'sub' or an 'id'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: `$topic has txt "machine_learning";` doesn't have an 'isa', a 'sub' or an 'id'
+2020-11-04 18:13:16,362 [grpc-request-handler-1] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: `$topic has txt "machine learning";` doesn't have an 'isa', a 'sub' or an 'id'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: `$topic has txt "machine learning";` doesn't have an 'isa', a 'sub' or an 'id'
+2020-11-04 18:18:34,491 [grpc-request-handler-5] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.SessionException: The client session with session ID [zeitlabs6f1dc93a-6364-41a7-8a92-fd11c5640cef] was not found. Create a new session to interact with the graph.
+	at grakn.core.kb.server.exception.SessionException.sessionNotFound(SessionException.java:36)
+	at grakn.core.server.rpc.SessionService.close(SessionService.java:139)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:343)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-04 18:18:34,513 [grpc-request-handler-4] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.TransactionException: Keyspace name is invalid: []. Keyspace name cannot start with a number, and can only contain maximum 48 characters of lower case, alphanumeric and underscore characters.
+	at grakn.core.kb.server.exception.TransactionException.create(TransactionException.java:49)
+	at grakn.core.kb.server.exception.TransactionException.invalidKeyspaceName(TransactionException.java:101)
+	at grakn.core.server.keyspace.KeyspaceImpl.<init>(KeyspaceImpl.java:43)
+	at grakn.core.server.rpc.ServerOpenRequest.open(ServerOpenRequest.java:39)
+	at grakn.core.server.rpc.SessionService.open(SessionService.java:122)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:339)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-04 18:20:50,832 [grpc-request-handler-4] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: `$topic has txt "machine learning";` doesn't have an 'isa', a 'sub' or an 'id'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: `$topic has txt "machine learning";` doesn't have an 'isa', a 'sub' or an 'id'
+2020-11-04 18:25:51,521 [grpc-request-handler-0] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: `$topic has txt "machine learning";` doesn't have an 'isa', a 'sub' or an 'id'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: `$topic has txt "machine learning";` doesn't have an 'isa', a 'sub' or an 'id'
+2020-11-04 18:38:21,038 [grpc-request-handler-7] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: `$topic has txt "machine learning";` doesn't have an 'isa', a 'sub' or an 'id'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: `$topic has txt "machine learning";` doesn't have an 'isa', a 'sub' or an 'id'
+2020-11-04 18:45:11,742 [grpc-request-handler-3] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: `$topic has txt "machine learning";` doesn't have an 'isa', a 'sub' or an 'id'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: `$topic has txt "machine learning";` doesn't have an 'isa', a 'sub' or an 'id'
+2020-11-04 18:51:15,873 [grpc-request-handler-7] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.SessionException: The client session with session ID [zeitlabs6f1dc93a-6364-41a7-8a92-fd11c5640cef] was not found. Create a new session to interact with the graph.
+	at grakn.core.kb.server.exception.SessionException.sessionNotFound(SessionException.java:36)
+	at grakn.core.server.rpc.SessionService.close(SessionService.java:139)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:343)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-04 18:51:29,159 [grpc-request-handler-2] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.SessionException: The client session with session ID [zeitlabs6f1dc93a-6364-41a7-8a92-fd11c5640cef] was not found. Create a new session to interact with the graph.
+	at grakn.core.kb.server.exception.SessionException.sessionNotFound(SessionException.java:36)
+	at grakn.core.server.rpc.SessionService.close(SessionService.java:139)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:343)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-04 21:20:27,413 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2020-11-04 21:20:32,069 [main] INFO  grakn.core.server.Grakn - Grakn started in 4.612 s
+2020-11-04 21:23:10,378 [grpc-request-handler-5] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: label 'topc' not found
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: label 'topc' not found
+2020-11-06 14:39:11,695 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2020-11-06 14:39:16,798 [main] INFO  grakn.core.server.Grakn - Grakn started in 4.831 s
+2020-11-06 14:44:28,524 [grpc-request-handler-1] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.TransactionException: Keyspace name is invalid: []. Keyspace name cannot start with a number, and can only contain maximum 48 characters of lower case, alphanumeric and underscore characters.
+	at grakn.core.kb.server.exception.TransactionException.create(TransactionException.java:49)
+	at grakn.core.kb.server.exception.TransactionException.invalidKeyspaceName(TransactionException.java:101)
+	at grakn.core.server.keyspace.KeyspaceImpl.<init>(KeyspaceImpl.java:43)
+	at grakn.core.server.rpc.ServerOpenRequest.open(ServerOpenRequest.java:39)
+	at grakn.core.server.rpc.SessionService.open(SessionService.java:122)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:339)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-06 15:00:13,388 [grpc-request-handler-6] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: label 'name' not found
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: label 'name' not found
+2020-11-06 21:15:05,431 [grpc-request-handler-5] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-07 14:34:52,994 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2020-11-07 14:34:58,835 [main] INFO  grakn.core.server.Grakn - Grakn started in 4.993 s
+2020-11-07 15:34:02,481 [grpc-request-handler-3] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: name doesn't have an 'isa', a 'sub' or an 'id'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: name doesn't have an 'isa', a 'sub' or an 'id'
+2020-11-07 15:42:30,892 [grpc-request-handler-2] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: name doesn't have an 'isa', a 'sub' or an 'id'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: name doesn't have an 'isa', a 'sub' or an 'id'
+2020-11-07 15:43:26,255 [grpc-request-handler-3] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: title doesn't have an 'isa', a 'sub' or an 'id'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: title doesn't have an 'isa', a 'sub' or an 'id'
+2020-11-07 15:56:12,876 [grpc-request-handler-4] ERROR g.core.server.rpc.KeyspaceService - Exception during keyspace deletion.
+java.lang.RuntimeException: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:85)
+	at grakn.core.server.keyspace.KeyspaceManager.delete(KeyspaceManager.java:60)
+	at grakn.core.server.rpc.KeyspaceService.delete(KeyspaceService.java:60)
+	at grakn.protocol.keyspace.KeyspaceServiceGrpc$MethodHandlers.invoke(KeyspaceServiceGrpc.java:281)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at com.datastax.oss.driver.api.core.DriverTimeoutException.copy(DriverTimeoutException.java:34)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:53)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:30)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession.execute(DefaultSession.java:208)
+	at com.datastax.oss.driver.api.core.CqlSession.execute(CqlSession.java:51)
+	at grakn.core.graph.diskstorage.cql.CQLStoreManager.clearStorage(CQLStoreManager.java:363)
+	at grakn.core.graph.diskstorage.Backend.clearStorage(Backend.java:317)
+	at grakn.core.graph.core.JanusGraphFactory.drop(JanusGraphFactory.java:97)
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:83)
+	... 11 common frames omitted
+2020-11-07 16:05:37,965 [grpc-request-handler-1] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: title doesn't have an 'isa', a 'sub' or an 'id'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: title doesn't have an 'isa', a 'sub' or an 'id'
+2020-11-07 16:16:16,800 [grpc-request-handler-2] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: title doesn't have an 'isa', a 'sub' or an 'id'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: title doesn't have an 'isa', a 'sub' or an 'id'
+2020-11-07 16:21:28,166 [grpc-request-handler-0] ERROR g.core.server.rpc.KeyspaceService - Exception during keyspace deletion.
+java.lang.RuntimeException: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:85)
+	at grakn.core.server.keyspace.KeyspaceManager.delete(KeyspaceManager.java:60)
+	at grakn.core.server.rpc.KeyspaceService.delete(KeyspaceService.java:60)
+	at grakn.protocol.keyspace.KeyspaceServiceGrpc$MethodHandlers.invoke(KeyspaceServiceGrpc.java:281)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at com.datastax.oss.driver.api.core.DriverTimeoutException.copy(DriverTimeoutException.java:34)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:53)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:30)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession.execute(DefaultSession.java:208)
+	at com.datastax.oss.driver.api.core.CqlSession.execute(CqlSession.java:51)
+	at grakn.core.graph.diskstorage.cql.CQLStoreManager.clearStorage(CQLStoreManager.java:363)
+	at grakn.core.graph.diskstorage.Backend.clearStorage(Backend.java:317)
+	at grakn.core.graph.core.JanusGraphFactory.drop(JanusGraphFactory.java:97)
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:83)
+	... 11 common frames omitted
+2020-11-07 16:23:46,997 [grpc-request-handler-3] ERROR g.core.server.rpc.KeyspaceService - Exception during keyspace deletion.
+java.lang.RuntimeException: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:85)
+	at grakn.core.server.keyspace.KeyspaceManager.delete(KeyspaceManager.java:60)
+	at grakn.core.server.rpc.KeyspaceService.delete(KeyspaceService.java:60)
+	at grakn.protocol.keyspace.KeyspaceServiceGrpc$MethodHandlers.invoke(KeyspaceServiceGrpc.java:281)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at com.datastax.oss.driver.api.core.DriverTimeoutException.copy(DriverTimeoutException.java:34)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:53)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:30)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession.execute(DefaultSession.java:208)
+	at com.datastax.oss.driver.api.core.CqlSession.execute(CqlSession.java:51)
+	at grakn.core.graph.diskstorage.cql.CQLStoreManager.clearStorage(CQLStoreManager.java:363)
+	at grakn.core.graph.diskstorage.Backend.clearStorage(Backend.java:317)
+	at grakn.core.graph.core.JanusGraphFactory.drop(JanusGraphFactory.java:97)
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:83)
+	... 11 common frames omitted
+2020-11-07 16:32:46,674 [grpc-request-handler-3] ERROR g.core.server.rpc.KeyspaceService - Exception during keyspace deletion.
+java.lang.RuntimeException: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:85)
+	at grakn.core.server.keyspace.KeyspaceManager.delete(KeyspaceManager.java:60)
+	at grakn.core.server.rpc.KeyspaceService.delete(KeyspaceService.java:60)
+	at grakn.protocol.keyspace.KeyspaceServiceGrpc$MethodHandlers.invoke(KeyspaceServiceGrpc.java:281)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at com.datastax.oss.driver.api.core.DriverTimeoutException.copy(DriverTimeoutException.java:34)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:53)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:30)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession.execute(DefaultSession.java:208)
+	at com.datastax.oss.driver.api.core.CqlSession.execute(CqlSession.java:51)
+	at grakn.core.graph.diskstorage.cql.CQLStoreManager.clearStorage(CQLStoreManager.java:363)
+	at grakn.core.graph.diskstorage.Backend.clearStorage(Backend.java:317)
+	at grakn.core.graph.core.JanusGraphFactory.drop(JanusGraphFactory.java:97)
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:83)
+	... 11 common frames omitted
+2020-11-07 16:54:11,108 [grpc-request-handler-7] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+match$r (level1: "Overview", level2:$subtopic2) isa rel2;get;
+                 ^
+no viable alternative at input 'match$r (level1: "Overview"'
+syntax error at line 1: 
+match$r (level1: "Overview", level2:$subtopic2) isa rel2;get;
+                 ^
+no viable alternative at input 'match$r (level1: "Overview"'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+match$r (level1: "Overview", level2:$subtopic2) isa rel2;get;
+                 ^
+no viable alternative at input 'match$r (level1: "Overview"'
+syntax error at line 1: 
+match$r (level1: "Overview", level2:$subtopic2) isa rel2;get;
+                 ^
+no viable alternative at input 'match$r (level1: "Overview"'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-07 16:54:35,419 [grpc-request-handler-7] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+match $r (level1: "Overview", level2:$subtopic2) isa rel2;get;
+                  ^
+no viable alternative at input 'match $r (level1: "Overview"'
+syntax error at line 1: 
+match $r (level1: "Overview", level2:$subtopic2) isa rel2;get;
+                  ^
+no viable alternative at input 'match $r (level1: "Overview"'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+match $r (level1: "Overview", level2:$subtopic2) isa rel2;get;
+                  ^
+no viable alternative at input 'match $r (level1: "Overview"'
+syntax error at line 1: 
+match $r (level1: "Overview", level2:$subtopic2) isa rel2;get;
+                  ^
+no viable alternative at input 'match $r (level1: "Overview"'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-07 16:56:24,446 [grpc-request-handler-3] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+match $r (level1: $subtopic1, level2:$subtopic2) isa rel2 has subtopic1 "Overview";get;
+                                                          ^
+no viable alternative at input 'match $r (level1: $subtopic1, level2:$subtopic2) isa rel2 has'
+syntax error at line 1: 
+match $r (level1: $subtopic1, level2:$subtopic2) isa rel2 has subtopic1 "Overview";get;
+                                                          ^
+no viable alternative at input 'match $r (level1: $subtopic1, level2:$subtopic2) isa rel2 has'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+match $r (level1: $subtopic1, level2:$subtopic2) isa rel2 has subtopic1 "Overview";get;
+                                                          ^
+no viable alternative at input 'match $r (level1: $subtopic1, level2:$subtopic2) isa rel2 has'
+syntax error at line 1: 
+match $r (level1: $subtopic1, level2:$subtopic2) isa rel2 has subtopic1 "Overview";get;
+                                                          ^
+no viable alternative at input 'match $r (level1: $subtopic1, level2:$subtopic2) isa rel2 has'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-07 16:56:58,376 [grpc-request-handler-6] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: type 'subtopic1' must be an attribute-type
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: type 'subtopic1' must be an attribute-type
+2020-11-07 16:57:56,005 [grpc-request-handler-6] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: level1 is not a type and so does not have instances
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: level1 is not a type and so does not have instances
+2020-11-07 16:58:52,198 [grpc-request-handler-2] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has level1.title "Overview";get;
+                                                                     ^
+token recognition error at: '.'
+syntax error at line 1: 
+match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has level1.title "Overview";get;
+                                                                      ^
+no viable alternative at input 'match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has level1title'
+syntax error at line 1: 
+match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has level1.title "Overview";get;
+                                                                      ^
+no viable alternative at input 'match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has level1title'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has level1.title "Overview";get;
+                                                                     ^
+token recognition error at: '.'
+syntax error at line 1: 
+match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has level1.title "Overview";get;
+                                                                      ^
+no viable alternative at input 'match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has level1title'
+syntax error at line 1: 
+match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has level1.title "Overview";get;
+                                                                      ^
+no viable alternative at input 'match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has level1title'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-07 16:59:06,046 [grpc-request-handler-0] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has subtopic1.title "Overview";get;
+                                                                        ^
+token recognition error at: '.'
+syntax error at line 1: 
+match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has subtopic1.title "Overview";get;
+                                                                         ^
+no viable alternative at input 'match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has subtopic1title'
+syntax error at line 1: 
+match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has subtopic1.title "Overview";get;
+                                                                         ^
+no viable alternative at input 'match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has subtopic1title'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has subtopic1.title "Overview";get;
+                                                                        ^
+token recognition error at: '.'
+syntax error at line 1: 
+match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has subtopic1.title "Overview";get;
+                                                                         ^
+no viable alternative at input 'match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has subtopic1title'
+syntax error at line 1: 
+match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has subtopic1.title "Overview";get;
+                                                                         ^
+no viable alternative at input 'match $r (level1: $subtopic1, level2:$subtopic2) isa rel2, has subtopic1title'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-07 17:12:49,763 [grpc-request-handler-1] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: the variable [$y-pn] is out of scope of the query
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: the variable [$y-pn] is out of scope of the query
+	at graql.lang.exception.GraqlException.variableOutOfScope(GraqlException.java:62)
+	at graql.lang.query.GraqlGet.<init>(GraqlGet.java:65)
+	at graql.lang.query.GraqlGet.<init>(GraqlGet.java:51)
+	at graql.lang.parser.Parser.visitQuery_get(Parser.java:262)
+	at graql.lang.parser.Parser.visitQuery(Parser.java:190)
+	at graql.lang.parser.Parser.visitEof_query(Parser.java:155)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:117)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-07 17:21:28,930 [grpc-request-handler-0] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-07 20:51:22,187 [grpc-request-handler-0] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $p1 isa subtopic1, has title "Overview";  $p2 isa topic, has title $x;  $r (level0: $p2, level1: $p1);  $x isa string;get $x;
+                                                                                                                      ^
+no viable alternative at input 'match  $p1 isa subtopic1, has title "Overview";  $p2 isa topic, has title $x;  $r (level0: $p2, level1: $p1);  $x isa string'
+syntax error at line 1: 
+match  $p1 isa subtopic1, has title "Overview";  $p2 isa topic, has title $x;  $r (level0: $p2, level1: $p1);  $x isa string;get $x;
+                                                                                                                      ^
+no viable alternative at input 'match  $p1 isa subtopic1, has title "Overview";  $p2 isa topic, has title $x;  $r (level0: $p2, level1: $p1);  $x isa string'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $p1 isa subtopic1, has title "Overview";  $p2 isa topic, has title $x;  $r (level0: $p2, level1: $p1);  $x isa string;get $x;
+                                                                                                                      ^
+no viable alternative at input 'match  $p1 isa subtopic1, has title "Overview";  $p2 isa topic, has title $x;  $r (level0: $p2, level1: $p1);  $x isa string'
+syntax error at line 1: 
+match  $p1 isa subtopic1, has title "Overview";  $p2 isa topic, has title $x;  $r (level0: $p2, level1: $p1);  $x isa string;get $x;
+                                                                                                                      ^
+no viable alternative at input 'match  $p1 isa subtopic1, has title "Overview";  $p2 isa topic, has title $x;  $r (level0: $p2, level1: $p1);  $x isa string'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-07 22:22:06,242 [grpc-request-handler-4] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.TransactionException: Keyspace name is invalid: []. Keyspace name cannot start with a number, and can only contain maximum 48 characters of lower case, alphanumeric and underscore characters.
+	at grakn.core.kb.server.exception.TransactionException.create(TransactionException.java:49)
+	at grakn.core.kb.server.exception.TransactionException.invalidKeyspaceName(TransactionException.java:101)
+	at grakn.core.server.keyspace.KeyspaceImpl.<init>(KeyspaceImpl.java:43)
+	at grakn.core.server.rpc.ServerOpenRequest.open(ServerOpenRequest.java:39)
+	at grakn.core.server.rpc.SessionService.open(SessionService.java:122)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:339)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-07 22:47:25,920 [grpc-request-handler-3] ERROR g.core.server.rpc.KeyspaceService - Exception during keyspace deletion.
+java.lang.RuntimeException: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:85)
+	at grakn.core.server.keyspace.KeyspaceManager.delete(KeyspaceManager.java:60)
+	at grakn.core.server.rpc.KeyspaceService.delete(KeyspaceService.java:60)
+	at grakn.protocol.keyspace.KeyspaceServiceGrpc$MethodHandlers.invoke(KeyspaceServiceGrpc.java:281)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at com.datastax.oss.driver.api.core.DriverTimeoutException.copy(DriverTimeoutException.java:34)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:53)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:30)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession.execute(DefaultSession.java:208)
+	at com.datastax.oss.driver.api.core.CqlSession.execute(CqlSession.java:51)
+	at grakn.core.graph.diskstorage.cql.CQLStoreManager.clearStorage(CQLStoreManager.java:363)
+	at grakn.core.graph.diskstorage.Backend.clearStorage(Backend.java:317)
+	at grakn.core.graph.core.JanusGraphFactory.drop(JanusGraphFactory.java:97)
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:83)
+	... 11 common frames omitted
+2020-11-07 22:55:13,773 [grpc-request-handler-1] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title "Machine_learning", has txt "Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                                                                                                                                                      ^
+mismatched input 'training' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title "Machine_learning", has txt "Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                                                                                                                                                      ^
+mismatched input 'training' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-07 22:57:59,188 [grpc-request-handler-3] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: txt doesn't have an 'isa', a 'sub' or an 'id'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: txt doesn't have an 'isa', a 'sub' or an 'id'
+2020-11-07 23:00:30,184 [grpc-request-handler-1] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title "Machine_learning"; has txt "desc";
+                                                       ^
+mismatched input 'has' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title "Machine_learning"; has txt "desc";
+                                                       ^
+mismatched input 'has' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-07 23:01:03,699 [grpc-request-handler-1] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title "Machine_learning" has txt "desc";
+                                                      ^
+mismatched input 'has' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title "Machine_learning" has txt "desc";
+                                                      ^
+mismatched input 'has' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-07 23:02:23,771 [grpc-request-handler-2] ERROR g.core.server.rpc.KeyspaceService - Exception during keyspace deletion.
+java.lang.RuntimeException: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:85)
+	at grakn.core.server.keyspace.KeyspaceManager.delete(KeyspaceManager.java:60)
+	at grakn.core.server.rpc.KeyspaceService.delete(KeyspaceService.java:60)
+	at grakn.protocol.keyspace.KeyspaceServiceGrpc$MethodHandlers.invoke(KeyspaceServiceGrpc.java:281)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at com.datastax.oss.driver.api.core.DriverTimeoutException.copy(DriverTimeoutException.java:34)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:53)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:30)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession.execute(DefaultSession.java:208)
+	at com.datastax.oss.driver.api.core.CqlSession.execute(CqlSession.java:51)
+	at grakn.core.graph.diskstorage.cql.CQLStoreManager.clearStorage(CQLStoreManager.java:363)
+	at grakn.core.graph.diskstorage.Backend.clearStorage(Backend.java:317)
+	at grakn.core.graph.core.JanusGraphFactory.drop(JanusGraphFactory.java:97)
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:83)
+	... 11 common frames omitted
+2020-11-07 23:05:46,504 [grpc-request-handler-3] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title Machine_learning, has txt Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                    ^
+token recognition error at: '.'
+syntax error at line 1: 
+insert $topic isa topic, has title Machine_learning, has txt Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                                                                       ^
+token recognition error at: '.'
+syntax error at line 1: 
+insert $topic isa topic, has title Machine_learning, has txt Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                                                                                                                                                                                                                                                         ^
+token recognition error at: '.'
+syntax error at line 1: 
+insert $topic isa topic, has title Machine_learning, has txt Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+token recognition error at: '.'
+syntax error at line 2: 
+A subset of machine learning is closely related to computational statistics, which focuses on making predictions using computers; but not all machine learning is statistical learning. The study of mathematical optimization delivers methods, theory and application domains to the field of machine learning. Data mining is a related field of study, focusing on exploratory data analysis through unsupervised learning. In its application across business problems, machine learning is also referred to as predictive analytics.;
+                                                                                                                                                                                      ^
+token recognition error at: '.'
+syntax error at line 2: 
+A subset of machine learning is closely related to computational statistics, which focuses on making predictions using computers; but not all machine learning is statistical learning. The study of mathematical optimization delivers methods, theory and application domains to the field of machine learning. Data mining is a related field of study, focusing on exploratory data analysis through unsupervised learning. In its application across business problems, machine learning is also referred to as predictive analytics.;
+                                                                                                                                                                                                                                                                                                                ^
+token recognition error at: '.'
+syntax error at line 2: 
+A subset of machine learning is closely related to computational statistics, which focuses on making predictions using computers; but not all machine learning is statistical learning. The study of mathematical optimization delivers methods, theory and application domains to the field of machine learning. Data mining is a related field of study, focusing on exploratory data analysis through unsupervised learning. In its application across business problems, machine learning is also referred to as predictive analytics.;
+                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+token recognition error at: '.'
+syntax error at line 2: 
+A subset of machine learning is closely related to computational statistics, which focuses on making predictions using computers; but not all machine learning is statistical learning. The study of mathematical optimization delivers methods, theory and application domains to the field of machine learning. Data mining is a related field of study, focusing on exploratory data analysis through unsupervised learning. In its application across business problems, machine learning is also referred to as predictive analytics.;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ^
+token recognition error at: '.'
+syntax error at line 1: 
+insert $topic isa topic, has title Machine_learning, has txt Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                   ^
+no viable alternative at input 'Machine_learning'
+syntax error at line 1: 
+insert $topic isa topic, has title Machine_learning, has txt Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                   ^
+mismatched input 'Machine_learning' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title Machine_learning, has txt Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                    ^
+token recognition error at: '.'
+syntax error at line 1: 
+insert $topic isa topic, has title Machine_learning, has txt Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                                                                       ^
+token recognition error at: '.'
+syntax error at line 1: 
+insert $topic isa topic, has title Machine_learning, has txt Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                                                                                                                                                                                                                                                         ^
+token recognition error at: '.'
+syntax error at line 1: 
+insert $topic isa topic, has title Machine_learning, has txt Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ^
+token recognition error at: '.'
+syntax error at line 2: 
+A subset of machine learning is closely related to computational statistics, which focuses on making predictions using computers; but not all machine learning is statistical learning. The study of mathematical optimization delivers methods, theory and application domains to the field of machine learning. Data mining is a related field of study, focusing on exploratory data analysis through unsupervised learning. In its application across business problems, machine learning is also referred to as predictive analytics.;
+                                                                                                                                                                                      ^
+token recognition error at: '.'
+syntax error at line 2: 
+A subset of machine learning is closely related to computational statistics, which focuses on making predictions using computers; but not all machine learning is statistical learning. The study of mathematical optimization delivers methods, theory and application domains to the field of machine learning. Data mining is a related field of study, focusing on exploratory data analysis through unsupervised learning. In its application across business problems, machine learning is also referred to as predictive analytics.;
+                                                                                                                                                                                                                                                                                                                ^
+token recognition error at: '.'
+syntax error at line 2: 
+A subset of machine learning is closely related to computational statistics, which focuses on making predictions using computers; but not all machine learning is statistical learning. The study of mathematical optimization delivers methods, theory and application domains to the field of machine learning. Data mining is a related field of study, focusing on exploratory data analysis through unsupervised learning. In its application across business problems, machine learning is also referred to as predictive analytics.;
+                                                                                                                                                                                                                                                                                                                                                                                                                              ^
+token recognition error at: '.'
+syntax error at line 2: 
+A subset of machine learning is closely related to computational statistics, which focuses on making predictions using computers; but not all machine learning is statistical learning. The study of mathematical optimization delivers methods, theory and application domains to the field of machine learning. Data mining is a related field of study, focusing on exploratory data analysis through unsupervised learning. In its application across business problems, machine learning is also referred to as predictive analytics.;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ^
+token recognition error at: '.'
+syntax error at line 1: 
+insert $topic isa topic, has title Machine_learning, has txt Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                   ^
+no viable alternative at input 'Machine_learning'
+syntax error at line 1: 
+insert $topic isa topic, has title Machine_learning, has txt Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                   ^
+mismatched input 'Machine_learning' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-07 23:06:24,179 [grpc-request-handler-7] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title "Machine_learning" , has txt "Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                                                                                                                                                       ^
+mismatched input 'training' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title "Machine_learning" , has txt "Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                                                                                                                                                       ^
+mismatched input 'training' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-07 23:08:51,851 [grpc-request-handler-3] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title "Machine_learning" , has txt "Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                                                                                                                                                       ^
+mismatched input 'training' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+syntax error at line 2: 
+A subset of machine learning is closely related to computational statistics, which focuses on making predictions using computers; but not all machine learning is statistical learning. The study of mathematical optimization delivers methods, theory and application domains to the field of machine learning. Data mining is a related field of study, focusing on exploratory data analysis through unsupervised learning. In its application across business problems, machine learning is also referred to as predictive analytics."" ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+token recognition error at: '" ;'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title "Machine_learning" , has txt "Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                                                                                                                                                       ^
+mismatched input 'training' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+syntax error at line 2: 
+A subset of machine learning is closely related to computational statistics, which focuses on making predictions using computers; but not all machine learning is statistical learning. The study of mathematical optimization delivers methods, theory and application domains to the field of machine learning. Data mining is a related field of study, focusing on exploratory data analysis through unsupervised learning. In its application across business problems, machine learning is also referred to as predictive analytics."" ;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ^
+token recognition error at: '" ;'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-07 23:09:26,220 [grpc-request-handler-7] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title "Machine_learning" , has txt "Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                                                                                                                                                       ^
+mismatched input 'training' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title "Machine_learning" , has txt "Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                                                                                                                                                       ^
+mismatched input 'training' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-07 23:11:34,082 [grpc-request-handler-4] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-07 23:11:46,794 [grpc-request-handler-7] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title "Machine_learning" , has txt "Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                                                                                                                                                       ^
+mismatched input 'training' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title "Machine_learning" , has txt "Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                                                                                                                                                       ^
+mismatched input 'training' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-07 23:13:18,531 [grpc-request-handler-3] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title "Machine_learning",  has txt "Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                                                                                                                                                       ^
+mismatched input 'training' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title "Machine_learning",  has txt "Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks.
+                                                                                                                                                                                                                                                                                                       ^
+mismatched input 'training' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-07 23:35:00,785 [grpc-request-handler-0] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title "Machine_learning",  has txt "Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks. • A subset of machine learning is closely related to computational statistics, which focuses on making predictions using computers; but not all machine learning is statistical learning. The study of mathematical optimization delivers methods, theory and application domains to the field of machine learning. Data mining is a related field of study, focusing on exploratory data analysis through unsupervised learning. In its application across business problems, machine learning is also referred to as predictive analytics." ;
+                                                                                                                                                                                                                                                                                                       ^
+mismatched input 'training' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $topic isa topic, has title "Machine_learning",  has txt "Machine learning (ML) is the study of computer algorithms that improve automatically through experience. It is seen as a subset of artificial intelligence. Machine learning algorithms build a model based on sample data, known as "training data", in order to make predictions or decisions without being explicitly programmed to do so. Machine learning algorithms are used in a wide variety of applications, such as email filtering and computer vision, where it is difficult or infeasible to develop conventional algorithms to perform the needed tasks. • A subset of machine learning is closely related to computational statistics, which focuses on making predictions using computers; but not all machine learning is statistical learning. The study of mathematical optimization delivers methods, theory and application domains to the field of machine learning. Data mining is a related field of study, focusing on exploratory data analysis through unsupervised learning. In its application across business problems, machine learning is also referred to as predictive analytics." ;
+                                                                                                                                                                                                                                                                                                       ^
+mismatched input 'training' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-08 00:40:45,235 [grpc-request-handler-1] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.TransactionException: Keyspace name is invalid: []. Keyspace name cannot start with a number, and can only contain maximum 48 characters of lower case, alphanumeric and underscore characters.
+	at grakn.core.kb.server.exception.TransactionException.create(TransactionException.java:49)
+	at grakn.core.kb.server.exception.TransactionException.invalidKeyspaceName(TransactionException.java:101)
+	at grakn.core.server.keyspace.KeyspaceImpl.<init>(KeyspaceImpl.java:43)
+	at grakn.core.server.rpc.ServerOpenRequest.open(ServerOpenRequest.java:39)
+	at grakn.core.server.rpc.SessionService.open(SessionService.java:122)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:339)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-08 01:11:07,173 [grpc-request-handler-1] ERROR g.core.server.rpc.KeyspaceService - Exception during keyspace deletion.
+java.lang.RuntimeException: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:85)
+	at grakn.core.server.keyspace.KeyspaceManager.delete(KeyspaceManager.java:60)
+	at grakn.core.server.rpc.KeyspaceService.delete(KeyspaceService.java:60)
+	at grakn.protocol.keyspace.KeyspaceServiceGrpc$MethodHandlers.invoke(KeyspaceServiceGrpc.java:281)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at com.datastax.oss.driver.api.core.DriverTimeoutException.copy(DriverTimeoutException.java:34)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:53)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:30)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession.execute(DefaultSession.java:208)
+	at com.datastax.oss.driver.api.core.CqlSession.execute(CqlSession.java:51)
+	at grakn.core.graph.diskstorage.cql.CQLStoreManager.clearStorage(CQLStoreManager.java:363)
+	at grakn.core.graph.diskstorage.Backend.clearStorage(Backend.java:317)
+	at grakn.core.graph.core.JanusGraphFactory.drop(JanusGraphFactory.java:97)
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:83)
+	... 11 common frames omitted
+2020-11-08 01:13:04,238 [grpc-request-handler-6] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $p2 isa subtopic2, has title "Machine learning approaches", has txt $x ;  $p1 isa subtopic1, has title "Overview";  $p0 isa topic, has title "Machine_learning", has txt;  $r1 (level0: $p0, level1: $p1);  $r2 (level1: $p1, level2: $p2);get $x;
+                                                                                                                                                                               ^
+no viable alternative at input 'match  $p2 isa subtopic2, has title "Machine learning approaches", has txt $x ;  $p1 isa subtopic1, has title "Overview";  $p0 isa topic, has title "Machine_learning", has txt;'
+syntax error at line 1: 
+match  $p2 isa subtopic2, has title "Machine learning approaches", has txt $x ;  $p1 isa subtopic1, has title "Overview";  $p0 isa topic, has title "Machine_learning", has txt;  $r1 (level0: $p0, level1: $p1);  $r2 (level1: $p1, level2: $p2);get $x;
+                                                                                                                                                                               ^
+no viable alternative at input 'match  $p2 isa subtopic2, has title "Machine learning approaches", has txt $x ;  $p1 isa subtopic1, has title "Overview";  $p0 isa topic, has title "Machine_learning", has txt;'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $p2 isa subtopic2, has title "Machine learning approaches", has txt $x ;  $p1 isa subtopic1, has title "Overview";  $p0 isa topic, has title "Machine_learning", has txt;  $r1 (level0: $p0, level1: $p1);  $r2 (level1: $p1, level2: $p2);get $x;
+                                                                                                                                                                               ^
+no viable alternative at input 'match  $p2 isa subtopic2, has title "Machine learning approaches", has txt $x ;  $p1 isa subtopic1, has title "Overview";  $p0 isa topic, has title "Machine_learning", has txt;'
+syntax error at line 1: 
+match  $p2 isa subtopic2, has title "Machine learning approaches", has txt $x ;  $p1 isa subtopic1, has title "Overview";  $p0 isa topic, has title "Machine_learning", has txt;  $r1 (level0: $p0, level1: $p1);  $r2 (level1: $p1, level2: $p2);get $x;
+                                                                                                                                                                               ^
+no viable alternative at input 'match  $p2 isa subtopic2, has title "Machine learning approaches", has txt $x ;  $p1 isa subtopic1, has title "Overview";  $p0 isa topic, has title "Machine_learning", has txt;'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-08 15:54:31,200 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2020-11-08 15:54:35,110 [main] INFO  grakn.core.server.Grakn - Grakn started in 3.859 s
