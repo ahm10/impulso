@@ -2137,3 +2137,147 @@ no viable alternative at input 'match  $p2 isa subtopic2, has title "Machine lea
 	... 3 common frames omitted
 2020-11-08 15:54:31,200 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
 2020-11-08 15:54:35,110 [main] INFO  grakn.core.server.Grakn - Grakn started in 3.859 s
+2020-11-09 16:49:36,338 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2020-11-09 16:49:41,383 [main] INFO  grakn.core.server.Grakn - Grakn started in 4.844 s
+2020-11-09 17:47:01,360 [grpc-request-handler-0] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+Executing Query:
+^
+no viable alternative at input 'Executing'
+syntax error at line 1: 
+Executing Query:
+^
+mismatched input 'Executing' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+Executing Query:
+^
+no viable alternative at input 'Executing'
+syntax error at line 1: 
+Executing Query:
+^
+mismatched input 'Executing' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-09 17:51:51,381 [grpc-request-handler-2] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 3: 
+  $p0 isa topic, has title $x";
+                             ^
+token recognition error at: '";\n\nget $x; offset 0; limit 30;'
+syntax error at line 5: 
+get $x; offset 0; limit 30;
+                           ^
+no viable alternative at input 'match\n\n  $p0 isa topic, has title $x'
+syntax error at line 5: 
+get $x; offset 0; limit 30;
+                           ^
+no viable alternative at input 'match\n\n  $p0 isa topic, has title $x'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 3: 
+  $p0 isa topic, has title $x";
+                             ^
+token recognition error at: '";\n\nget $x; offset 0; limit 30;'
+syntax error at line 5: 
+get $x; offset 0; limit 30;
+                           ^
+no viable alternative at input 'match\n\n  $p0 isa topic, has title $x'
+syntax error at line 5: 
+get $x; offset 0; limit 30;
+                           ^
+no viable alternative at input 'match\n\n  $p0 isa topic, has title $x'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-09 17:52:10,413 [grpc-request-handler-4] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+ match $p0 isa topic, has title $x";
+                                  ^
+token recognition error at: '";\nget $x; offset 0; limit 30;'
+syntax error at line 2: 
+get $x; offset 0; limit 30;
+                           ^
+no viable alternative at input 'match $p0 isa topic, has title $x'
+syntax error at line 2: 
+get $x; offset 0; limit 30;
+                           ^
+no viable alternative at input 'match $p0 isa topic, has title $x'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+ match $p0 isa topic, has title $x";
+                                  ^
+token recognition error at: '";\nget $x; offset 0; limit 30;'
+syntax error at line 2: 
+get $x; offset 0; limit 30;
+                           ^
+no viable alternative at input 'match $p0 isa topic, has title $x'
+syntax error at line 2: 
+get $x; offset 0; limit 30;
+                           ^
+no viable alternative at input 'match $p0 isa topic, has title $x'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted

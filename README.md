@@ -51,6 +51,28 @@
 ![View_grakn_schema](./grakn/zeitlabs/grakn_schema.PNG)
 
 
+#### Entities : 
+
+The headers hierarchy,
+
+- topic, 
+- subtopic1, 
+- subtopic2, 
+- subtopic3
+
+#### Relations : 
+- rel1 ( connects topic and subtopic1)
+- rel2 ( connects subtopic1 and subtopic2)
+- rel3 ( connects subtopic2 and subtopic3)
+
+#### Attributes
+- title
+- text
+
+Each entity has these attributes. 
+
+In Grakn all of the above are collective referred to as concepts. 
+
 3. Ingest the data. :heavy_check_mark:
 
 - Folder : /zeitlabs
