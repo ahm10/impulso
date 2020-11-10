@@ -71,7 +71,7 @@ The headers hierarchy,
 
 Each entity has these attributes. 
 
-In Grakn all of the above are collective referred to as concepts. 
+In Grakn all of the above are collectivly referred to as *concepts*. Hence it is also called a concept graph. 
 
 3. Ingest the data. :heavy_check_mark:
 
