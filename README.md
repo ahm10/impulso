@@ -16,10 +16,10 @@ With this, all scripts can be run at the root level.
 
 ## Data dictionary (output JSON):   
 
-1. URL : URL of the article
-1. tag : the topic of article
-1. sections : levelled list of sections
-1. full_text : entire text body
+1. `URL` : URL of the article
+1. `tag` : the topic of article
+1. `sections` : levelled list of sections
+1. `full_text` : entire text body
 
 
 ## Steps 
