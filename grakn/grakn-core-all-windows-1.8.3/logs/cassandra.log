@@ -4970,3 +4970,4 @@ INFO  [main] 2020-12-10 13:26:15,060 Server.java:155 - Using Netty Version: [net
 INFO  [main] 2020-12-10 13:26:15,062 Server.java:156 - Starting listening for CQL clients on localhost/127.0.0.1:9042 (unencrypted)...
 INFO  [main] 2020-12-10 13:26:15,752 CassandraDaemon.java:529 - Not starting RPC server as requested. Use JMX (StorageService->startRPCServer()) or nodetool (enablethrift) to start it
 INFO  [IndexSummaryManager:1] 2020-12-10 14:26:10,622 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [IndexSummaryManager:1] 2020-12-10 15:26:10,645 IndexSummaryRedistribution.java:77 - Redistributing index summaries

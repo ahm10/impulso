@@ -35,7 +35,7 @@ To scrap data from wikipedia based on list of topics or csv (to be uncommented).
  $ python ./build_wiki_data/scripts/1_scrape.py
 ```
 or
-```python
+```ruby
  $ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 ```
 
