@@ -99,7 +99,7 @@ and then run the schema file,
 ```
 e.g.
 ```ruby 
-$ \grakn console --keyspace impulso2 --file ../../build_KB/scripts/1_schema.gql
+$ .\grakn console --keyspace impulso2 --file ../../build_KB/scripts/1_schema.gql
 ```
 
 #### Current Schema : :heavy_check_mark:
@@ -171,6 +171,22 @@ $ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 
 1. RASA training data generation for correct intent classification
 2. RASA grakn integration : write new entity extraction and data fetch query functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Medium data collection and organization 
