@@ -4,11 +4,11 @@
 ![Folder structure](./folder_structure.PNG)
 
 
-
-
 # Configurations
 
-At the root level, the *config.ini* is defined. This file contains the folder structure and data storage paths. 
+At the root level, the *config.ini* is defined. 
+
+This file contains the folder structure and data storage paths. 
 
 With this, all scripts can be run at the root level. 
 
@@ -31,13 +31,13 @@ With this, all scripts can be run at the root level.
 To scrap data from wikipedia based on list of topics or csv (to be uncommented).
 
 #### Run from the root
-
-> python ./build_wiki_data/scripts/1_scrape.py
-
+```
+ python ./build_wiki_data/scripts/1_scrape.py
+```
 or
-
-> python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
-
+```
+ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
+```
 
 
 
@@ -48,13 +48,13 @@ or
 To parse and clean the scrapped wikipedia content.
 
 #### Run from the root
-
-> python ./build_wiki_data/scripts/1_parse.py
-
+```
+python ./build_wiki_data/scripts/1_parse.py
+```
 or
-
-> python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
-
+```
+python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
+```
 ### 3. Structure the data into tree :heavy_check_mark:
 
 #### Objective: 
@@ -62,13 +62,13 @@ or
 To construct structured tree from wiki topics and content.
 
 #### Run from the root
-
-> python ./build_wiki_data/scripts/3_structure.py
-
+```
+python ./build_wiki_data/scripts/3_structure.py
+```
 or
-
-> python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
-
+```
+python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
+```
 
 
 # Grakn Knowledge base design :heavy_check_mark:
@@ -89,16 +89,18 @@ To define schema for the keyspace impulso [finalized as on 08 Dec 2020.]
 #### Run script 
 
 :push_pin: Inside Grakn folder ( ensuring access grakn server and console)
- 
-> [RELATIVE PATH OF GRAKN SERVER BASH e.g. .\]grakn server start 
 
+```
+[RELATIVE PATH OF GRAKN SERVER BASH e.g. .\]grakn server start 
+```
 and then run the schema file, 
-
-> [RELATIVE PATH OF GRAKN CONSOLE BASH e.g. .\]grakn console --keyspace [KEYSPACE NAME] --file [RELATIVE PATH TO SCHEMA]
-
-e.g. 
-> .\grakn console --keyspace impulso2 --file ../../build_KB/scripts/1_schema.gql
-
+```
+[RELATIVE PATH OF GRAKN CONSOLE BASH e.g. .\]grakn console --keyspace [KEYSPACE NAME] --file [RELATIVE PATH TO SCHEMA]
+```
+e.g.
+``` 
+\grakn console --keyspace impulso2 --file ../../build_KB/scripts/1_schema.gql
+```
 
 #### Current Schema : :heavy_check_mark:
 
@@ -136,13 +138,13 @@ In Grakn all of the above are collectivly referred to as *concepts*. Hence it is
 - Custom functions required are scripted under grakn_utils.py.
 
 #### Run from the root
-
-> python ./build_KB/scripts/2_data_ingestion.py
-
+```
+python ./build_KB/scripts/2_data_ingestion.py
+```
 or
-
-> python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
-
+```
+python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
+```
 #### Input  : 
 For each topic, there should be a file created in parsed_data and structured_data folders. 
 
@@ -155,18 +157,23 @@ For each topic, there should be a file created in parsed_data and structured_dat
 Check the data ingestion by testing view queries. 
 
 #### Run from the root
-
-> python ./build_KB/scripts/3_view.py
-
+```
+python ./build_KB/scripts/3_view.py
+```
 or 
+```
+python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
+```
+![View_grakn_data](./test_q.PNG)
 
-> python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 
-![View_grakn_data](./test_q.png)
+# Next steps : :construction:
+
+1. RASA training data generation for correct intent classification
+2. RASA grakn integration : write new entity extraction and data fetch query functions
 
 
-
-# Medium_Scraper  
+# Medium data collection and organization :construction:
 
 ## Data dictionary (output columns):
 
@@ -226,24 +233,16 @@ Please refer : contents_op_Medium_scrape_urls_multi-tag _clean_2016-2020.csv [cs
 -You can also refer instance setup file - example in Medium_scrape_text_and_image folder.
 
 
-# Neo4j-wiki
+## Medium - preprocess
 
-1. Neo4j sandbox is implemented.
-
-2. Exported graph and JSON are available for review.
-
-3. It is command line interface like SQL. So do not have instructions listed at the moment.
-
-# Medium - preprocess
-
-## Extract unique tags - steps 
+### Extract unique tags - steps 
 
 - :file_folder:Medium_data_preprocess
 - Script to run: unique_tags.py
 - Settings in script: The script reads content files from the adjacent "data" folder. So please make sure all content files you want to process are placed in there. 
 - Output data: All unique tags with their total occurances have been logged into a CSV file in "op" folder.
 
-## Article content preprocessing :heavy_check_mark:
+### Article content preprocessing 
 This includes- 
 1. Cleaning,
 
