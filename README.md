@@ -12,7 +12,7 @@ This file contains the folder structure and data storage paths.
 
 With this, all scripts can be run at the root level. 
 
-# Wiki Scrapping and graph tree structure construction
+# Wiki Scrapping and graph tree structure construction :heavy_check_mark:
 
 ## Data dictionary (output JSON):   
 
@@ -76,11 +76,11 @@ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 ## Steps
 - :file_folder:grakn
 
-### 1. Download and install Grakn console and Grakn workbase 
+### 1. Download and install Grakn console and Grakn workbase :heavy_check_mark:
 
 *(The entire setup for windows is ready within the folder so no extra installation should be required)*
 
-#### 2. Initiate the Grakn console and define a keyspace with schema file.
+#### 2. Initiate the Grakn console and define a keyspace with schema file. :heavy_check_mark:
 
 #### Objective: 
 
