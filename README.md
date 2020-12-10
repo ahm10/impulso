@@ -31,12 +31,12 @@ With this, all scripts can be run at the root level.
 To scrap data from wikipedia based on list of topics or csv (to be uncommented).
 
 #### Run from the root
-```
- python ./build_wiki_data/scripts/1_scrape.py
+```python
+ $ python ./build_wiki_data/scripts/1_scrape.py
 ```
 or
-```
- python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
+```python
+ $ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 ```
 
 
@@ -91,7 +91,7 @@ To define schema for the keyspace impulso [finalized as on 08 Dec 2020.]
 :point_right: Inside Grakn folder ( ensuring access grakn server and console)
 
 ```
-[RELATIVE PATH OF GRAKN SERVER BASH e.g. .\]grakn server start 
+[RELATIVE PATH OF GRAKN SERVER BASH e.g. .\] grakn server start 
 ```
 and then run the schema file, 
 ```
