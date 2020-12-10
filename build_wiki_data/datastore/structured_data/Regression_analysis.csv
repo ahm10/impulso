@@ -1,0 +1,17 @@
+,child,parent,color,rel_level
+0,History,Regression_analysis,red,1
+1,Regression model,Regression_analysis,red,1
+2,Underlying assumptions,Regression_analysis,red,1
+3,Linear regression,Regression_analysis,red,1
+4,Nonlinear regression,Regression_analysis,red,1
+5,Interpolation and extrapolation,Regression_analysis,red,1
+6,Power and sample size calculations,Regression_analysis,red,1
+7,Other methods,Regression_analysis,red,1
+8,Software,Regression_analysis,red,1
+9,See also,Regression_analysis,red,1
+10,References,Regression_analysis,red,1
+11,Further reading,Regression_analysis,red,1
+12,External links,Regression_analysis,red,1
+13,General linear model,Linear regression,blue,2
+14,Diagnostics,Linear regression,blue,2
+15,Limited dependent variables,Linear regression,blue,2

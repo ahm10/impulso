@@ -31,7 +31,7 @@ With this, all scripts can be run at the root level.
 To scrap data from wikipedia based on list of topics or csv (to be uncommented).
 
 #### Run from the root
-```python
+```ruby
  $ python ./build_wiki_data/scripts/1_scrape.py
 ```
 or
@@ -48,12 +48,12 @@ or
 To parse and clean the scrapped wikipedia content.
 
 #### Run from the root
-```
-python ./build_wiki_data/scripts/1_parse.py
+```ruby
+$ python ./build_wiki_data/scripts/1_parse.py
 ```
 or
-```
-python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
+```ruby
+$ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 ```
 ### 3. Structure the data into tree :heavy_check_mark:
 
@@ -62,12 +62,12 @@ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 To construct structured tree from wiki topics and content.
 
 #### Run from the root
-```
-python ./build_wiki_data/scripts/3_structure.py
+```ruby
+$ python ./build_wiki_data/scripts/3_structure.py
 ```
 or
-```
-python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
+```ruby
+$ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 ```
 
 
@@ -90,16 +90,16 @@ To define schema for the keyspace impulso [finalized as on 08 Dec 2020.]
 
 :point_right: Inside Grakn folder ( ensuring access grakn server and console)
 
-```
-[RELATIVE PATH OF GRAKN SERVER BASH e.g. .\] grakn server start 
+```ruby
+$ [RELATIVE PATH OF GRAKN SERVER BASH e.g. .\] grakn server start 
 ```
 and then run the schema file, 
 ```
 [RELATIVE PATH OF GRAKN CONSOLE BASH e.g. .\]grakn console --keyspace [KEYSPACE NAME] --file [RELATIVE PATH TO SCHEMA]
-```
+```ruby
 e.g.
 ``` 
-\grakn console --keyspace impulso2 --file ../../build_KB/scripts/1_schema.gql
+$ \grakn console --keyspace impulso2 --file ../../build_KB/scripts/1_schema.gql
 ```
 
 #### Current Schema : :heavy_check_mark:
@@ -138,12 +138,12 @@ In Grakn all of the above are collectivly referred to as *concepts*. Hence it is
 - Custom functions required are scripted under grakn_utils.py.
 
 #### Run from the root
-```
-python ./build_KB/scripts/2_data_ingestion.py
+```ruby
+$ python ./build_KB/scripts/2_data_ingestion.py
 ```
 or
-```
-python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
+```ruby
+$ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 ```
 #### Input  : 
 For each topic, there should be a file created in parsed_data and structured_data folders. 
@@ -157,12 +157,12 @@ For each topic, there should be a file created in parsed_data and structured_dat
 Check the data ingestion by testing view queries. 
 
 #### Run from the root
-```
-python ./build_KB/scripts/3_view.py
+```ruby
+$ python ./build_KB/scripts/3_view.py
 ```
 or 
-```
-python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
+```ruby
+$ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 ```
 ![View_grakn_data](./test_q.PNG)
 
