@@ -88,7 +88,7 @@ To define schema for the keyspace impulso [finalized as on 08 Dec 2020.]
 
 #### Run script 
 
-:push_pin: Inside Grakn folder ( ensuring access grakn server and console)
+:point_right: Inside Grakn folder ( ensuring access grakn server and console)
 
 ```
 [RELATIVE PATH OF GRAKN SERVER BASH e.g. .\]grakn server start 
@@ -173,7 +173,7 @@ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 2. RASA grakn integration : write new entity extraction and data fetch query functions
 
 
-# Medium data collection and organization :construction:
+# Medium data collection and organization 
 
 ## Data dictionary (output columns):
 
