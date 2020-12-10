@@ -2281,3 +2281,1597 @@ no viable alternative at input 'match $p0 isa topic, has title $x'
 	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	... 3 common frames omitted
+2020-11-12 18:10:25,652 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2020-11-12 18:10:29,764 [main] INFO  grakn.core.server.Grakn - Grakn started in 3.830 s
+2020-11-12 18:11:33,271 [grpc-request-handler-5] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-12 18:12:10,379 [grpc-request-handler-4] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-12 18:27:12,123 [main] ERROR grakn.core.server.Grakn - Uncaught exception at thread [Could not reach any contact point, make sure you've provided valid addresses (showing first 1, use getErrors() for more: Node(endPoint=/127.0.0.1:9042, hostId=null, hashCode=113368cc): com.datastax.oss.driver.api.core.DriverTimeoutException: [s0|control|id: 0xaec66e6c, L:/127.0.0.1:64551 - R:/127.0.0.1:9042] init query OPTIONS: timed out after 500 ms)]
+com.datastax.oss.driver.api.core.AllNodesFailedException: Could not reach any contact point, make sure you've provided valid addresses (showing first 1, use getErrors() for more: Node(endPoint=/127.0.0.1:9042, hostId=null, hashCode=113368cc): com.datastax.oss.driver.api.core.DriverTimeoutException: [s0|control|id: 0xaec66e6c, L:/127.0.0.1:64551 - R:/127.0.0.1:9042] init query OPTIONS: timed out after 500 ms)
+	at com.datastax.oss.driver.api.core.AllNodesFailedException.copy(AllNodesFailedException.java:95)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.api.core.session.SessionBuilder.build(SessionBuilder.java:501)
+	at grakn.core.server.ServerFactory.createServer(ServerFactory.java:78)
+	at grakn.core.server.Grakn.main(Grakn.java:66)
+2020-11-12 18:27:17,280 [main] ERROR grakn.core.daemon.GraknDaemon - An error has occurred during boot-up. Please run 'grakn server status' or check the logs located under the 'logs' directory.
+grakn.core.daemon.exception.GraknDaemonException: Process exited with code '0': 'Uncaught exception at thread [Could not reach any contact point, make sure you've provided valid addresses (showing first 1, use getErrors() for more: Node(endPoint=/127.0.0.1:9042, hostId=null, hashCode=113368cc): com.datastax.oss.driver.api.core.DriverTimeoutException: [s0|control|id: 0xaec66e6c, L:/127.0.0.1:64551 - R:/127.0.0.1:9042] init query OPTIONS: timed out after 500 ms)]
+'
+	at grakn.core.daemon.executor.Server.start(Server.java:142)
+	at grakn.core.daemon.executor.Server.startIfNotRunning(Server.java:80)
+	at grakn.core.daemon.GraknDaemon.serverStart(GraknDaemon.java:224)
+	at grakn.core.daemon.GraknDaemon.run(GraknDaemon.java:166)
+	at grakn.core.daemon.GraknDaemon.main(GraknDaemon.java:85)
+2020-11-12 18:28:08,896 [main] INFO  grakn.core.server.Grakn - Grakn started in 1.622 s
+2020-11-12 18:36:55,881 [grpc-request-handler-7] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-13 00:50:43,762 [grpc-request-handler-6] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-13 00:50:43,770 [grpc-request-handler-6] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-13 00:50:43,771 [grpc-request-handler-6] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-13 00:50:43,772 [grpc-request-handler-6] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-13 00:50:43,774 [grpc-request-handler-6] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-14 16:08:30,991 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2020-11-14 16:08:34,196 [main] INFO  grakn.core.server.Grakn - Grakn started in 2.892 s
+2020-11-14 16:16:44,189 [main] INFO  grakn.core.server.Grakn - Grakn started in 1.732 s
+2020-11-14 16:30:10,464 [grpc-request-handler-3] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $account isa account, has balance 267.69, has account-number "DE82444435329779109646", has account-type "credit", has opening-date 2019-01-16T10:49:31.641721;
+                                                                                                                                                                 ^
+mismatched input '721' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $account isa account, has balance 267.69, has account-number "DE82444435329779109646", has account-type "credit", has opening-date 2019-01-16T10:49:31.641721;
+                                                                                                                                                                 ^
+mismatched input '721' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-14 16:34:45,333 [grpc-request-handler-7] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [person] that owns the key [catalinasargent@googlemail.com] of type [email]. 
+
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [person] that owns the key [catalinasargent@googlemail.com] of type [email]. 
+
+	at grakn.core.kb.server.exception.InvalidKBException.create(InvalidKBException.java:51)
+	at grakn.core.kb.server.exception.InvalidKBException.validationErrors(InvalidKBException.java:63)
+	at grakn.core.server.session.TransactionImpl.validateGraph(TransactionImpl.java:1213)
+	at grakn.core.server.session.TransactionImpl.persistInternal(TransactionImpl.java:228)
+	at grakn.core.server.session.TransactionImpl.commitInternal(TransactionImpl.java:219)
+	at grakn.core.server.session.TransactionImpl.commit(TransactionImpl.java:1175)
+	at grakn.core.server.rpc.SessionService$TransactionListener.commit(SessionService.java:353)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:234)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-14 16:36:50,135 [grpc-request-handler-2] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [person] that owns the key [catalinasargent@googlemail.com] of type [email]. 
+
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [person] that owns the key [catalinasargent@googlemail.com] of type [email]. 
+
+	at grakn.core.kb.server.exception.InvalidKBException.create(InvalidKBException.java:51)
+	at grakn.core.kb.server.exception.InvalidKBException.validationErrors(InvalidKBException.java:63)
+	at grakn.core.server.session.TransactionImpl.validateGraph(TransactionImpl.java:1213)
+	at grakn.core.server.session.TransactionImpl.persistInternal(TransactionImpl.java:228)
+	at grakn.core.server.session.TransactionImpl.commitInternal(TransactionImpl.java:219)
+	at grakn.core.server.session.TransactionImpl.commit(TransactionImpl.java:1175)
+	at grakn.core.server.rpc.SessionService$TransactionListener.commit(SessionService.java:353)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:234)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-14 16:37:55,728 [grpc-request-handler-3] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [person] that owns the key [catalinasargent@googlemail.com] of type [email]. 
+
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [person] that owns the key [catalinasargent@googlemail.com] of type [email]. 
+
+	at grakn.core.kb.server.exception.InvalidKBException.create(InvalidKBException.java:51)
+	at grakn.core.kb.server.exception.InvalidKBException.validationErrors(InvalidKBException.java:63)
+	at grakn.core.server.session.TransactionImpl.validateGraph(TransactionImpl.java:1213)
+	at grakn.core.server.session.TransactionImpl.persistInternal(TransactionImpl.java:228)
+	at grakn.core.server.session.TransactionImpl.commitInternal(TransactionImpl.java:219)
+	at grakn.core.server.session.TransactionImpl.commit(TransactionImpl.java:1175)
+	at grakn.core.server.rpc.SessionService$TransactionListener.commit(SessionService.java:353)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:234)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-14 16:39:22,065 [grpc-request-handler-4] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [person] that owns the key [catalinasargent@googlemail.com] of type [email]. 
+
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [person] that owns the key [catalinasargent@googlemail.com] of type [email]. 
+
+	at grakn.core.kb.server.exception.InvalidKBException.create(InvalidKBException.java:51)
+	at grakn.core.kb.server.exception.InvalidKBException.validationErrors(InvalidKBException.java:63)
+	at grakn.core.server.session.TransactionImpl.validateGraph(TransactionImpl.java:1213)
+	at grakn.core.server.session.TransactionImpl.persistInternal(TransactionImpl.java:228)
+	at grakn.core.server.session.TransactionImpl.commitInternal(TransactionImpl.java:219)
+	at grakn.core.server.session.TransactionImpl.commit(TransactionImpl.java:1175)
+	at grakn.core.server.rpc.SessionService$TransactionListener.commit(SessionService.java:353)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:234)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-14 16:42:24,390 [grpc-request-handler-0] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $account isa account, has balance 267.69, has account-number "DE82444435329779109646", has account-type "credit", has opening-date 2019-01-16T10:49:31.641721;
+                                                                                                                                                                 ^
+mismatched input '721' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $account isa account, has balance 267.69, has account-number "DE82444435329779109646", has account-type "credit", has opening-date 2019-01-16T10:49:31.641721;
+                                                                                                                                                                 ^
+mismatched input '721' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-14 16:44:41,793 [grpc-request-handler-7] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.TransactionException: Keyspace name is invalid: []. Keyspace name cannot start with a number, and can only contain maximum 48 characters of lower case, alphanumeric and underscore characters.
+	at grakn.core.kb.server.exception.TransactionException.create(TransactionException.java:49)
+	at grakn.core.kb.server.exception.TransactionException.invalidKeyspaceName(TransactionException.java:101)
+	at grakn.core.server.keyspace.KeyspaceImpl.<init>(KeyspaceImpl.java:43)
+	at grakn.core.server.rpc.ServerOpenRequest.open(ServerOpenRequest.java:39)
+	at grakn.core.server.rpc.SessionService.open(SessionService.java:122)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:339)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-14 16:46:37,558 [grpc-request-handler-1] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $account isa account, has balance 267.69, has account-number "DE82444435329779109646", has account-type "credit", has opening-date 2019-01-16T10:49:31.641721;
+                                                                                                                                                                 ^
+mismatched input '721' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+insert $account isa account, has balance 267.69, has account-number "DE82444435329779109646", has account-type "credit", has opening-date 2019-01-16T10:49:31.641721;
+                                                                                                                                                                 ^
+mismatched input '721' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-14 16:54:16,230 [grpc-request-handler-0] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [person] that owns the key [catalinasargent@googlemail.com] of type [email]. 
+
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [person] that owns the key [catalinasargent@googlemail.com] of type [email]. 
+
+	at grakn.core.kb.server.exception.InvalidKBException.create(InvalidKBException.java:51)
+	at grakn.core.kb.server.exception.InvalidKBException.validationErrors(InvalidKBException.java:63)
+	at grakn.core.server.session.TransactionImpl.validateGraph(TransactionImpl.java:1213)
+	at grakn.core.server.session.TransactionImpl.persistInternal(TransactionImpl.java:228)
+	at grakn.core.server.session.TransactionImpl.commitInternal(TransactionImpl.java:219)
+	at grakn.core.server.session.TransactionImpl.commit(TransactionImpl.java:1175)
+	at grakn.core.server.rpc.SessionService$TransactionListener.commit(SessionService.java:353)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:234)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-14 17:04:13,524 [grpc-request-handler-3] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [person] that owns the key [catalinasargent@googlemail.com] of type [email]. 
+
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [person] that owns the key [catalinasargent@googlemail.com] of type [email]. 
+
+	at grakn.core.kb.server.exception.InvalidKBException.create(InvalidKBException.java:51)
+	at grakn.core.kb.server.exception.InvalidKBException.validationErrors(InvalidKBException.java:63)
+	at grakn.core.server.session.TransactionImpl.validateGraph(TransactionImpl.java:1213)
+	at grakn.core.server.session.TransactionImpl.persistInternal(TransactionImpl.java:228)
+	at grakn.core.server.session.TransactionImpl.commitInternal(TransactionImpl.java:219)
+	at grakn.core.server.session.TransactionImpl.commit(TransactionImpl.java:1175)
+	at grakn.core.server.rpc.SessionService$TransactionListener.commit(SessionService.java:353)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:234)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-14 17:05:03,484 [grpc-request-handler-1] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [person] that owns the key [catalinasargent@googlemail.com] of type [email]. 
+
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [person] that owns the key [catalinasargent@googlemail.com] of type [email]. 
+
+	at grakn.core.kb.server.exception.InvalidKBException.create(InvalidKBException.java:51)
+	at grakn.core.kb.server.exception.InvalidKBException.validationErrors(InvalidKBException.java:63)
+	at grakn.core.server.session.TransactionImpl.validateGraph(TransactionImpl.java:1213)
+	at grakn.core.server.session.TransactionImpl.persistInternal(TransactionImpl.java:228)
+	at grakn.core.server.session.TransactionImpl.commitInternal(TransactionImpl.java:219)
+	at grakn.core.server.session.TransactionImpl.commit(TransactionImpl.java:1175)
+	at grakn.core.server.rpc.SessionService$TransactionListener.commit(SessionService.java:353)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:234)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-14 17:05:48,522 [grpc-request-handler-7] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [person] that owns the key [catalinasargent@googlemail.com] of type [email]. 
+
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [person] that owns the key [catalinasargent@googlemail.com] of type [email]. 
+
+	at grakn.core.kb.server.exception.InvalidKBException.create(InvalidKBException.java:51)
+	at grakn.core.kb.server.exception.InvalidKBException.validationErrors(InvalidKBException.java:63)
+	at grakn.core.server.session.TransactionImpl.validateGraph(TransactionImpl.java:1213)
+	at grakn.core.server.session.TransactionImpl.persistInternal(TransactionImpl.java:228)
+	at grakn.core.server.session.TransactionImpl.commitInternal(TransactionImpl.java:219)
+	at grakn.core.server.session.TransactionImpl.commit(TransactionImpl.java:1175)
+	at grakn.core.server.rpc.SessionService$TransactionListener.commit(SessionService.java:353)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:234)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-14 17:08:01,291 [grpc-request-handler-7] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [person] that owns the key [catalinasargent@googlemail.com] of type [email]. 
+
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [person] that owns the key [catalinasargent@googlemail.com] of type [email]. 
+
+	at grakn.core.kb.server.exception.InvalidKBException.create(InvalidKBException.java:51)
+	at grakn.core.kb.server.exception.InvalidKBException.validationErrors(InvalidKBException.java:63)
+	at grakn.core.server.session.TransactionImpl.validateGraph(TransactionImpl.java:1213)
+	at grakn.core.server.session.TransactionImpl.persistInternal(TransactionImpl.java:228)
+	at grakn.core.server.session.TransactionImpl.commitInternal(TransactionImpl.java:219)
+	at grakn.core.server.session.TransactionImpl.commit(TransactionImpl.java:1175)
+	at grakn.core.server.rpc.SessionService$TransactionListener.commit(SessionService.java:353)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:234)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-17 14:40:01,675 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2020-11-17 14:40:05,732 [main] INFO  grakn.core.server.Grakn - Grakn started in 3.644 s
+2020-11-17 15:04:20,377 [grpc-request-handler-2] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [transaction] that owns the key [9] of type [identifier]. 
+
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.server.exception.InvalidKBException: A structural validation error has occurred. Please correct the [`1`] errors found. 
+There is more than one thing of type [transaction] that owns the key [9] of type [identifier]. 
+
+	at grakn.core.kb.server.exception.InvalidKBException.create(InvalidKBException.java:51)
+	at grakn.core.kb.server.exception.InvalidKBException.validationErrors(InvalidKBException.java:63)
+	at grakn.core.server.session.TransactionImpl.validateGraph(TransactionImpl.java:1213)
+	at grakn.core.server.session.TransactionImpl.persistInternal(TransactionImpl.java:228)
+	at grakn.core.server.session.TransactionImpl.commitInternal(TransactionImpl.java:219)
+	at grakn.core.server.session.TransactionImpl.commit(TransactionImpl.java:1175)
+	at grakn.core.server.rpc.SessionService$TransactionListener.commit(SessionService.java:353)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:234)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-17 15:21:11,304 [grpc-request-handler-4] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.SessionException: The client session with session ID [banking7671439a-5c9d-4d00-a76f-84c7f34fa8ac] was not found. Create a new session to interact with the graph.
+	at grakn.core.kb.server.exception.SessionException.sessionNotFound(SessionException.java:36)
+	at grakn.core.server.rpc.SessionService.close(SessionService.java:139)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:343)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-17 15:21:11,326 [grpc-request-handler-2] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.TransactionException: Keyspace name is invalid: []. Keyspace name cannot start with a number, and can only contain maximum 48 characters of lower case, alphanumeric and underscore characters.
+	at grakn.core.kb.server.exception.TransactionException.create(TransactionException.java:49)
+	at grakn.core.kb.server.exception.TransactionException.invalidKeyspaceName(TransactionException.java:101)
+	at grakn.core.server.keyspace.KeyspaceImpl.<init>(KeyspaceImpl.java:43)
+	at grakn.core.server.rpc.ServerOpenRequest.open(ServerOpenRequest.java:39)
+	at grakn.core.server.rpc.SessionService.open(SessionService.java:122)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:339)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-20 14:53:25,457 [main] INFO  grakn.core.server.Grakn - Grakn started in 4.782 s
+2020-11-23 20:34:55,727 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2020-11-23 20:34:59,494 [main] INFO  grakn.core.server.Grakn - Grakn started in 3.728 s
+2020-11-26 23:52:16,590 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2020-11-26 23:52:22,292 [main] INFO  grakn.core.server.Grakn - Grakn started in 5.648 s
+2020-11-26 23:54:49,292 [main] INFO  grakn.core.server.Grakn - Grakn started in 2.203 s
+2020-11-26 23:54:56,701 [grpc-request-handler-1] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.SessionException: The client session with session ID [phone_callsc7316bf7-2d83-45fe-b870-327b3048b8a8] was not found. Create a new session to interact with the graph.
+	at grakn.core.kb.server.exception.SessionException.sessionNotFound(SessionException.java:36)
+	at grakn.core.server.rpc.SessionService.close(SessionService.java:139)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:343)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-26 23:55:09,606 [grpc-request-handler-4] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.SessionException: The client session with session ID [phone_callsc7316bf7-2d83-45fe-b870-327b3048b8a8] was not found. Create a new session to interact with the graph.
+	at grakn.core.kb.server.exception.SessionException.sessionNotFound(SessionException.java:36)
+	at grakn.core.server.rpc.SessionService.close(SessionService.java:139)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:343)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-26 23:56:42,919 [grpc-request-handler-7] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.SessionException: The client session with session ID [phone_callsc7316bf7-2d83-45fe-b870-327b3048b8a8] was not found. Create a new session to interact with the graph.
+	at grakn.core.kb.server.exception.SessionException.sessionNotFound(SessionException.java:36)
+	at grakn.core.server.rpc.SessionService.close(SessionService.java:139)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:343)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-26 23:58:14,063 [grpc-request-handler-6] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: io.grpc.StatusRuntimeException: INVALID_ARGUMENT
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: io.grpc.StatusRuntimeException: INVALID_ARGUMENT
+	at grakn.core.server.rpc.ResponseBuilder.exception(ResponseBuilder.java:430)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:268)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-26 23:59:13,705 [grpc-request-handler-6] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $topic isa topic, has title "Machine_learning" has txt $x;get $txt;
+                                                      ^
+no viable alternative at input 'match  $topic isa topic, has title "Machine_learning" has'
+syntax error at line 1: 
+match  $topic isa topic, has title "Machine_learning" has txt $x;get $txt;
+                                                      ^
+no viable alternative at input 'match  $topic isa topic, has title "Machine_learning" has'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $topic isa topic, has title "Machine_learning" has txt $x;get $txt;
+                                                      ^
+no viable alternative at input 'match  $topic isa topic, has title "Machine_learning" has'
+syntax error at line 1: 
+match  $topic isa topic, has title "Machine_learning" has txt $x;get $txt;
+                                                      ^
+no viable alternative at input 'match  $topic isa topic, has title "Machine_learning" has'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-27 00:01:03,587 [grpc-request-handler-0] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.SessionException: The client session with session ID [phone_callsc7316bf7-2d83-45fe-b870-327b3048b8a8] was not found. Create a new session to interact with the graph.
+	at grakn.core.kb.server.exception.SessionException.sessionNotFound(SessionException.java:36)
+	at grakn.core.server.rpc.SessionService.close(SessionService.java:139)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:343)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-27 00:01:23,897 [grpc-request-handler-3] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.server.exception.SessionException: The client session with session ID [phone_callsc7316bf7-2d83-45fe-b870-327b3048b8a8] was not found. Create a new session to interact with the graph.
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.server.exception.SessionException: The client session with session ID [phone_callsc7316bf7-2d83-45fe-b870-327b3048b8a8] was not found. Create a new session to interact with the graph.
+	at grakn.core.kb.server.exception.SessionException.sessionNotFound(SessionException.java:36)
+	at grakn.core.server.rpc.SessionService$TransactionListener.open(SessionService.java:333)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:231)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-11-27 02:09:51,175 [grpc-request-handler-6] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.SessionException: The client session with session ID [phone_callsc7316bf7-2d83-45fe-b870-327b3048b8a8] was not found. Create a new session to interact with the graph.
+	at grakn.core.kb.server.exception.SessionException.sessionNotFound(SessionException.java:36)
+	at grakn.core.server.rpc.SessionService.close(SessionService.java:139)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:343)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-27 03:19:25,624 [grpc-request-handler-1] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: label 'entity-type-mapping' not found
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: label 'entity-type-mapping' not found
+2020-11-27 03:47:12,928 [grpc-request-handler-1] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-27 13:00:31,884 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2020-11-27 13:00:37,391 [main] INFO  grakn.core.server.Grakn - Grakn started in 5.353 s
+2020-11-27 13:30:56,410 [grpc-request-handler-2] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-11-28 17:04:41,941 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2020-11-28 17:04:46,452 [main] INFO  grakn.core.server.Grakn - Grakn started in 4.260 s
+2020-12-01 18:10:33,573 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2020-12-01 18:10:37,077 [main] INFO  grakn.core.server.Grakn - Grakn started in 3.409 s
+2020-12-08 00:10:39,190 [main] INFO  grakn.core.server.Grakn - Grakn started in 3.081 s
+2020-12-08 00:16:29,582 [grpc-request-handler-5] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.concept.api.GraknConceptException: The concept [Base Type [ROLE] - Id [V4288]  - Label [article] ] is not of type [interface grakn.core.kb.concept.api.EntityType]
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.concept.api.GraknConceptException: The concept [Base Type [ROLE] - Id [V4288]  - Label [article] ] is not of type [interface grakn.core.kb.concept.api.EntityType]
+	at grakn.core.kb.concept.api.GraknConceptException.create(GraknConceptException.java:54)
+	at grakn.core.kb.concept.api.GraknConceptException.invalidCasting(GraknConceptException.java:61)
+	at grakn.core.kb.concept.api.Concept.asEntityType(Concept.java:81)
+	at grakn.core.graql.executor.ConceptBuilderImpl.setSuper(ConceptBuilderImpl.java:439)
+	at grakn.core.graql.executor.ConceptBuilderImpl.tryPutConcept(ConceptBuilderImpl.java:235)
+	at grakn.core.graql.executor.ConceptBuilderImpl.build(ConceptBuilderImpl.java:182)
+	at grakn.core.graql.executor.WriteExecutorImpl.buildConcept(WriteExecutorImpl.java:269)
+	at grakn.core.graql.executor.WriteExecutorImpl.getConcept(WriteExecutorImpl.java:406)
+	at grakn.core.graql.executor.property.PlaysExecutor$DefinePlays.execute(PlaysExecutor.java:90)
+	at grakn.core.graql.executor.WriteExecutorImpl.write(WriteExecutorImpl.java:241)
+	at grakn.core.graql.executor.WriteExecutorImpl.write(WriteExecutorImpl.java:230)
+	at grakn.core.graql.executor.QueryExecutorImpl.define(QueryExecutorImpl.java:254)
+	at grakn.core.server.session.TransactionImpl.stream(TransactionImpl.java:380)
+	at grakn.core.server.session.TransactionImpl.stream(TransactionImpl.java:691)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:388)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-12-08 00:31:35,843 [grpc-request-handler-1] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.TransactionException: Keyspace name is invalid: []. Keyspace name cannot start with a number, and can only contain maximum 48 characters of lower case, alphanumeric and underscore characters.
+	at grakn.core.kb.server.exception.TransactionException.create(TransactionException.java:49)
+	at grakn.core.kb.server.exception.TransactionException.invalidKeyspaceName(TransactionException.java:101)
+	at grakn.core.server.keyspace.KeyspaceImpl.<init>(KeyspaceImpl.java:43)
+	at grakn.core.server.rpc.ServerOpenRequest.open(ServerOpenRequest.java:39)
+	at grakn.core.server.rpc.SessionService.open(SessionService.java:122)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:339)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-12-08 00:33:54,666 [grpc-request-handler-3] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.SessionException: The client session with session ID [impulso1fe1681c8-a473-4c99-9169-e9562366d945] was not found. Create a new session to interact with the graph.
+	at grakn.core.kb.server.exception.SessionException.sessionNotFound(SessionException.java:36)
+	at grakn.core.server.rpc.SessionService.close(SessionService.java:139)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:343)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-12-08 00:34:14,361 [grpc-request-handler-4] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.SessionException: The client session with session ID [impulso1fe1681c8-a473-4c99-9169-e9562366d945] was not found. Create a new session to interact with the graph.
+	at grakn.core.kb.server.exception.SessionException.sessionNotFound(SessionException.java:36)
+	at grakn.core.server.rpc.SessionService.close(SessionService.java:139)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:343)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-12-08 00:34:29,360 [grpc-request-handler-5] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.SessionException: The client session with session ID [impulso1fe1681c8-a473-4c99-9169-e9562366d945] was not found. Create a new session to interact with the graph.
+	at grakn.core.kb.server.exception.SessionException.sessionNotFound(SessionException.java:36)
+	at grakn.core.server.rpc.SessionService.close(SessionService.java:139)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:343)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-12-08 00:36:58,314 [grpc-request-handler-5] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-12-09 00:53:29,540 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2020-12-09 00:53:32,405 [main] INFO  grakn.core.server.Grakn - Grakn started in 2.825 s
+2020-12-09 01:05:44,346 [grpc-request-handler-6] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: child is not a type and so does not have instances
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: child is not a type and so does not have instances
+2020-12-09 01:26:50,186 [grpc-request-handler-5] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.SessionException: The client session with session ID [impulso1840bc02f-961a-4da6-b442-ece2f3562c85] was not found. Create a new session to interact with the graph.
+	at grakn.core.kb.server.exception.SessionException.sessionNotFound(SessionException.java:36)
+	at grakn.core.server.rpc.SessionService.close(SessionService.java:139)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:343)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-12-09 01:26:50,188 [grpc-request-handler-7] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.TransactionException: Keyspace name is invalid: []. Keyspace name cannot start with a number, and can only contain maximum 48 characters of lower case, alphanumeric and underscore characters.
+	at grakn.core.kb.server.exception.TransactionException.create(TransactionException.java:49)
+	at grakn.core.kb.server.exception.TransactionException.invalidKeyspaceName(TransactionException.java:101)
+	at grakn.core.server.keyspace.KeyspaceImpl.<init>(KeyspaceImpl.java:43)
+	at grakn.core.server.rpc.ServerOpenRequest.open(ServerOpenRequest.java:39)
+	at grakn.core.server.rpc.SessionService.open(SessionService.java:122)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:339)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-12-09 01:31:22,134 [grpc-request-handler-4] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.TransactionException: Keyspace name is invalid: []. Keyspace name cannot start with a number, and can only contain maximum 48 characters of lower case, alphanumeric and underscore characters.
+	at grakn.core.kb.server.exception.TransactionException.create(TransactionException.java:49)
+	at grakn.core.kb.server.exception.TransactionException.invalidKeyspaceName(TransactionException.java:101)
+	at grakn.core.server.keyspace.KeyspaceImpl.<init>(KeyspaceImpl.java:43)
+	at grakn.core.server.rpc.ServerOpenRequest.open(ServerOpenRequest.java:39)
+	at grakn.core.server.rpc.SessionService.open(SessionService.java:122)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:339)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-12-09 01:38:34,811 [grpc-request-handler-5] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.SessionException: The client session with session ID [impulso126fdab5b-f28c-4f38-8968-58f2876f53fc] was not found. Create a new session to interact with the graph.
+	at grakn.core.kb.server.exception.SessionException.sessionNotFound(SessionException.java:36)
+	at grakn.core.server.rpc.SessionService.close(SessionService.java:139)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:343)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-12-09 01:44:16,583 [grpc-request-handler-3] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.TransactionException: Keyspace name is invalid: []. Keyspace name cannot start with a number, and can only contain maximum 48 characters of lower case, alphanumeric and underscore characters.
+	at grakn.core.kb.server.exception.TransactionException.create(TransactionException.java:49)
+	at grakn.core.kb.server.exception.TransactionException.invalidKeyspaceName(TransactionException.java:101)
+	at grakn.core.server.keyspace.KeyspaceImpl.<init>(KeyspaceImpl.java:43)
+	at grakn.core.server.rpc.ServerOpenRequest.open(ServerOpenRequest.java:39)
+	at grakn.core.server.rpc.SessionService.open(SessionService.java:122)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:339)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-12-09 01:47:50,652 [grpc-request-handler-2] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: the variable [$x] is out of scope of the query
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: the variable [$x] is out of scope of the query
+	at graql.lang.exception.GraqlException.variableOutOfScope(GraqlException.java:62)
+	at graql.lang.query.GraqlGet.<init>(GraqlGet.java:65)
+	at graql.lang.query.GraqlGet.<init>(GraqlGet.java:51)
+	at graql.lang.parser.Parser.visitQuery_get(Parser.java:262)
+	at graql.lang.parser.Parser.visitQuery(Parser.java:190)
+	at graql.lang.parser.Parser.visitEof_query(Parser.java:155)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:117)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-12-09 01:49:46,611 [grpc-request-handler-3] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $p1 isa topic, has title "Overview"  $r (parent: $x, child: $p1);get $x;
+                                            ^
+no viable alternative at input 'match  $p1 isa topic, has title "Overview"  $r'
+syntax error at line 1: 
+match  $p1 isa topic, has title "Overview"  $r (parent: $x, child: $p1);get $x;
+                                            ^
+no viable alternative at input 'match  $p1 isa topic, has title "Overview"  $r'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $p1 isa topic, has title "Overview"  $r (parent: $x, child: $p1);get $x;
+                                            ^
+no viable alternative at input 'match  $p1 isa topic, has title "Overview"  $r'
+syntax error at line 1: 
+match  $p1 isa topic, has title "Overview"  $r (parent: $x, child: $p1);get $x;
+                                            ^
+no viable alternative at input 'match  $p1 isa topic, has title "Overview"  $r'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-12-09 01:54:07,164 [grpc-request-handler-3] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+ match $topic1 isa topic, has title "Supervised learning"; $topic2 isa topic, has title "Steps";  $x (parent: topic1, child: $topic2) isa ConsistsOf;get $x;
+                                                                                                              ^
+no viable alternative at input 'match $topic1 isa topic, has title "Supervised learning"; $topic2 isa topic, has title "Steps";  $x (parent: topic1'
+syntax error at line 1: 
+ match $topic1 isa topic, has title "Supervised learning"; $topic2 isa topic, has title "Steps";  $x (parent: topic1, child: $topic2) isa ConsistsOf;get $x;
+                                                                                                              ^
+no viable alternative at input 'match $topic1 isa topic, has title "Supervised learning"; $topic2 isa topic, has title "Steps";  $x (parent: topic1'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+ match $topic1 isa topic, has title "Supervised learning"; $topic2 isa topic, has title "Steps";  $x (parent: topic1, child: $topic2) isa ConsistsOf;get $x;
+                                                                                                              ^
+no viable alternative at input 'match $topic1 isa topic, has title "Supervised learning"; $topic2 isa topic, has title "Steps";  $x (parent: topic1'
+syntax error at line 1: 
+ match $topic1 isa topic, has title "Supervised learning"; $topic2 isa topic, has title "Steps";  $x (parent: topic1, child: $topic2) isa ConsistsOf;get $x;
+                                                                                                              ^
+no viable alternative at input 'match $topic1 isa topic, has title "Supervised learning"; $topic2 isa topic, has title "Steps";  $x (parent: topic1'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-12-09 02:03:20,806 [grpc-request-handler-6] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.concept.api.GraknConceptException: The concept [Base Type [ROLE] - Id [V4264]  - Label [parent] ] is not of type [interface grakn.core.kb.concept.api.EntityType]
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.concept.api.GraknConceptException: The concept [Base Type [ROLE] - Id [V4264]  - Label [parent] ] is not of type [interface grakn.core.kb.concept.api.EntityType]
+	at grakn.core.kb.concept.api.GraknConceptException.create(GraknConceptException.java:54)
+	at grakn.core.kb.concept.api.GraknConceptException.invalidCasting(GraknConceptException.java:61)
+	at grakn.core.kb.concept.api.Concept.asEntityType(Concept.java:81)
+	at grakn.core.graql.executor.ConceptBuilderImpl.setSuper(ConceptBuilderImpl.java:439)
+	at grakn.core.graql.executor.ConceptBuilderImpl.tryPutConcept(ConceptBuilderImpl.java:235)
+	at grakn.core.graql.executor.ConceptBuilderImpl.build(ConceptBuilderImpl.java:182)
+	at grakn.core.graql.executor.WriteExecutorImpl.buildConcept(WriteExecutorImpl.java:269)
+	at grakn.core.graql.executor.WriteExecutorImpl.getConcept(WriteExecutorImpl.java:406)
+	at grakn.core.graql.executor.property.PlaysExecutor$DefinePlays.execute(PlaysExecutor.java:90)
+	at grakn.core.graql.executor.WriteExecutorImpl.write(WriteExecutorImpl.java:241)
+	at grakn.core.graql.executor.WriteExecutorImpl.write(WriteExecutorImpl.java:230)
+	at grakn.core.graql.executor.QueryExecutorImpl.define(QueryExecutorImpl.java:254)
+	at grakn.core.server.session.TransactionImpl.stream(TransactionImpl.java:380)
+	at grakn.core.server.session.TransactionImpl.stream(TransactionImpl.java:691)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:388)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-12-09 02:12:05,092 [grpc-request-handler-4] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-12-09 02:18:54,186 [grpc-request-handler-0] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-12-09 02:19:37,437 [grpc-request-handler-6] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+ match $topic1 isa Tparent, has title "Supervised learning" has URL $x;get $x;
+                                                            ^
+no viable alternative at input 'match $topic1 isa Tparent, has title "Supervised learning" has'
+syntax error at line 1: 
+ match $topic1 isa Tparent, has title "Supervised learning" has URL $x;get $x;
+                                                            ^
+no viable alternative at input 'match $topic1 isa Tparent, has title "Supervised learning" has'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+ match $topic1 isa Tparent, has title "Supervised learning" has URL $x;get $x;
+                                                            ^
+no viable alternative at input 'match $topic1 isa Tparent, has title "Supervised learning" has'
+syntax error at line 1: 
+ match $topic1 isa Tparent, has title "Supervised learning" has URL $x;get $x;
+                                                            ^
+no viable alternative at input 'match $topic1 isa Tparent, has title "Supervised learning" has'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-12-09 02:21:00,499 [grpc-request-handler-4] ERROR g.core.server.rpc.KeyspaceService - Exception during keyspace deletion.
+java.lang.RuntimeException: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:85)
+	at grakn.core.server.keyspace.KeyspaceManager.delete(KeyspaceManager.java:60)
+	at grakn.core.server.rpc.KeyspaceService.delete(KeyspaceService.java:60)
+	at grakn.protocol.keyspace.KeyspaceServiceGrpc$MethodHandlers.invoke(KeyspaceServiceGrpc.java:281)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at com.datastax.oss.driver.api.core.DriverTimeoutException.copy(DriverTimeoutException.java:34)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:53)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:30)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession.execute(DefaultSession.java:208)
+	at com.datastax.oss.driver.api.core.CqlSession.execute(CqlSession.java:51)
+	at grakn.core.graph.diskstorage.cql.CQLStoreManager.clearStorage(CQLStoreManager.java:363)
+	at grakn.core.graph.diskstorage.Backend.clearStorage(Backend.java:317)
+	at grakn.core.graph.core.JanusGraphFactory.drop(JanusGraphFactory.java:97)
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:83)
+	... 11 common frames omitted
+2020-12-09 02:21:44,536 [grpc-request-handler-3] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: URL doesn't have an 'isa', a 'sub' or an 'id'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: URL doesn't have an 'isa', a 'sub' or an 'id'
+2020-12-09 02:27:00,363 [grpc-request-handler-3] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+$topic isa Tparent, has title "Supervised_learning",  has URL $x ;get $x;
+^
+no viable alternative at input '$topic'
+syntax error at line 1: 
+$topic isa Tparent, has title "Supervised_learning",  has URL $x ;get $x;
+^
+mismatched input '$topic' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+$topic isa Tparent, has title "Supervised_learning",  has URL $x ;get $x;
+^
+no viable alternative at input '$topic'
+syntax error at line 1: 
+$topic isa Tparent, has title "Supervised_learning",  has URL $x ;get $x;
+^
+mismatched input '$topic' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-12-09 02:27:21,062 [grpc-request-handler-7] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+$topic isa Tparent, has title "Supervised_learning",  has URL $x ;get $x;
+^
+no viable alternative at input '$topic'
+syntax error at line 1: 
+$topic isa Tparent, has title "Supervised_learning",  has URL $x ;get $x;
+^
+mismatched input '$topic' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+$topic isa Tparent, has title "Supervised_learning",  has URL $x ;get $x;
+^
+no viable alternative at input '$topic'
+syntax error at line 1: 
+$topic isa Tparent, has title "Supervised_learning",  has URL $x ;get $x;
+^
+mismatched input '$topic' expecting {'match', 'define', 'undefine', 'insert', 'compute'}
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-12-09 02:30:42,211 [grpc-request-handler-1] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: label 'Tchild' not found
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: label 'Tchild' not found
+2020-12-09 02:40:10,548 [grpc-request-handler-0] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: label 'Tchild' not found
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: label 'Tchild' not found
+2020-12-09 02:52:50,469 [grpc-request-handler-0] ERROR grakn.core.server.rpc.SessionService - An error has occurred
+grakn.core.kb.server.exception.TransactionException: Keyspace name is invalid: []. Keyspace name cannot start with a number, and can only contain maximum 48 characters of lower case, alphanumeric and underscore characters.
+	at grakn.core.kb.server.exception.TransactionException.create(TransactionException.java:49)
+	at grakn.core.kb.server.exception.TransactionException.invalidKeyspaceName(TransactionException.java:101)
+	at grakn.core.server.keyspace.KeyspaceImpl.<init>(KeyspaceImpl.java:43)
+	at grakn.core.server.rpc.ServerOpenRequest.open(ServerOpenRequest.java:39)
+	at grakn.core.server.rpc.SessionService.open(SessionService.java:122)
+	at grakn.protocol.session.SessionServiceGrpc$MethodHandlers.invoke(SessionServiceGrpc.java:339)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-12-09 02:57:25,275 [grpc-request-handler-2] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $t1 isa Tparent, has phone title "Supervised_learning", has URL $x;get $x;
+                                  ^
+no viable alternative at input 'match  $t1 isa Tparent, has phone title'
+syntax error at line 1: 
+match  $t1 isa Tparent, has phone title "Supervised_learning", has URL $x;get $x;
+                                  ^
+no viable alternative at input 'match  $t1 isa Tparent, has phone title'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $t1 isa Tparent, has phone title "Supervised_learning", has URL $x;get $x;
+                                  ^
+no viable alternative at input 'match  $t1 isa Tparent, has phone title'
+syntax error at line 1: 
+match  $t1 isa Tparent, has phone title "Supervised_learning", has URL $x;get $x;
+                                  ^
+no viable alternative at input 'match  $t1 isa Tparent, has phone title'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-12-09 03:02:34,235 [grpc-request-handler-4] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Steps";  (parent: $t1, child: $t2) isa ConsistsOf has content $x;get $x;
+                                                                                                                                       ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Steps";  (parent: $t1, child: $t2) isa ConsistsOf has'
+syntax error at line 1: 
+match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Steps";  (parent: $t1, child: $t2) isa ConsistsOf has content $x;get $x;
+                                                                                                                                       ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Steps";  (parent: $t1, child: $t2) isa ConsistsOf has'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Steps";  (parent: $t1, child: $t2) isa ConsistsOf has content $x;get $x;
+                                                                                                                                       ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Steps";  (parent: $t1, child: $t2) isa ConsistsOf has'
+syntax error at line 1: 
+match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Steps";  (parent: $t1, child: $t2) isa ConsistsOf has content $x;get $x;
+                                                                                                                                       ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Steps";  (parent: $t1, child: $t2) isa ConsistsOf has'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-12-09 03:21:01,636 [grpc-request-handler-6] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Steps", has URL $y;  (parent: $t1, child: $t2) isa ConsistsOf, has ;get $x;
+                                                                                                                                                        ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Steps", has URL $y;  (parent: $t1, child: $t2) isa ConsistsOf, has ;'
+syntax error at line 1: 
+match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Steps", has URL $y;  (parent: $t1, child: $t2) isa ConsistsOf, has ;get $x;
+                                                                                                                                                        ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Steps", has URL $y;  (parent: $t1, child: $t2) isa ConsistsOf, has ;'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Steps", has URL $y;  (parent: $t1, child: $t2) isa ConsistsOf, has ;get $x;
+                                                                                                                                                        ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Steps", has URL $y;  (parent: $t1, child: $t2) isa ConsistsOf, has ;'
+syntax error at line 1: 
+match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Steps", has URL $y;  (parent: $t1, child: $t2) isa ConsistsOf, has ;get $x;
+                                                                                                                                                        ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Steps", has URL $y;  (parent: $t1, child: $t2) isa ConsistsOf, has ;'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-12-09 03:23:10,084 [grpc-request-handler-7] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Algorithm choice",  (parent: $t1, child: $t2) isa ConsistsOf, has content $x;get $x;
+                                                                                                         ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Algorithm choice",  ('
+syntax error at line 1: 
+match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Algorithm choice",  (parent: $t1, child: $t2) isa ConsistsOf, has content $x;get $x;
+                                                                                                         ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Algorithm choice",  ('
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Algorithm choice",  (parent: $t1, child: $t2) isa ConsistsOf, has content $x;get $x;
+                                                                                                         ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Algorithm choice",  ('
+syntax error at line 1: 
+match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Algorithm choice",  (parent: $t1, child: $t2) isa ConsistsOf, has content $x;get $x;
+                                                                                                         ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Supervised_learning";  $t2 isa Tchild, has title "Algorithm choice",  ('
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2020-12-10 13:26:19,569 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2020-12-10 13:26:24,371 [main] INFO  grakn.core.server.Grakn - Grakn started in 4.751 s
+2020-12-10 13:33:33,242 [grpc-request-handler-5] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2020-12-10 13:42:03,719 [grpc-request-handler-1] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)

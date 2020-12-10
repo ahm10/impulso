@@ -1,0 +1,65 @@
+
+# Objective: To define schema for the keyspace impulso [finalized as on 08 Dec 2020.]
+
+# Run script inside Grakn folder ( ensuring access grakn server and console)
+# STEPS: 
+# $[RELATIVE PATH OF GRAKN SERVER BASH e.g. .\]grakn server start 
+# $[RELATIVE PATH OF GRAKN CONSOLE BASH e.g. .\]grakn console --keyspace [KEYSPACE NAME] --file [RELATIVE PATH TO SCHEMA]
+
+# e.g. 
+# $.\grakn console --keyspace impulso1 --file ../../build_KB/scripts/1_schema.gql
+
+
+
+
+define
+
+    # entities
+    Tparent sub entity, # topic of type parent
+        has title,
+        has URL,
+        plays parent;
+
+    Tchild sub entity, # topic of type child
+        has title,
+        has URL,
+        plays child;
+
+    article sub entity,
+        has URL,
+        has UUID,
+        has author,
+        has title,
+        plays suppliment;
+
+
+    # relations
+
+    ConsistsOf sub relation,
+        has content,
+        relates parent,
+        relates child;
+
+    ExplainedIn sub relation,
+        has content,
+        relates child,
+        relates suppliment;
+
+
+    # attributes
+
+    author sub attribute, 
+        value string;
+
+    URL sub attribute, 
+        value string;
+
+    UUID sub attribute, 
+        value string;
+
+    title sub attribute, 
+        value string;
+
+    content sub attribute, 
+        value string;
+
