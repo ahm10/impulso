@@ -94,11 +94,11 @@ To define schema for the keyspace impulso [finalized as on 08 Dec 2020.]
 $ [RELATIVE PATH OF GRAKN SERVER BASH e.g. .\] grakn server start 
 ```
 and then run the schema file, 
-```
-[RELATIVE PATH OF GRAKN CONSOLE BASH e.g. .\]grakn console --keyspace [KEYSPACE NAME] --file [RELATIVE PATH TO SCHEMA]
 ```ruby
+[RELATIVE PATH OF GRAKN CONSOLE BASH e.g. .\]grakn console --keyspace [KEYSPACE NAME] --file [RELATIVE PATH TO SCHEMA]
+```
 e.g.
-``` 
+```ruby 
 $ \grakn console --keyspace impulso2 --file ../../build_KB/scripts/1_schema.gql
 ```
 
@@ -109,20 +109,20 @@ $ \grakn console --keyspace impulso2 --file ../../build_KB/scripts/1_schema.gql
 
 ##### Entities : 
 
-- Tparent : topic that acts as parent 
-- Tchild : topic that acts as child
-- article : article that acts as suppliment to a topic
+- `Tparent` : topic that acts as parent 
+- `Tchild` : topic that acts as child
+- `article` : article that acts as suppliment to a topic
 
 ##### Relations : 
-- ConsistsOf : Relates Tparent and Tchild. e.g. Tparent ConsistsOf Tchild entity. 
-- ExplainedIn : Relates a topic and article, e.g. Tchild ExplainedIn article entity. 
+- `ConsistsOf` : Relates Tparent and Tchild. e.g. Tparent ConsistsOf Tchild entity. 
+- `ExplainedIn` : Relates a topic and article, e.g. Tchild ExplainedIn article entity. 
 
 ##### Attributes :
-- Tparent (title,URL)
-- Tchild (title,URL)
-- article (UUID, URL, author, title)
-- ConsistsOf(content)
-- ExplainedIn (content)
+- Tparent `(title,URL)`
+- Tchild `(title,URL)`
+- article `(UUID, URL, author, title)`
+- ConsistsOf `(content)`
+- ExplainedIn `(content)`
 
 
 In Grakn all of the above are collectivly referred to as *concepts*. Hence it is also called a concept graph. 
