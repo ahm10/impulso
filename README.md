@@ -39,8 +39,6 @@ or
  $ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 ```
 
-
-
 ### 2. Parse the data :heavy_check_mark:
 
 #### Objective: 

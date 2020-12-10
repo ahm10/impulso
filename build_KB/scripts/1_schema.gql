@@ -7,7 +7,7 @@
 # $[RELATIVE PATH OF GRAKN CONSOLE BASH e.g. .\]grakn console --keyspace [KEYSPACE NAME] --file [RELATIVE PATH TO SCHEMA]
 
 # e.g. 
-# $.\grakn console --keyspace impulso1 --file ../../build_KB/scripts/1_schema.gql
+# $.\grakn console --keyspace impulso2 --file ../../build_KB/scripts/1_schema.gql
 
 
 
@@ -43,6 +43,7 @@ define
     ExplainedIn sub relation,
         has content,
         relates child,
+        relates parent,
         relates suppliment;
 
 
