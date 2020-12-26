@@ -15,32 +15,33 @@
 13,References,Machine_learning,red,1
 14,Further reading,Machine_learning,red,1
 15,External links,Machine_learning,red,1
-16,Machine learning approaches,Overview,blue,2
-17,Artificial intelligence,History and relationships to other fields,blue,2
-18,Data mining,History and relationships to other fields,blue,2
-19,Optimization,History and relationships to other fields,blue,2
-20,Statistics,History and relationships to other fields,blue,2
-21,Types of learning algorithms,Approaches,blue,2
-22,Models,Approaches,blue,2
-23,Training models,Approaches,blue,2
-24,Bias,Limitations,blue,2
-25,Free and open-source software,Software,blue,2
-26,Proprietary software with free and open-source editions,Software,blue,2
-27,Proprietary software,Software,blue,2
-28,Supervised learning,Types of learning algorithms,green,3
-29,Unsupervised learning,Types of learning algorithms,green,3
-30,Semi-supervised learning,Types of learning algorithms,green,3
-31,Reinforcement learning,Types of learning algorithms,green,3
-32,Self learning,Types of learning algorithms,green,3
-33,Feature learning,Types of learning algorithms,green,3
-34,Sparse dictionary learning,Types of learning algorithms,green,3
-35,Anomaly detection,Types of learning algorithms,green,3
-36,Robot learning,Types of learning algorithms,green,3
-37,Association rules,Types of learning algorithms,green,3
-38,Artificial neural networks,Models,green,3
-39,Decision trees,Models,green,3
-40,Support vector machines,Models,green,3
-41,Regression analysis,Models,green,3
-42,Bayesian networks,Models,green,3
-43,Genetic algorithms,Models,green,3
-44,Federated learning,Training models,green,3
+16,introduction,Machine_learning,red,1
+17,Machine learning approaches,Overview,blue,2
+18,Artificial intelligence,History and relationships to other fields,blue,2
+19,Data mining,History and relationships to other fields,blue,2
+20,Optimization,History and relationships to other fields,blue,2
+21,Statistics,History and relationships to other fields,blue,2
+22,Types of learning algorithms,Approaches,blue,2
+23,Models,Approaches,blue,2
+24,Training models,Approaches,blue,2
+25,Bias,Limitations,blue,2
+26,Free and open-source software,Software,blue,2
+27,Proprietary software with free and open-source editions,Software,blue,2
+28,Proprietary software,Software,blue,2
+29,Supervised learning,Types of learning algorithms,green,3
+30,Unsupervised learning,Types of learning algorithms,green,3
+31,Semi-supervised learning,Types of learning algorithms,green,3
+32,Reinforcement learning,Types of learning algorithms,green,3
+33,Self learning,Types of learning algorithms,green,3
+34,Feature learning,Types of learning algorithms,green,3
+35,Sparse dictionary learning,Types of learning algorithms,green,3
+36,Anomaly detection,Types of learning algorithms,green,3
+37,Robot learning,Types of learning algorithms,green,3
+38,Association rules,Types of learning algorithms,green,3
+39,Artificial neural networks,Models,green,3
+40,Decision trees,Models,green,3
+41,Support vector machines,Models,green,3
+42,Regression analysis,Models,green,3
+43,Bayesian networks,Models,green,3
+44,Genetic algorithms,Models,green,3
+45,Federated learning,Training models,green,3

@@ -95,6 +95,19 @@ for filename in os.listdir(SCRAPPED_PATH):
         graph_df.loc[k,'color'] = 'red'
         graph_df.loc[k,'rel_level'] = 1
         k = k + 1
+        
+    ### make a special addition for introduction as subtopic of each topic at level 0-1
+    
+    graph_df.loc[k,'child'] = "introduction"
+    graph_df.loc[k,'parent'] = topic # the base topic
+    graph_df.loc[k,'color'] = 'red'
+    graph_df.loc[k,'rel_level'] = 1
+    k = k + 1
+    
+   ################################################################
+    
+    
+    
 
     # define edge colors for level 0-1
     

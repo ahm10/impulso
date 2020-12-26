@@ -164,13 +164,100 @@ $ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 ```
 ![View_grakn_data](./test_q.PNG)
 
+# RASA Assistant :heavy_check_mark:
+
+## Steps
+- :file_folder:impulso
+
+### 1. Make sure grakn database (with selected topics) and rasa are up and working. 
+
+
+### 1. start grakn server ( refer command above)
+
+### 1. start rasa actions server within the folder
+
+
+```ruby
+$ rasa run actions
+```
+
+### 1. start rasa bot with existing model ( present in models folder)
+
+
+```ruby
+$ rasa shell
+```
+### Possible Conversation paths
+
+#### Greet and ask for main topic
+
+![Greet and ask for main topic](./test0.PNG)
+
+#### Explain main topic 
+
+![explain main topic](./test1.PNG)
+
+
+#### Confirm (yes/no) before going next level within the topic
+
+![Confirm (yes/no) before going next level within the topic](./test2.PNG)
+
+
+##### No : Go back to resetting topic 
+
+![No : Go back to resetting topic](./testX.PNG)
+
+##### Yes: ask for inner topic choice ^ 
+
+![Yes: ask for inner topic choice](./test3.PNG)
+
+##### Explain the inner topic + Check for user's interest in main topic (yes / No )
+
+![Explain the inner topic](./test4.PNG)
+
+#### Offer shortcuts to reset / change topic / stop
+
+![change topic](./test5.PNG)
+
+#### Keep exploring multiple inner topics on a given main topic
+
+![multiple sub topics](./testM.PNG)
+
+#### Courtesy chitchat : thank you / bot question / bye
+
+![chitchat](./test6.PNG)
+
+![chitchat](./test7.PNG)
+
+![chitchat](./test8.PNG)
+
+
+
+
+^ Possible choices:  
+
+- Current search queries for inner topics are limited to single word. 
+
+- Branching is only done upto one level. 
+  
 
 # Next steps : :construction:
 
-1. RASA training data generation for correct intent classification
-2. RASA grakn integration : write new entity extraction and data fetch query functions
+- Review test results from users
 
+- Build more complex conversation paths ( currently we have topic > sub topic singular direction flow)
 
+- Add couple of preprocessing components in wiki ingestion to enhance match probability of user query and topic names stored in grakn ( e.g same term referred with abbreviations, case sensitivity, tokenizing )
+
+- Craft extensive search queries to maximize the match possibilities ( from single word to multiple)
+
+- Prepare abbriviations ( AI / ML/ ..) dictionary and resolution
+
+- Add spelling mistake work around for user
+
+--- combination questions ( e.g. "can you explain a in context of b")
+--- branching ( prompting user with cues)
+- after the wiki ingestion and rasa o/ps are approved we can get on medium ingestion module writing
 
 
 

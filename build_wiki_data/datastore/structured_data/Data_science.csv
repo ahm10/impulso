@@ -1,0 +1,9 @@
+,child,parent,color,rel_level
+0,Foundations,Data_science,red,1
+1,Etymology,Data_science,red,1
+2,Impacts of data science,Data_science,red,1
+3,Technologies and techniques,Data_science,red,1
+4,introduction,Data_science,red,1
+5,Relationship to statistics,Foundations,blue,2
+6,Early usage,Etymology,blue,2
+7,Modern usage,Etymology,blue,2

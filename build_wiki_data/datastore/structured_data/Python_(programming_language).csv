@@ -1,0 +1,30 @@
+,child,parent,color,rel_level
+0,History,Python_(programming_language),red,1
+1,Design philosophy and features,Python_(programming_language),red,1
+2,Syntax and semantics,Python_(programming_language),red,1
+3,Programming examples,Python_(programming_language),red,1
+4,Libraries,Python_(programming_language),red,1
+5,Development environments,Python_(programming_language),red,1
+6,Implementations,Python_(programming_language),red,1
+7,Development,Python_(programming_language),red,1
+8,API documentation generators,Python_(programming_language),red,1
+9,Naming,Python_(programming_language),red,1
+10,Uses,Python_(programming_language),red,1
+11,Languages influenced by Python,Python_(programming_language),red,1
+12,See also,Python_(programming_language),red,1
+13,References,Python_(programming_language),red,1
+14,Further reading,Python_(programming_language),red,1
+15,External links,Python_(programming_language),red,1
+16,introduction,Python_(programming_language),red,1
+17,Indentation,Syntax and semantics,blue,2
+18,Statements and control flow,Syntax and semantics,blue,2
+19,Expressions,Syntax and semantics,blue,2
+20,Methods,Syntax and semantics,blue,2
+21,Typing,Syntax and semantics,blue,2
+22,Arithmetic operations,Syntax and semantics,blue,2
+23,Reference implementation,Implementations,blue,2
+24,Other implementations,Implementations,blue,2
+25,Unsupported implementations,Implementations,blue,2
+26,Cross-compilers to other languages,Implementations,blue,2
+27,Performance,Implementations,blue,2
+28,Sources,References,blue,2

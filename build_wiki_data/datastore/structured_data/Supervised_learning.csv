@@ -10,11 +10,12 @@
 8,See also,Supervised_learning,red,1
 9,References,Supervised_learning,red,1
 10,External links,Supervised_learning,red,1
-11,Bias-variance tradeoff,Algorithm choice,blue,2
-12,Function complexity and amount of training data,Algorithm choice,blue,2
-13,Dimensionality of the input space,Algorithm choice,blue,2
-14,Noise in the output values,Algorithm choice,blue,2
-15,Other factors to consider,Algorithm choice,blue,2
-16,Algorithms,Algorithm choice,blue,2
-17,Empirical risk minimization,How supervised learning algorithms work,blue,2
-18,Structural risk minimization,How supervised learning algorithms work,blue,2
+11,introduction,Supervised_learning,red,1
+12,Bias-variance tradeoff,Algorithm choice,blue,2
+13,Function complexity and amount of training data,Algorithm choice,blue,2
+14,Dimensionality of the input space,Algorithm choice,blue,2
+15,Noise in the output values,Algorithm choice,blue,2
+16,Other factors to consider,Algorithm choice,blue,2
+17,Algorithms,Algorithm choice,blue,2
+18,Empirical risk minimization,How supervised learning algorithms work,blue,2
+19,Structural risk minimization,How supervised learning algorithms work,blue,2

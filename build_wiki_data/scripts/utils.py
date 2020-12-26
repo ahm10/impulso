@@ -60,8 +60,13 @@ def summarise(text):
         sumValues += sentenceValue[sentence] 
 
     # Average value of a sentence from the original text 
+    
+    n_sentenceValue = len(sentenceValue)
+    
+    if (n_sentenceValue < 1): 
+      n_sentenceValue = 1
 
-    average = int(sumValues / len(sentenceValue)) 
+    average = int(sumValues / n_sentenceValue) 
 
     # Storing sentences into our summary. 
     summary = '' 

@@ -1,0 +1,90 @@
+stories:
+#  - story: greet and subscribe
+#    steps:
+#    - intent: greet
+#    - action: utter_greet
+#    - action: action_greet
+#    - intent: subscribe
+#    - action: newsletter_form
+#    - active_loop: newsletter_form
+
+
+
+ - story: greet and ask2
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - action: action_greet
+   - intent: know_about
+   - action: Tparent_form
+   - active_loop: Tparent_form   
+   - intent: reset_topic
+   - action: utter_reset_topic
+   - action: action_greet
+ 
+
+ - story: greet and ask3
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - action: action_greet
+   - intent: know_about
+   - action: Tparent_form
+   - active_loop: Tparent_form   
+   - intent: next_level_affirm
+   - action: Tchild_form
+   - active_loop: Tchild_form
+   
+
+ - story: greet and ask3
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - action: action_greet
+   - intent: know_about
+   - action: Tparent_form
+   - active_loop: Tparent_form   
+   - intent: next_level_affirm
+   - action: Tchild_form
+   - active_loop: Tchild_form
+   - intent: next_level_affirm
+   - action: Tchild_form
+   - active_loop: Tchild_form
+
+ - story: greet and ask4
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - action: action_greet
+   - intent: know_about
+   - action: Tparent_form
+   - active_loop: Tparent_form   
+   - intent: next_level_affirm
+   - action: Tchild_form
+   - active_loop: Tchild_form
+   - intent: next_level_deny
+   - action: utter_reset_topic
+   - action: action_greet
+   
+ 
+ - story: greet ask bot5
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - action: action_greet
+   - intent: know_about
+   - action: Tparent_form
+   - active_loop: Tparent_form
+   - intent: next_level_affirm
+   - action: Tchild_form
+   - active_loop: Tchild_form
+   - intent: reset_topic
+   - action: utter_reset_topic
+   - action: action_greet
+
+ 
+
+
+
+
+

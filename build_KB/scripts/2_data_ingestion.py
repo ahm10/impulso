@@ -80,7 +80,9 @@ for filename in parsed_files:
     # # organize each item 
     for k in range(n):
 
-        content = cont[tree_structure.loc[k,'child']]
+        content = ''
+        if (tree_structure.loc[k,'child'] in cont.keys()):
+            content += cont[tree_structure.loc[k,'child']]
 
         new_parent = tree_structure.loc[k,'parent']
 

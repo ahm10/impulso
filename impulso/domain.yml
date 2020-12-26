@@ -1,0 +1,116 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 10
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- inform
+- query
+- know_about
+- next_level_affirm
+- deny
+- escape
+- thankyou
+- next_level
+- subscribe
+- bot_challenge
+- reset
+- reset_topic
+- next_level_deny
+- stop
+- bye
+
+
+entities:
+- Tparent
+- Tparent_set
+- Tchild
+- Tparent_store
+- Tchild_store
+- email
+
+slots:
+  email:
+    type: unfeaturized
+    influence_conversation: false
+  Tparent:
+    type: unfeaturized
+    influence_conversation: false
+  Tparent_set:
+    type: unfeaturized
+    influence_conversation: false
+  Tchild:
+    type: unfeaturized
+    influence_conversation: false
+  Tparent_store:
+    type: unfeaturized
+    influence_conversation: false
+  Tchild_store:
+    type: unfeaturized
+    influence_conversation: false
+
+responses:
+  utter_greet:
+  - text: "Hello! I am Impulso! I am your learning assistant!\n \n > Here are some shortcuts [stop, restart, change topic]."
+  utter_ask_Tparent:
+  - text: "Sure! Do you have a topic in mind?\n"
+  - text: "Cool, What topic you like to know about?"
+  - text: "Of course, can you specify a topic to begin with?"
+  utter_topic_continue: 
+  - text: "\nWould you like to continue learning on this topic ( {Tparent} ) ?"
+  utter_describe:
+  - text: "Ok, let me tell you about {Tparent}"
+  - text: "I know that {Tparent} is..."
+  utter_ask_email:
+  - text: "What is your email address?\n"
+  utter_subscribed:
+  - text: "Check your inbox at {email} in order to finish subscribing to the newsletter!\n"
+  - text: You're all set! Check your inbox at {email} to confirm your subscription.
+  utter_ask_Tchild:
+  - text: "What more would you like to know to know more about {Tparent}?\n"
+  - text: "Which point would you like to know about in {Tparent}?"
+  - text: "Does any of above points sound interesting in {Tparent}?"
+  utter_ask_continue:
+  - text: "Sorry, I dont understand. Do you want to continue?"
+  utter_bot:
+  - text: "Yes, I am a machine! :)"
+  utter_bye: 
+  - text: "See you later! Bye!"
+  - text: "Have a nice day! Bye"
+  - text: "Cheers! bye"
+  utter_reset_topic:
+  - text: "\nLet's choose a new topic...\n"
+  utter_reset:
+  - text: "\nLet's start over...\n"
+  utter_np: 
+  - text: "You are most welcome!"
+  - text: "Thank you for your time!"
+  - text: "I am glad to be useful!"
+  utter_default: 
+  - text: "I think we have missed a step! You can help me with by saying restart anytime!"  
+actions:
+- '...'
+- utter_greet
+- utter_subscribed
+- action_greet
+- action_reset
+- action_s1
+- action_s2
+- topicForm
+- utter_ask_continue
+- utter_topic_continue
+- utter_bye
+- utter_reset_topic
+- utter_np
+forms:
+  newsletter_form:
+    email:
+    - type: from_text
+
+  Tparent_form:
+    Tparent:
+    - type: from_text
+ 
+  Tchild_form:
+    Tchild:
+    - type: from_text    

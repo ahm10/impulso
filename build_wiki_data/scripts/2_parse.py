@@ -5,7 +5,7 @@ Objective:
 To parse and clean the scrapped wikipedia content.
 
 Run from the root
-$ python ./build_wiki_data/scripts/1_parse.py
+$ python ./build_wiki_data/scripts/2_parse.py
 $ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 
 '''

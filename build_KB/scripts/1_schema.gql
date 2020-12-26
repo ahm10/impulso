@@ -30,7 +30,7 @@ define
         has UUID,
         has author,
         has title,
-        plays suppliment;
+        plays supplement;
 
 
     # relations
@@ -44,7 +44,7 @@ define
         has content,
         relates child,
         relates parent,
-        relates suppliment;
+        relates supplement;
 
 
     # attributes

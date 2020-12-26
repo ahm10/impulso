@@ -1,0 +1,98 @@
+rules:   
+
+ - rule: activate Tparent form
+   condition:
+   - slot_was_set:
+     - Tparent: null
+   steps:
+   - intent: know_about
+   - action: Tparent_form
+   - active_loop: Tparent_form
+
+ - rule: submit Tparent form
+   condition:
+   - active_loop: Tparent_form
+   steps:
+   - action: Tparent_form
+   - active_loop: null
+   - action: action_s1
+   
+
+ - rule: activate Tchild form
+   steps:
+   - intent: next_level_affirm
+   - action: Tchild_form
+   - active_loop: Tchild_form
+
+ - rule: submit Tchild form
+   condition:
+   - active_loop: Tchild_form
+   steps:
+   - action: Tchild_form
+   - active_loop: null
+   - action: action_s2
+
+ - rule: activate Tchild form1
+   condition: 
+   - slot_was_set:
+     - Tchild: null
+
+   steps:
+   - intent: next_level
+   - action: Tchild_form
+   - active_loop: Tchild_form
+
+ - rule: submit Tchild form1
+   condition:
+   - active_loop: Tchild_form
+   steps:
+   - action: Tchild_form
+   - active_loop: null
+   - action: action_s2
+
+ - rule: bot_challenge
+   steps: 
+   - intent: bot_challenge
+   - action: utter_bot
+
+ - rule: reset
+   steps:
+   - intent: reset
+   - action: utter_reset
+   - action: action_reset
+
+ - rule: thankyou
+   steps:
+   - intent: thankyou
+   - action: utter_np
+   - action: action_greet
+
+ - rule: bye
+   steps:
+   - intent: bye
+   - action: utter_bye
+
+ - rule: stop
+   steps:
+   - intent: stop
+   - action: utter_bye  
+
+ - rule: reset_topic
+   steps:
+   - intent: reset_topic
+   - action: utter_reset_topic
+   - action: action_greet
+
+ - rule: next_level_deny
+   steps:
+   - intent: next_level_deny
+   - action: utter_reset_topic
+   - action: action_greet
+
+ - rule: greet
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - action: action_greet
+
+

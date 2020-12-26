@@ -1,0 +1,16 @@
+forms:
+  newsletter_form:
+    email:
+    - type: from_text
+
+
+  Tparent_form:
+    Tparent:
+    - type: from_text
+
+  
+  Tchild_form:
+    Tchild:
+    - type: from_text
+
+  

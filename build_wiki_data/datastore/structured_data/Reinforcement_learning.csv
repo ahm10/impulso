@@ -1,0 +1,24 @@
+,child,parent,color,rel_level
+0,Introduction,Reinforcement_learning,red,1
+1,Exploration,Reinforcement_learning,red,1
+2,Algorithms for control learning,Reinforcement_learning,red,1
+3,Theory,Reinforcement_learning,red,1
+4,Research,Reinforcement_learning,red,1
+5,Comparison of reinforcement learning algorithms,Reinforcement_learning,red,1
+6,See also,Reinforcement_learning,red,1
+7,References,Reinforcement_learning,red,1
+8,Further reading,Reinforcement_learning,red,1
+9,External links,Reinforcement_learning,red,1
+10,introduction,Reinforcement_learning,red,1
+11,Criterion of optimality,Algorithms for control learning,blue,2
+12,Brute force,Algorithms for control learning,blue,2
+13,Value function,Algorithms for control learning,blue,2
+14,Direct policy search,Algorithms for control learning,blue,2
+15,Associative reinforcement learning,Comparison of reinforcement learning algorithms,blue,2
+16,Deep reinforcement learning,Comparison of reinforcement learning algorithms,blue,2
+17,Inverse reinforcement learning,Comparison of reinforcement learning algorithms,blue,2
+18,Safe Reinforcement Learning,Comparison of reinforcement learning algorithms,blue,2
+19,Policy,Criterion of optimality,green,3
+20,State-value function,Criterion of optimality,green,3
+21,Monte Carlo methods,Value function,green,3
+22,Temporal difference methods,Value function,green,3

@@ -51,10 +51,12 @@ def arrange_sections(sections,level=0):
    
 # Please update all the tags you want to scrap for 
 
-topics = ['Machine_learning','Supervised_learning','Regression_analysis']
+topics = ["Machine_learning","Python_(programming_language)","Data_science","Reinforcement_learning","Artificial_intelligence"]
 
 # alternative code - read from csv
-#filename = "ML.csv" # place the name of the CSV to be scrapped
+#filename = WIKI_DATASTORE_PATH + "XYZ.csv" # place the name of the CSV to be scrapped
+
+
 #tags_df = pd.read_csv(filename)
 #topics = list(tags_df['title'])
 
