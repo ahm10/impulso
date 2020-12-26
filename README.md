@@ -172,16 +172,16 @@ $ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 ### 1. Make sure grakn database (with selected topics) and rasa are up and working. 
 
 
-### 1. start grakn server ( refer command above)
+### 2. start grakn server ( refer command above)
 
-### 1. start rasa actions server within the folder
+### 3. start rasa actions server within the folder
 
 
 ```ruby
 $ rasa run actions
 ```
 
-### 1. start rasa bot with existing model ( present in models folder)
+### 5. start rasa bot with existing model ( present in models folder)
 
 
 ```ruby
@@ -207,7 +207,7 @@ $ rasa shell
 
 ![No : Go back to resetting topic](./testX.PNG)
 
-##### Yes: ask for inner topic choice ^ 
+##### Yes: ask for inner topic choice (*)
 
 ![Yes: ask for inner topic choice](./test3.PNG)
 
@@ -234,7 +234,7 @@ $ rasa shell
 
 
 
-^ Possible choices:  
+(*) Possible choices:  
 
 - Current search queries for inner topics are limited to single word. 
 
