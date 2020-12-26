@@ -255,8 +255,11 @@ $ rasa shell
 
 - Add spelling mistake work around for user
 
+
 --- combination questions ( e.g. "can you explain a in context of b")
+
 --- branching ( prompting user with cues)
+
 - after the wiki ingestion and rasa o/ps are approved we can get on medium ingestion module writing
 
 
