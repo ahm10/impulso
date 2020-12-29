@@ -47,7 +47,7 @@ To parse and clean the scrapped wikipedia content.
 
 #### Run from the root
 ```ruby
-$ python ./build_wiki_data/scripts/1_parse.py
+$ python ./build_wiki_data/scripts/2_parse.py
 ```
 or
 ```ruby
@@ -181,12 +181,32 @@ $ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 $ rasa run actions
 ```
 
-### 5. start rasa bot with existing model ( present in models folder)
+### 4. start rasa bot with existing model 
 
 
 ```ruby
 $ rasa shell
+
 ```
+
+### 5. Alternatively, you can also train the model with 
+
+
+```ruby
+$ rasa train
+
+```
+### 6. Trouble shooting tips, In case of troubles with prev. steps, It is essential to ensure that the data is correctly organized. For that following command can be used. 
+
+
+```ruby
+$ rasa data validate
+
+```
+
+This makes sure all the intents and entities are correctly registered and that there are no conflicting stories. 
+
+
 ### Possible Conversation paths
 
 #### Greet and ask for main topic

@@ -2,6 +2,7 @@ version: '2.0'
 session_config:
   session_expiration_time: 10
   carry_over_slots_to_new_session: true
+
 intents:
 - greet
 - inform
@@ -9,7 +10,6 @@ intents:
 - know_about
 - next_level_affirm
 - deny
-- escape
 - thankyou
 - next_level
 - subscribe
@@ -88,6 +88,7 @@ responses:
   - text: "I am glad to be useful!"
   utter_default: 
   - text: "I think we have missed a step! You can help me with by saying restart anytime!"  
+
 actions:
 - '...'
 - utter_greet
@@ -102,6 +103,7 @@ actions:
 - utter_bye
 - utter_reset_topic
 - utter_np
+
 forms:
   newsletter_form:
     email:
