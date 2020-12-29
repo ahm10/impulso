@@ -6457,3 +6457,9 @@ INFO  [main] 2020-12-29 13:17:46,701 Server.java:156 - Starting listening for CQ
 INFO  [main] 2020-12-29 13:17:47,248 CassandraDaemon.java:529 - Not starting RPC server as requested. Use JMX (StorageService->startRPCServer()) or nodetool (enablethrift) to start it
 INFO  [IndexSummaryManager:1] 2020-12-29 14:17:41,851 IndexSummaryRedistribution.java:77 - Redistributing index summaries
 INFO  [IndexSummaryManager:1] 2020-12-29 15:17:41,929 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [IndexSummaryManager:1] 2020-12-29 16:17:41,953 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [CompactionExecutor:3] 2020-12-29 17:17:30,157 AutoSavingCache.java:395 - Saved KeyCache (561 items) in 236 ms
+INFO  [IndexSummaryManager:1] 2020-12-29 17:17:41,983 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [IndexSummaryManager:1] 2020-12-29 20:09:25,503 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [IndexSummaryManager:1] 2020-12-29 21:09:25,556 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [CompactionExecutor:3] 2020-12-29 21:17:30,101 AutoSavingCache.java:395 - Saved KeyCache (561 items) in 204 ms
