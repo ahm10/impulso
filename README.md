@@ -196,13 +196,9 @@ $ rasa shell
 $ rasa train
 
 ```
-### 6. Trouble shooting tips, In case of troubles with prev. steps, It is essential to ensure that the data is correctly organized. For that following command can be used. 
+### 6. Validation results  
 
-
-```ruby
-$ rasa data validate
-
-```
+Evaluation matrices can be found under *results* folder inside. 
 
 This makes sure all the intents and entities are correctly registered and that there are no conflicting stories. 
 
