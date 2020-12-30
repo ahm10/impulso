@@ -1,21 +1,15 @@
 {
-  "utter_reset_topic": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 3
-  },
   "utter_greet": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 5
   },
-  "Tchild_form": {
+  "utter_reset_topic": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 5
+    "support": 3
   },
   "action_greet": {
     "precision": 1.0,
@@ -30,6 +24,12 @@
     "support": 18
   },
   "Tparent_form": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5
+  },
+  "Tchild_form": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,

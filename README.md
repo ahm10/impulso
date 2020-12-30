@@ -202,6 +202,10 @@ Evaluation matrices can be found under *results* folder inside.
 
 This makes sure all the intents and entities are correctly registered and that there are no conflicting stories. 
 
+Refer to core and nlu log files for summary reports. 
+
+
+
 
 ### Possible Conversation paths
 
