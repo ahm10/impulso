@@ -4307,3 +4307,6 @@ Caused by: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed 
 2020-12-28 21:25:30,061 [main] INFO  grakn.core.server.Grakn - Grakn started in 3.490 s
 2020-12-29 13:17:51,472 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
 2020-12-29 13:17:56,690 [main] INFO  grakn.core.server.Grakn - Grakn started in 5.154 s
+2020-12-30 13:34:08,160 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2020-12-30 13:34:19,435 [main] INFO  grakn.core.server.Grakn - Grakn started in 10.79 s
+2020-12-30 14:15:35,404 [main] INFO  grakn.core.server.Grakn - Grakn started in 1.931 s

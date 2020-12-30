@@ -1,0 +1,106 @@
+version: "2.0"
+nlu:
+- intent: bot_challenge
+  examples: |
+    - Are you a machine?
+- intent: stop
+  examples: |
+    - stop
+- intent: query
+  examples: |
+    - I am looking to learn something
+- intent: subscribe
+  examples: |
+    - Can you send me the newsletter?
+- intent: thankyou
+  examples: |
+    - thanks
+- intent: inform
+  examples: |
+    - My email is example@example.com
+- intent: greet
+  examples: |
+    - Hey!
+- intent: next_level_deny
+  examples: |
+    - neah
+- intent: reset
+  examples: |
+    - back to start
+- intent: bye
+  examples: |
+    - bye
+- intent: next_level_affirm
+  examples: |
+    - yep
+- intent: reset_topic
+  examples: |
+    - lets switch the topic please
+    - change
+- intent: know_about
+  examples: |
+    - What is [Python](Tparent)?
+    - Lets talk about [Machine Learning](Tparent)
+    - Describe [Machine Learning](Tparent)?
+    - Describe [Artificial Intelligence](Tparent)?
+    - Tell me about [Data Science](Tparent)?
+    - I would want to learn about [Data Science](Tparent).
+    - Describe [Data Science](Tparent)?
+    - Define [Machine Learning](Tparent)?
+    - Please explain [Data Science](Tparent)
+    - Can you explain [Reinforcement Learning](Tparent) to me?
+    - I don`t know a lot about [Python](Tparent)
+    - Can you explain [Python](Tparent) to me?
+    - [Machine Learning](Tparent)
+    - Define [Artificial Intelligence](Tparent)?
+    - Please explain [Python](Tparent)
+- intent: next_level
+  examples: |
+    - \tHow about [External links](Tchild)?
+    - \tDescribe [Algorithm choice](Tchild)?
+    - \tPerhaps [References](Tchild)
+    - \tDefine [General issues](Tchild)?
+    - \tCan you explain [General issues](Tchild) to me?
+    - \tDefine [introduction](Tchild)?
+    - \tI would want to learn about [References](Tchild).
+    - \tI would want to learn about [introduction](Tchild).
+    - \tTell me about [introduction](Tchild)?
+    - \tI don’t know a lot about [Approaches and algorithms](Tchild)
+    - \tWhat do you know about [introduction](Tchild)?
+    - \tPlease explain [Algorithm choice](Tchild)
+    - \tI don’t know a lot about [See also](Tchild)
+    - \t[Applications](Tchild)
+    - \tLets explore [References](Tchild)
+    - \tCan you explain [References](Tchild) to me?
+    - \tLets talk about [Generative training](Tchild)
+    - \tDescribe [See also](Tchild)?
+    - \tDefine [External links](Tchild)?
+    - \tLets talk about [References](Tchild)
+    - \tPlease explain [External links](Tchild)
+    - \tWhat is [General issues](Tchild)?
+    - \tWhat is [External links](Tchild)?
+    - \tPerhaps [Steps](Tchild)
+    - \tI don’t know a lot about [Applications](Tchild)
+    - \tCan you tell me about [Generative training](Tchild)?
+    - \tPlease explain [Steps](Tchild)
+    - \tDefine [Generalizations](Tchild)?
+    - \tTell me about [External links](Tchild)?
+    - \tLets talk about [General issues](Tchild)
+    - \tWhat is [Algorithm choice](Tchild)?
+    - \tLets explore [introduction](Tchild)
+    - \tTell me about [Steps](Tchild)?
+    - \tWhat is [References](Tchild)?
+    - \tWhat do you know about [Generalizations](Tchild)?
+    - \tI don’t know a lot about [Algorithm choice](Tchild)
+- lookup: Tparent
+  examples: |
+    - Machine Learning
+    - Python (programming language)
+    - Data Science
+    - Reinforcement Learning
+    - Artificial Intelligence
+- lookup: Tchild
+  examples: |
+    - Overview
+    - History and relationships to other fields
+    - Theory
