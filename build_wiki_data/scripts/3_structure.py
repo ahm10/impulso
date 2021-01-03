@@ -66,7 +66,7 @@ for filename in os.listdir(SCRAPPED_PATH):
 
     df = pd.DataFrame(columns=['level','heading'])
 
-    graph_df=pd.DataFrame(columns=['child','parent'])
+    graph_df=pd.DataFrame(columns=['child','parent','color','rel_level'])
     
     for section in sections:
 

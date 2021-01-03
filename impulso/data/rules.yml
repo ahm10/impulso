@@ -1,9 +1,9 @@
 rules:   
 
  - rule: activate Tparent form
-   condition:
-   - slot_was_set:
-     - Tparent: null
+  #  condition:
+  #  - slot_was_set:
+  #    - Tparent: null
    steps:
    - intent: know_about
    - action: Tparent_form
@@ -33,9 +33,9 @@ rules:
    - action: action_s2
 
  - rule: activate Tchild form1
-   condition: 
-   - slot_was_set:
-     - Tchild: null
+  #  condition: 
+  #  - slot_was_set:
+  #    - Tchild: null
 
    steps:
    - intent: next_level

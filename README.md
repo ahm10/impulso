@@ -251,6 +251,10 @@ Refer to core and nlu log files for summary reports.
 
 ![chitchat](./test8.PNG)
 
+#### Query on inner topics 
+
+![inner topic question](./test09.PNG)
+
 
 
 
