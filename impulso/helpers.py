@@ -11,7 +11,7 @@ Tparents_list = []
 
 Tchild_list = []
 
-def describe1(topic_val): 
+def describe(topic_val): 
 
     desc = "the description of " + topic_val
     return desc
@@ -32,7 +32,7 @@ def query_grakn(q):
                 return result
 
 
-def describe(test_topic): 
+def describe0(current_topic,current_level): 
 
 
     desc = "Exploring...\n "
@@ -40,12 +40,12 @@ def describe(test_topic):
 
     ### query to fetch intro
 
-    test_subtopic = "introduction"
+    subtopic = "introduction"
 
     q_intro = [
             'match',
-            '  $t1 isa Tparent, has title "' + test_topic + '";',
-            '  $t2 isa Tchild, has title "' + test_subtopic + '";'
+            '  $t1 isa Tparent, has title "' + current_topic + '", has path_depth "' + current_level + '";',
+            '  $t2 isa Tchild, has title "' + subtopic + '";'
             '  (parent: $t1, child: $t2) isa ConsistsOf, has content $x;',
             'get $x;'
         ]
@@ -67,7 +67,7 @@ def describe(test_topic):
 
     q = [
         'match',
-        '  $t1 isa Tparent, has title "' + test_topic + '";',
+        '  $t1 isa Tparent, has title "' + current_topic + '", has path_depth "' + current_level + '";',
         '  $t2 isa Tchild, has title $x;'
         '  (parent: $t1, child: $t2) isa ConsistsOf;',
         'get $x;'
@@ -90,7 +90,7 @@ def describe(test_topic):
     return desc
 
 
-def describe2(test_topic,test_subtopic): 
+def describe1(parent_topic,current_topic,current_level): 
 
 
     desc = "Searching...\n "
@@ -101,8 +101,8 @@ def describe2(test_topic,test_subtopic):
  
     q = [
             'match',
-            '  $t1 isa Tparent, has title "' + test_topic + '";',
-            '  $t2 isa Tchild, has title "' + test_subtopic + '";'
+            '  $t1 isa Tparent, has title "' + parent_topic + '";',
+            '  $t2 isa Tchild, has title "' + current_topic + '", has path_depth "' + current_level+ '";'
             '  (parent: $t1, child: $t2) isa ConsistsOf, has content $x;',
             'get $x;'
         ]
@@ -113,7 +113,19 @@ def describe2(test_topic,test_subtopic):
 
         result_str = str(results[0]) 
 
-        msg = test_subtopic + ":\n" + result_str
+        msg = current_topic + ":\n" + result_str
+
+        ## also check for inner topics
+
+        child_list = get_Tchild_list(parent_topic,current_topic,current_level)
+
+
+        if(len(child_list)):
+
+            result_str1 = process_result_bullets(child_list) 
+
+            msg = msg + "\n" + result_str1
+
 
     else: 
         msg = dont_know 
@@ -122,11 +134,11 @@ def describe2(test_topic,test_subtopic):
 
     return desc
 
-def get_Tparent_list(): 
+def welcome_topic_list(): 
 
     q = [
         'match',
-        '  $t1 isa Tparent, has title $x;',
+        '  $t1 isa Tparent, has title $x, has path_depth "' + str(1) + '";',
         'get $x;'
     ]
 
@@ -134,28 +146,67 @@ def get_Tparent_list():
 
     return result
 
+def get_Tparent_list(current_topic,current_level):
 
-def get_Tchild_list(test_topic): 
+    return None
 
+def get_valid_Tchild_list(parent_topic,current_topic,level): 
+
+
+    # q = [
+    #     'match',
+    #     '  $t1 isa Tparent, has title "' + test_topic + '";',
+    #     '  $t2 isa Tchild, has title $x;'
+    #     '  (parent: $t1, child: $t2) isa ConsistsOf;',
+    #     'get $x;'
+    # ]
+    
 
     q = [
         'match',
-        '  $t1 isa Tparent, has title "' + test_topic + '";',
+        '  $t1 isa Tparent, has title "' + parent_topic + '", has path_depth "' + level + '";',
         '  $t2 isa Tchild, has title $x;'
         '  (parent: $t1, child: $t2) isa ConsistsOf;',
         'get $x;'
     ]
-
     result = query_grakn(q)
 
     return result
 
 
-def process_Tparent_name(topic): ## to be edited
+def get_Tchild_list(parent_topic,current_topic,current_level): 
+
+
+    # q = [
+    #     'match',
+    #     '  $t1 isa Tparent, has title "' + test_topic + '";',
+    #     '  $t2 isa Tchild, has title $x;'
+    #     '  (parent: $t1, child: $t2) isa ConsistsOf;',
+    #     'get $x;'
+    # ]
+    
+
+    q = [
+        'match',
+        '  $t1 isa Tparent, has title "' + current_topic + '", has path_depth "' + current_level + '";',
+        '  $t2 isa Tchild, has title $x;'
+        '  (parent: $t1, child: $t2) isa ConsistsOf;',
+        'get $x;'
+    ]
+    result = query_grakn(q)
+
+    return result
+
+
+def validate_Tparent_name(topic,current_level): ## to be edited
 
     t = topic.lower()
-    
-    Tparent_list = get_Tparent_list()
+
+    if current_level=='1':
+        Tparent_list =welcome_topic_list()
+
+    #else: 
+    # Tparent_list = get_Tparent_list(topic,current_level)
 
     r = dict()
 
@@ -168,21 +219,6 @@ def process_Tparent_name(topic): ## to be edited
     for e in Tparent_list:
 
         e1 = e.replace('_', " ").lower()
-
-        # Ratio = fuzz.ratio(e1.lower(),t.lower())
-
-        # if (Ratio > 60): 
-        #     r['grakn'] = e
-
-        #     r['user'] = e1
-
-        #     break
-
-        # Partial_Ratio = fuzz.partial_ratio(e1.lower(),t.lower())
-
-        # if (Ratio > 50 and Partial_Ratio > 50):
-
-        ################
 
         start = t.find(e1)
 
@@ -198,21 +234,21 @@ def process_Tparent_name(topic): ## to be edited
     return r
 
 
-def process_Tchild_name(Tparent,Tchild): ## to be edited
-
+def validate_Tchild_name(parent_topic,current_topic,current_level): ## to be edited
     
-    Tchild_list = get_Tchild_list(Tparent)
+    Tchild_list = get_valid_Tchild_list(parent_topic,current_topic,current_level)
+
+    current_topic_processed = current_topic.lower()
 
     r = dict()
 
-    r['grakn'] = Tchild
+    r['grakn'] = current_topic_processed
 
-    r['user'] = Tchild
+    r['user'] = current_topic
 
     # r = str(len(Tparent_list))
 
     for e in Tchild_list:
-
 
         e1 = e.replace('_', " ").lower()
 
@@ -222,7 +258,7 @@ def process_Tchild_name(Tparent,Tchild): ## to be edited
 
         # if (Ratio > 50 and Partial_Ratio > 50):
 
-        start = Tchild.find(e1)
+        start = current_topic_processed.find(e1)
 
         if (start > -1): 
 
@@ -232,7 +268,8 @@ def process_Tchild_name(Tparent,Tchild): ## to be edited
 
             break
 
-
+    
+    r['grakn'] = ', '. join(Tchild_list)
     return r
 
 def process_result_bullets(list):

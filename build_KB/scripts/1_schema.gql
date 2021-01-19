@@ -16,12 +16,16 @@ define
 
     # entities
     Tparent sub entity, # topic of type parent
+        has UUID,
         has title,
-        has URL,
+        has path_depth, # for quicker compute access from grakn
+         has URL,
         plays parent;
 
     Tchild sub entity, # topic of type child
+        has UUID,
         has title,
+        has path_depth, # for quicker compute access from grakn
         has URL,
         plays child;
 
@@ -36,11 +40,13 @@ define
     # relations
 
     ConsistsOf sub relation,
+        has ConsistsOfID,
         has content,
         relates parent,
         relates child;
 
     ExplainedIn sub relation,
+        has ExplainedInID,
         has content,
         relates child,
         relates parent,
@@ -63,4 +69,14 @@ define
 
     content sub attribute, 
         value string;
+
+    ConsistsOfID sub attribute, 
+        value string;
+
+    ExplainedInID sub attribute, 
+        value string;
+
+    path_depth sub attribute, 
+        value string;
+
 

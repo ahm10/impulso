@@ -38,8 +38,8 @@ parsed_files = os.listdir(PARSED_PATH)
  
 #### recording all URLS to make sure no redundancy 
 
-URLs = []
-
+child_ids = []
+parent_ids = []
 
 for filename in parsed_files:
     print("Collecting data from...",filename)
@@ -102,45 +102,57 @@ for filename in parsed_files:
  
         url_child = grakn_utils.fetch_URL(topic_to_do_formatted,new_child_formatted)
 
-        
+        uuid_parent = grakn_utils.get_uuid(url_parent) # generate uuid
+
+        uuid_child = grakn_utils.get_uuid(url_child)
+
 
         # by default false
         is_new_parent = False
 
         is_new_child = False
 
-        if (url_parent not in URLs): # enter a new parent topic
+        d1 = int(tree_structure.loc[k,'rel_level'])
+        
+        d2 = d1 + 1
+
+
+        if (uuid_parent not in parent_ids): # enter a new parent topic
 
             ent_type = 'Tparent'
 
             is_new_parent = True
 
-            URLs.append(url_parent)
+            parent_ids.append(uuid_parent)
 
-            new_topic = {'title':new_parent, 'URL' : url_parent}
+            new_topic = {'UUID': uuid_parent ,'title':new_parent_formatted, 'URL' : url_parent,'path_depth': str(d1)}
 
             D[ent_type].append(new_topic)
 
 
-        if (url_child not in URLs): # enter a new child topic
+        if (uuid_child not in child_ids): # enter a new child topic
 
             ent_type = 'Tchild'
 
             is_new_child = True
 
-            URLs.append(url_child)
+            child_ids.append(uuid_child)
 
-            new_topic = {'title':new_child, 'URL' : url_child}
+            new_topic = {'UUID':uuid_child,'title':new_child_formatted, 'URL' : url_child,'path_depth': str(d2)}
 
             D[ent_type].append(new_topic)
 
-        if (is_new_parent or is_new_child): # form a new relation consistsof
+            # build the relation
 
-            new_rel = {'parent': new_parent, 'child':new_child,'content': content}
+        
 
-            rel_type = 'ConsistsOf'
+        ConsistsOfID =  grakn_utils.generate_ConsistsOfID(tree_structure.loc[k,:])
 
-            D[rel_type].append(new_rel)
+        new_rel = {'ConsistsOfID' : ConsistsOfID, 'parent': new_parent_formatted, 'child':new_child_formatted,'content': content}
+
+        rel_type = 'ConsistsOf'
+
+        D[rel_type].append(new_rel)
 
         
 
@@ -151,4 +163,4 @@ for filename in parsed_files:
     inputs = grakn_utils.create_inputs()
 
     # # Build the graph (refer grakn utils to understand the entire flow)
-    grakn_utils.build_zeitlabs_graph(inputs=inputs,D=D)
+    grakn_utils.build_impulso_graph(inputs=inputs,D=D)

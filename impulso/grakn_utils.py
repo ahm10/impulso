@@ -25,7 +25,7 @@ def check_entered(val,listofdict):
     return True
     
     
-def build_zeitlabs_graph(inputs, D):
+def build_impulso_graph(inputs, D):
         with GraknClient(uri="localhost:48555") as client:
             with client.session(keyspace = "impulso2") as session:
                 for input in inputs:

@@ -28,6 +28,7 @@ entities:
 - Tparent_store
 - Tchild_store
 - email
+- current_level
 
 slots:
   email:
@@ -48,9 +49,13 @@ slots:
   Tchild_store:
     type: unfeaturized
     influence_conversation: false
+  current_level:
+    type: unfeaturized
+    influence_conversation: false
 
 responses:
   utter_greet:
+  - text: "Hi! How can I help you today? I am Impulso, I can talk about everything AI"
   - text: "Hello! I am Impulso! I am your learning assistant!\n \n > Here are some shortcuts [stop, restart, change topic]."
   utter_ask_Tparent:
   - text: "Sure! Do you have a topic in mind?\n"

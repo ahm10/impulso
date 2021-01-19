@@ -116,12 +116,13 @@ $ .\grakn console --keyspace impulso2 --file ../../build_KB/scripts/1_schema.gql
 - `ExplainedIn` : Relates a topic and article, e.g. Tchild ExplainedIn article entity. 
 
 ##### Attributes :
-- Tparent `(title,URL)`
+- Tparent `(title,URL,path_depth)`
 - Tchild `(title,URL)`
 - article `(UUID, URL, author, title)`
 - ConsistsOf `(content)`
 - ExplainedIn `(content)`
 
+`path_depth` is added for fast reach of a node within the graph. Queries are optimized with this attribute. 
 
 In Grakn all of the above are collectivly referred to as *concepts*. Hence it is also called a concept graph. 
 
@@ -167,6 +168,7 @@ $ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 # RASA Assistant :heavy_check_mark:
 
 ## Steps
+
 - :file_folder:impulso
 
 ### 1. Make sure grakn database (with selected topics) and rasa are up and working. 
@@ -189,8 +191,38 @@ $ rasa shell
 
 ```
 
-### 5. Alternatively, you can also train the model with 
+### 5. Alternatively, you can also train the model. 
 
+#### 5.1: Generate training data
+- :file_folder:RASA_train_NLU
+
+##### Question patterns: 
+
+Defined in datastore > question_templates_topic_defination.csv
+
+##### Generate questions: 
+
+```ruby
+$ python ./RASA_train_NLU/scripts/1_generate_Tchild_questions.py
+$ python ./RASA_train_NLU/scripts/1_generate_Tparent_questions.py
+
+```
+
+Output will be stored in datastore. e.g. 
+
+> TchildQs.txt
+> TparentQs.txt
+
+Minor formatting would be required, See TparentQs.txt for reference. 
+
+
+#### 5.2: Set training data
+- :file_folder:impulso
+
+These texts are then to be placed in impulso > data > nlu.yml 
+
+#### 5.3: Train model
+- :file_folder:impulso
 
 ```ruby
 $ rasa train

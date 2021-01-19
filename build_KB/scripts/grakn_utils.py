@@ -3,12 +3,40 @@ import csv
 import pandas as pd
 import json
 import os
+import shortuuid 
+import random
  
 def process_topic_names(topicname):
-    return topicname.replace(' ','_')
+    return topicname.replace(' ','_').lower()
 
 def reverse_process_topic_names(topicname):
-    return topicname.replace('_',' ')
+    return topicname.replace('_',' ').lower()
+
+    
+    
+def get_uuid(url):
+
+    # GENERATE A UNIQUE ID BASED ON THE URL
+    
+    unique_id = shortuuid.uuid(name=url)
+      
+    return unique_id
+
+def generate_ConsistsOfID(row):
+
+    n = row['rel_level']
+
+    child = row['child']
+
+    parent = row['parent']
+
+    parent_child_combo = child + parent
+
+    # generate unique combo based on parent, child and rel level
+
+    ConsistsOfID = str (n) + shortuuid.uuid(name=parent_child_combo)
+
+    return ConsistsOfID
 
 def fetch_URL(topic,child):
 
@@ -25,7 +53,7 @@ def check_entered(val,listofdict):
     return True
     
     
-def build_zeitlabs_graph(inputs, D):
+def build_impulso_graph(inputs, D):
         with GraknClient(uri="localhost:48555") as client:
             with client.session(keyspace = "impulso2") as session:
                 for input in inputs:
@@ -48,7 +76,7 @@ def load_data_into_grakn(input, D,  session):
 
 def Tparent_template(topic):
         #print(topic)
-        q = 'insert $topic isa Tparent, has title ' + '"' +  topic["title"] + '"' + ', '  +' has URL ' + '"' + topic["URL"] + '" '  + ';'
+        q = 'insert $topic isa Tparent, has UUID "' + topic["UUID"] + '"' + ',' + ' has title ' + '"' +  topic["title"] + '"' + ', '  +' has URL ' + '"' + topic["URL"] + '"' + ', '  +' has path_depth ' + '"' + topic["path_depth"] + '" '  + ';'
         
         #print(">> ",q)
         # q= 'insert $topic isa topic,'  
@@ -60,7 +88,7 @@ def Tparent_template(topic):
 
 def Tchild_template(topic):
         #print(topic)
-        q = 'insert $topic isa Tchild, has title ' + '"' +  topic["title"] + '"' + ', '  +' has URL ' + '"' + topic["URL"] + '" '  + ';'
+        q = 'insert $topic isa Tchild, has UUID "' + topic['UUID'] + '"' + ',' + ' has title ' + '"' +  topic["title"] + '"' + ', '  +' has URL ' + '"' + topic["URL"] + '" '  + ', '  +' has path_depth ' + '"' + topic["path_depth"] + '" '  + ';'
         
         #print(">> ",q)
         # q= 'insert $topic isa topic,'  
@@ -74,6 +102,7 @@ def Tchild_template(topic):
 
 
 def ConsistsOf_template(rel1):
+
         # match parent
         graql_insert_query = 'match $topic1 isa Tparent, has title "' + rel1["parent"] + '";'
         # match child
@@ -81,7 +110,10 @@ def ConsistsOf_template(rel1):
         # insert rel
         graql_insert_query += " insert (parent: $topic1, child: $topic2) isa ConsistsOf,"
 
-        graql_insert_query += ' has content "' + rel1["content"] + '";'
+        graql_insert_query += ' has content "' + rel1["content"] + '", '
+
+        graql_insert_query += ' has ConsistsOfID "' + rel1["ConsistsOfID"] + '";'
+
         return graql_insert_query
 
 

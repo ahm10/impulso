@@ -10,6 +10,7 @@ nlu:
 
 - intent: query
   examples: |
+    - New to the field please tell me where to start
     - Can I ask you a question?
     - I am looking to learn something
     - I have a question
@@ -361,6 +362,17 @@ nlu:
     - something else
     - change
     - not interesting
+
+
+- synonym: Artificial Intelligence
+  examples: | 
+    - artificial intelligenz
+  
+- synonym: Python (programming language)
+  examples: |
+    - python
+    - python programming
+    - programming with python
 
 
 

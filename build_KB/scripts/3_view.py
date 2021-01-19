@@ -76,6 +76,31 @@ with GraknClient(uri="localhost:48555") as client:
             print("\nResult:\n", result)
 
 
+            
+            print("---------------------------")
+
+            # test_child_topic = "Models"
+            query22 = [
+                'match',
+                
+                '  $t2 isa Tparent, has title "' + test_child_topic + '";',
+                '  $t3 isa Tchild, has title $x;'
+                '  $r(parent: $t2, child: $t3) isa ConsistsOf;',
+                'get $x;'
+            ]
+
+            print("\nExecuting Query:\n", "\n".join(query22))
+            query22 = "".join(query22)
+
+            iterator = transaction.query(query22)
+            answers = [ans.get("x") for ans in iterator]
+            result = [ answer.value() for answer in answers ]
+
+            print("\nResult:\n", result)
+
+
+
+
             # test_subtopic1 = "Overview"
 
             # print(">>> Get parent of test subtopic: ", test_subtopic1)
