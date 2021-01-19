@@ -333,8 +333,7 @@ Refer to core and nlu log files for summary reports.
 
 - RASA pipeline : entityanalyzer added in addition to DIET classifier 
 
-
---- 
+:construction:
 
 - after the wiki ingestion and rasa o/ps are approved we can get on medium ingestion module writing
 
