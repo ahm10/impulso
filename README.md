@@ -297,24 +297,44 @@ Refer to core and nlu log files for summary reports.
 - Branching is only done upto one level. 
   
 
-# Next steps : :construction:
+# Wiki pipeline optimization : :heavy_check_mark:
 
-- Review test results from users
+## Main objectives: 
 
-- Build more complex conversation paths ( currently we have topic > sub topic singular direction flow)
+1/ Improve entity and intent classification = better response generation for variety of coversation paths
 
-- Add couple of preprocessing components in wiki ingestion to enhance match probability of user query and topic names stored in grakn ( e.g same term referred with abbreviations, case sensitivity, tokenizing )
+2/ Optimize response time i.e. minimize the time of fetching / searching data from grakn graph
 
-- Craft extensive search queries to maximize the match possibilities ( from single word to multiple)
+## Original task list
 
-- Prepare abbriviations ( AI / ML/ ..) dictionary and resolution
+- Review test results from users : Awaited from client side
 
-- Add spelling mistake work around for user
+- Build more complex conversation paths  :heavy_check_mark:
+
+- Add couple of preprocessing components in wiki ingestion to enhance match probability of user query and topic names stored in grakn ( e.g same term referred with abbreviations, case sensitivity, tokenizing ) :heavy_check_mark:
+
+- Craft extensive search queries to maximize the match possibilities ( from single word to multiple) :heavy_check_mark:
+
+- Custom RASA components written for Fuzzywuzzy and levenstein distance techniques to improve matching possibilities :heavy_check_mark:
+
+- Prepare abbriviations, spelling mistake work around for user - Added synonym lists in RASA NLU 
+
+- combination questions ( e.g. "can you explain a in context of b") : Raised too many conflicts and response delays
+
+- branching ::heavy_check_mark:
+
+## Additional : 
+
+- Updated the schema with path_depth field: Purpose of this field is to minimize latency in searching the node within the graph. 
+
+- Ingestion module, RASA - grakn functions updated. 
+
+- Each query and function checked and codes optimized. 
+
+- RASA pipeline : entityanalyzer added in addition to DIET classifier 
 
 
---- combination questions ( e.g. "can you explain a in context of b")
-
---- branching ( prompting user with cues)
+--- 
 
 - after the wiki ingestion and rasa o/ps are approved we can get on medium ingestion module writing
 
