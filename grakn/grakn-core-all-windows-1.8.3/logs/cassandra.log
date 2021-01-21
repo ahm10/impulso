@@ -8632,3 +8632,24 @@ INFO  [main] 2021-01-19 16:13:35,907 NativeTransportService.java:75 - Netty usin
 INFO  [main] 2021-01-19 16:13:36,145 Server.java:155 - Using Netty Version: [netty-buffer=netty-buffer-4.1.38.Final.465c900, netty-codec=netty-codec-4.1.38.Final.465c900, netty-codec-dns=netty-codec-dns-4.1.38.Final.465c900, netty-codec-haproxy=netty-codec-haproxy-4.1.38.Final.465c900, netty-codec-http=netty-codec-http-4.1.38.Final.465c900, netty-codec-http2=netty-codec-http2-4.1.38.Final.465c900, netty-codec-memcache=netty-codec-memcache-4.1.38.Final.465c900, netty-codec-mqtt=netty-codec-mqtt-4.1.38.Final.465c900, netty-codec-redis=netty-codec-redis-4.1.38.Final.465c900, netty-codec-smtp=netty-codec-smtp-4.1.38.Final.465c900, netty-codec-socks=netty-codec-socks-4.1.38.Final.465c900, netty-codec-stomp=netty-codec-stomp-4.1.38.Final.465c900, netty-codec-xml=netty-codec-xml-4.1.38.Final.465c900, netty-common=netty-common-4.1.38.Final.465c900, netty-handler=netty-handler-4.1.38.Final.465c900, netty-handler-proxy=netty-handler-proxy-4.1.38.Final.465c900, netty-resolver=netty-resolver-4.1.38.Final.465c900, netty-resolver-dns=netty-resolver-dns-4.1.38.Final.465c900, netty-tcnative=netty-tcnative-2.0.25.Final.c46c351, netty-tcnative-boringssl-static=netty-tcnative-boringssl-static-2.0.25.Final.c46c351, netty-transport=netty-transport-4.1.38.Final.465c900, netty-transport-native-epoll=netty-transport-native-epoll-4.1.38.Final.465c900, netty-transport-native-kqueue=netty-transport-native-kqueue-4.1.38.Final.465c900c04 (repository: dirty), netty-transport-native-unix-common=netty-transport-native-unix-common-4.1.38.Final.465c900, netty-transport-rxtx=netty-transport-rxtx-4.1.38.Final.465c900, netty-transport-sctp=netty-transport-sctp-4.1.38.Final.465c900, netty-transport-udt=netty-transport-udt-4.1.38.Final.465c900]
 INFO  [main] 2021-01-19 16:13:36,145 Server.java:156 - Starting listening for CQL clients on localhost/127.0.0.1:9042 (unencrypted)...
 INFO  [main] 2021-01-19 16:13:36,782 CassandraDaemon.java:529 - Not starting RPC server as requested. Use JMX (StorageService->startRPCServer()) or nodetool (enablethrift) to start it
+INFO  [IndexSummaryManager:1] 2021-01-19 17:21:42,065 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [IndexSummaryManager:1] 2021-01-19 18:21:42,118 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [IndexSummaryManager:1] 2021-01-19 19:21:42,173 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [CompactionExecutor:4] 2021-01-19 22:44:44,728 AutoSavingCache.java:395 - Saved KeyCache (557 items) in 1915 ms
+INFO  [CompactionExecutor:3] 2021-01-20 11:34:58,094 AutoSavingCache.java:395 - Saved KeyCache (557 items) in 8485 ms
+INFO  [IndexSummaryManager:1] 2021-01-20 12:47:30,615 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [IndexSummaryManager:1] 2021-01-20 13:47:30,658 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [IndexSummaryManager:1] 2021-01-20 14:47:30,680 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [CompactionExecutor:3] 2021-01-20 15:34:49,846 AutoSavingCache.java:395 - Saved KeyCache (557 items) in 1030 ms
+INFO  [IndexSummaryManager:1] 2021-01-20 15:47:30,728 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [IndexSummaryManager:1] 2021-01-20 16:47:31,467 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [IndexSummaryManager:1] 2021-01-20 17:47:34,620 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [IndexSummaryManager:1] 2021-01-20 18:47:38,344 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [CompactionExecutor:4] 2021-01-20 19:34:49,374 AutoSavingCache.java:395 - Saved KeyCache (557 items) in 540 ms
+INFO  [IndexSummaryManager:1] 2021-01-20 19:47:38,360 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [IndexSummaryManager:1] 2021-01-20 20:47:38,406 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [IndexSummaryManager:1] 2021-01-20 21:47:40,439 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [IndexSummaryManager:1] 2021-01-20 22:47:40,453 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [CompactionExecutor:3] 2021-01-20 23:34:50,070 AutoSavingCache.java:395 - Saved KeyCache (557 items) in 1084 ms
+INFO  [IndexSummaryManager:1] 2021-01-20 23:47:40,474 IndexSummaryRedistribution.java:77 - Redistributing index summaries
+INFO  [IndexSummaryManager:1] 2021-01-21 00:57:15,512 IndexSummaryRedistribution.java:77 - Redistributing index summaries

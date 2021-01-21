@@ -28,8 +28,6 @@ RASA_TRAIN_DATASTORE_PATH = RASA_TRAIN_PATH + config['RASA_TRAIN_PATHS']['datast
 import spacy
 import json
 import pandas as pd
-import networkx as nx
-import matplotlib.pyplot as plt
 import glob
 import itertools
 nlp_blank = spacy.blank('en')
@@ -59,9 +57,20 @@ direct_children_qs = dict()
 direct_children_seq = dict()
 
 
-###### make sure all these topics are scrapped and ready!!!!
+###### Note: Ensure that all these topics are scrapped parsed and strctured. 
 
-topic_list = ["Machine Learning", "Python", "Data Science", "Reinforcement Learning", "Artificial Intelligence"]
+#topic_list = ["Machine Learning", "Python", "Data Science", "Reinforcement Learning", "Artificial Intelligence"]
+
+structured_topic_list = os.listdir(STRUCTURED_PATH) 
+
+topic_list = []
+
+for t in structured_topic_list: 
+
+  topic = t.split(".csv")[0]
+  topic_list.append(t)
+  
+  
 
 topic_qs = [] 
 for topic in topic_list: 

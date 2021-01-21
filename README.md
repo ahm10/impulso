@@ -200,6 +200,10 @@ $ rasa shell
 
 Defined in datastore > question_templates_topic_defination.csv
 
+##### Topic names - Tchild and Tparents 
+
+To be sourced autmatically from structured data path i.e. tree structure CSVs - constructed in earlier steps. 
+
 ##### Generate questions: 
 
 ```ruby
@@ -213,13 +217,16 @@ Output will be stored in datastore. e.g.
 > TchildQs.txt
 > TparentQs.txt
 
-Minor formatting would be required, See TparentQs.txt for reference. 
-
 
 #### 5.2: Set training data
 - :file_folder:impulso
 
 These texts are then to be placed in impulso > data > nlu.yml 
+
+##### Formatting and placement instructions 
+
+1. Questions in TchildQs or TparentQs must be reformatted. In RASA nlu.yml, multiple utterance examples are present as reference.  
+2. Tparent questions are to be placed under the intent ``know_about`` and Tchild questions are to be placed as training examples of ``next_level`` intent. 
 
 #### 5.3: Train model
 - :file_folder:impulso
