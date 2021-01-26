@@ -1,0 +1,31 @@
+[
+  {
+    "text": "\tHow about How supervised learning algorithms work?",
+    "entities": [
+      {
+        "start": 11,
+        "end": 50,
+        "value": "How supervised learning algorithms work",
+        "entity": "Tchild"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 1,
+        "end": 4,
+        "confidence_entity": 0.7413594722747803,
+        "value": "How",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "Tchild",
+        "start": 11,
+        "end": 50,
+        "confidence_entity": 0.9983296990394592,
+        "value": "How supervised learning algorithms work",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

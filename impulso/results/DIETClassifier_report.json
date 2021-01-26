@@ -7,28 +7,28 @@
     "confused_with": {}
   },
   "Tchild": {
-    "precision": 1.0,
+    "precision": 0.9971098265895953,
     "recall": 1.0,
-    "f1-score": 1.0,
+    "f1-score": 0.9985528219971056,
     "support": 345,
     "confused_with": {}
   },
   "micro avg": {
-    "precision": 1.0,
+    "precision": 0.997920997920998,
     "recall": 1.0,
-    "f1-score": 1.0,
+    "f1-score": 0.9989594172736733,
     "support": 480
   },
   "macro avg": {
-    "precision": 1.0,
+    "precision": 0.9985549132947977,
     "recall": 1.0,
-    "f1-score": 1.0,
+    "f1-score": 0.9992764109985528,
     "support": 480
   },
   "weighted avg": {
-    "precision": 1.0,
+    "precision": 0.9979226878612716,
     "recall": 1.0,
-    "f1-score": 1.0,
+    "f1-score": 0.9989598408104197,
     "support": 480
   }
 }

@@ -1,0 +1,26 @@
+[
+  {
+    "text": "no thank you",
+    "intent": "thankyou",
+    "intent_prediction": {
+      "name": "reset",
+      "confidence": 0.20735178887844086
+    }
+  },
+  {
+    "text": "thanks",
+    "intent": "thankyou",
+    "intent_prediction": {
+      "name": "reset",
+      "confidence": 0.2795298099517822
+    }
+  },
+  {
+    "text": "thank you very much",
+    "intent": "thankyou",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.2535466253757477
+    }
+  }
+]
