@@ -1,3 +1,24 @@
+### GET PATHS FROM UNIVERSAL CONFIG
+
+import configparser
+
+
+config = configparser.ConfigParser()
+config.read('config.ini')
+ROOT_BASE_DIR_PATH = config['ROOT_PATH']['basedir']
+WIKI_BASE_DIR_PATH = ROOT_BASE_DIR_PATH + config['WIKI_PATHS']['basedir']
+WIKI_DATASTORE_PATH = WIKI_BASE_DIR_PATH + config['WIKI_PATHS']['datastoredir']
+WIKI_SCRAPPED_PATH = WIKI_DATASTORE_PATH + config['WIKI_PATHS']['scrapped']
+WIKI_PARSED_PATH = WIKI_DATASTORE_PATH + config['WIKI_PATHS']['parsed']
+WIKI_STRUCTURED_PATH = WIKI_DATASTORE_PATH + config['WIKI_PATHS']['structured']
+
+MEDIUM_BASE_DIR_PATH = ROOT_BASE_DIR_PATH + config['MEDIUM_PATHS']['basedir']
+MEDIUM_DATASTORE_PATH = MEDIUM_BASE_DIR_PATH + config['MEDIUM_PATHS']['datastoredir']
+MEDIUM_SCRAPPED_PATH = MEDIUM_DATASTORE_PATH + config['MEDIUM_PATHS']['scrapped']
+MEDIUM_PARSED_PATH = MEDIUM_DATASTORE_PATH + config['MEDIUM_PATHS']['parsed'] # for title etc
+MEDIUM_STRUCTURED_PATH = MEDIUM_DATASTORE_PATH + config['MEDIUM_PATHS']['structured'] # for content
+
+
 # medium URL scrapper 
 
 import os
@@ -259,14 +280,14 @@ def scrape_tag(tag, yearstart, monthstart, yearstop, monthstop):
     #INPUT CHECKS
     #1. MAKE SURE TAG IS VALID (no idea how to do this without exhaustive list... too much work )
     #2.CHECK VALID FILE PATH
-    path = os.getcwd()
-    path = path + "medium_"+tag+".csv"
+    path = MEDIUM_SCRAPPED_PATH
+    filepath = path + tag +".csv"
     #3. TRY TO OPEN FILE PATH
     try:
-        file = open(path, "w")
+        file = open(filepath, "w")
         file.close()
     except:
-        raise Exception("Could not open file.")
+        pass
 
     #4. MAKE SURE START DATE <= STOP DATE
     current_date = get_start_date(int(yearstart), int(monthstart), 1)

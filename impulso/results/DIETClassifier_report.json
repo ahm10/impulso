@@ -1,34 +1,34 @@
 {
   "Tparent": {
-    "precision": 1.0,
+    "precision": 0.9926470588235294,
     "recall": 1.0,
-    "f1-score": 1.0,
+    "f1-score": 0.996309963099631,
     "support": 135,
     "confused_with": {}
   },
   "Tchild": {
-    "precision": 0.9971098265895953,
-    "recall": 1.0,
-    "f1-score": 0.9985528219971056,
+    "precision": 0.9942196531791907,
+    "recall": 0.9971014492753624,
+    "f1-score": 0.9956584659913169,
     "support": 345,
     "confused_with": {}
   },
   "micro avg": {
-    "precision": 0.997920997920998,
-    "recall": 1.0,
-    "f1-score": 0.9989594172736733,
+    "precision": 0.9937759336099585,
+    "recall": 0.9979166666666667,
+    "f1-score": 0.9958419958419957,
     "support": 480
   },
   "macro avg": {
-    "precision": 0.9985549132947977,
-    "recall": 1.0,
-    "f1-score": 0.9992764109985528,
+    "precision": 0.9934333560013601,
+    "recall": 0.9985507246376812,
+    "f1-score": 0.995984214545474,
     "support": 480
   },
   "weighted avg": {
-    "precision": 0.9979226878612716,
-    "recall": 1.0,
-    "f1-score": 0.9989598408104197,
+    "precision": 0.993777361016661,
+    "recall": 0.9979166666666667,
+    "f1-score": 0.9958416995530303,
     "support": 480
   }
 }

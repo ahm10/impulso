@@ -5413,3 +5413,705 @@ Caused by: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed 
 2021-01-19 00:22:58,413 [main] INFO  grakn.core.server.Grakn - Grakn started in 3.689 s
 2021-01-19 16:13:41,289 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
 2021-01-19 16:13:44,780 [main] INFO  grakn.core.server.Grakn - Grakn started in 3.469 s
+2021-01-26 17:17:50,330 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2021-01-26 17:17:54,103 [main] INFO  grakn.core.server.Grakn - Grakn started in 3.739 s
+2021-02-02 01:02:32,934 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2021-02-02 01:02:35,747 [main] INFO  grakn.core.server.Grakn - Grakn started in 2.748 s
+2021-02-03 16:00:31,134 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2021-02-03 16:00:34,709 [main] INFO  grakn.core.server.Grakn - Grakn started in 3.247 s
+2021-02-03 16:11:44,033 [grpc-request-handler-0] ERROR g.core.server.rpc.KeyspaceService - Exception during keyspace deletion.
+java.lang.RuntimeException: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:85)
+	at grakn.core.server.keyspace.KeyspaceManager.delete(KeyspaceManager.java:60)
+	at grakn.core.server.rpc.KeyspaceService.delete(KeyspaceService.java:60)
+	at grakn.protocol.keyspace.KeyspaceServiceGrpc$MethodHandlers.invoke(KeyspaceServiceGrpc.java:281)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at com.datastax.oss.driver.api.core.DriverTimeoutException.copy(DriverTimeoutException.java:34)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:53)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:30)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession.execute(DefaultSession.java:208)
+	at com.datastax.oss.driver.api.core.CqlSession.execute(CqlSession.java:51)
+	at grakn.core.graph.diskstorage.cql.CQLStoreManager.clearStorage(CQLStoreManager.java:363)
+	at grakn.core.graph.diskstorage.Backend.clearStorage(Backend.java:317)
+	at grakn.core.graph.core.JanusGraphFactory.drop(JanusGraphFactory.java:97)
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:83)
+	... 11 common frames omitted
+2021-02-03 16:22:05,721 [grpc-request-handler-7] ERROR g.core.server.rpc.KeyspaceService - Exception during keyspace deletion.
+java.lang.RuntimeException: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:85)
+	at grakn.core.server.keyspace.KeyspaceManager.delete(KeyspaceManager.java:60)
+	at grakn.core.server.rpc.KeyspaceService.delete(KeyspaceService.java:60)
+	at grakn.protocol.keyspace.KeyspaceServiceGrpc$MethodHandlers.invoke(KeyspaceServiceGrpc.java:281)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at com.datastax.oss.driver.api.core.DriverTimeoutException.copy(DriverTimeoutException.java:34)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:53)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:30)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession.execute(DefaultSession.java:208)
+	at com.datastax.oss.driver.api.core.CqlSession.execute(CqlSession.java:51)
+	at grakn.core.graph.diskstorage.cql.CQLStoreManager.clearStorage(CQLStoreManager.java:363)
+	at grakn.core.graph.diskstorage.Backend.clearStorage(Backend.java:317)
+	at grakn.core.graph.core.JanusGraphFactory.drop(JanusGraphFactory.java:97)
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:83)
+	... 11 common frames omitted
+2021-02-03 17:02:41,932 [grpc-request-handler-7] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-02-03 17:02:41,933 [grpc-request-handler-7] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-02-03 17:02:41,934 [grpc-request-handler-7] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-02-03 17:03:09,889 [grpc-request-handler-4] ERROR g.core.server.rpc.KeyspaceService - Exception during keyspace deletion.
+java.lang.RuntimeException: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:85)
+	at grakn.core.server.keyspace.KeyspaceManager.delete(KeyspaceManager.java:60)
+	at grakn.core.server.rpc.KeyspaceService.delete(KeyspaceService.java:60)
+	at grakn.protocol.keyspace.KeyspaceServiceGrpc$MethodHandlers.invoke(KeyspaceServiceGrpc.java:281)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at com.datastax.oss.driver.api.core.DriverTimeoutException.copy(DriverTimeoutException.java:34)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:53)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:30)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession.execute(DefaultSession.java:208)
+	at com.datastax.oss.driver.api.core.CqlSession.execute(CqlSession.java:51)
+	at grakn.core.graph.diskstorage.cql.CQLStoreManager.clearStorage(CQLStoreManager.java:363)
+	at grakn.core.graph.diskstorage.Backend.clearStorage(Backend.java:317)
+	at grakn.core.graph.core.JanusGraphFactory.drop(JanusGraphFactory.java:97)
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:83)
+	... 11 common frames omitted
+2021-02-03 17:16:34,682 [grpc-request-handler-6] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: label 'ExplainedID' not found
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: label 'ExplainedID' not found
+2021-02-03 21:38:04,124 [grpc-request-handler-0] ERROR g.core.server.rpc.KeyspaceService - Exception during keyspace deletion.
+java.lang.RuntimeException: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:85)
+	at grakn.core.server.keyspace.KeyspaceManager.delete(KeyspaceManager.java:60)
+	at grakn.core.server.rpc.KeyspaceService.delete(KeyspaceService.java:60)
+	at grakn.protocol.keyspace.KeyspaceServiceGrpc$MethodHandlers.invoke(KeyspaceServiceGrpc.java:281)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at com.datastax.oss.driver.api.core.DriverTimeoutException.copy(DriverTimeoutException.java:34)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:53)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:30)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession.execute(DefaultSession.java:208)
+	at com.datastax.oss.driver.api.core.CqlSession.execute(CqlSession.java:51)
+	at grakn.core.graph.diskstorage.cql.CQLStoreManager.clearStorage(CQLStoreManager.java:363)
+	at grakn.core.graph.diskstorage.Backend.clearStorage(Backend.java:317)
+	at grakn.core.graph.core.JanusGraphFactory.drop(JanusGraphFactory.java:97)
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:83)
+	... 11 common frames omitted
+2021-02-03 21:38:21,420 [grpc-request-handler-3] ERROR g.core.server.rpc.KeyspaceService - Exception during keyspace deletion.
+java.lang.RuntimeException: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:85)
+	at grakn.core.server.keyspace.KeyspaceManager.delete(KeyspaceManager.java:60)
+	at grakn.core.server.rpc.KeyspaceService.delete(KeyspaceService.java:60)
+	at grakn.protocol.keyspace.KeyspaceServiceGrpc$MethodHandlers.invoke(KeyspaceServiceGrpc.java:281)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at com.datastax.oss.driver.api.core.DriverTimeoutException.copy(DriverTimeoutException.java:34)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:53)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:30)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession.execute(DefaultSession.java:208)
+	at com.datastax.oss.driver.api.core.CqlSession.execute(CqlSession.java:51)
+	at grakn.core.graph.diskstorage.cql.CQLStoreManager.clearStorage(CQLStoreManager.java:363)
+	at grakn.core.graph.diskstorage.Backend.clearStorage(Backend.java:317)
+	at grakn.core.graph.core.JanusGraphFactory.drop(JanusGraphFactory.java:97)
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:83)
+	... 11 common frames omitted
+2021-02-03 21:44:12,961 [grpc-request-handler-2] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-02-03 22:01:48,058 [grpc-request-handler-6] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-02-04 00:03:25,139 [grpc-request-handler-3] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: the variable [$x] is out of scope of the query
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: the variable [$x] is out of scope of the query
+	at graql.lang.exception.GraqlException.variableOutOfScope(GraqlException.java:62)
+	at graql.lang.query.GraqlGet.<init>(GraqlGet.java:65)
+	at graql.lang.query.GraqlGet.<init>(GraqlGet.java:51)
+	at graql.lang.parser.Parser.visitQuery_get(Parser.java:262)
+	at graql.lang.parser.Parser.visitQuery(Parser.java:190)
+	at graql.lang.parser.Parser.visitEof_query(Parser.java:155)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:117)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2021-02-04 00:05:33,162 [grpc-request-handler-4] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: the variable [$x] is out of scope of the query
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: the variable [$x] is out of scope of the query
+	at graql.lang.exception.GraqlException.variableOutOfScope(GraqlException.java:62)
+	at graql.lang.query.GraqlGet.<init>(GraqlGet.java:65)
+	at graql.lang.query.GraqlGet.<init>(GraqlGet.java:51)
+	at graql.lang.parser.Parser.visitQuery_get(Parser.java:262)
+	at graql.lang.parser.Parser.visitQuery(Parser.java:190)
+	at graql.lang.parser.Parser.visitEof_query(Parser.java:155)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:117)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2021-02-04 00:05:55,147 [grpc-request-handler-5] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x";get $x;
+                                                                        ^
+token recognition error at: '";get $x;'
+syntax error at line 1: 
+match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x";get $x;
+                                                                                 ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x'
+syntax error at line 1: 
+match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x";get $x;
+                                                                                 ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x";get $x;
+                                                                        ^
+token recognition error at: '";get $x;'
+syntax error at line 1: 
+match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x";get $x;
+                                                                                 ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x'
+syntax error at line 1: 
+match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x";get $x;
+                                                                                 ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2021-02-04 00:06:45,328 [grpc-request-handler-7] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $t1 isa Tparent, has title "Artificial_intelligence" has UUID $x";get $x;
+                                                                       ^
+token recognition error at: '";get $x;'
+syntax error at line 1: 
+match  $t1 isa Tparent, has title "Artificial_intelligence" has UUID $x";get $x;
+                                                            ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Artificial_intelligence" has'
+syntax error at line 1: 
+match  $t1 isa Tparent, has title "Artificial_intelligence" has UUID $x";get $x;
+                                                            ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Artificial_intelligence" has'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $t1 isa Tparent, has title "Artificial_intelligence" has UUID $x";get $x;
+                                                                       ^
+token recognition error at: '";get $x;'
+syntax error at line 1: 
+match  $t1 isa Tparent, has title "Artificial_intelligence" has UUID $x";get $x;
+                                                            ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Artificial_intelligence" has'
+syntax error at line 1: 
+match  $t1 isa Tparent, has title "Artificial_intelligence" has UUID $x";get $x;
+                                                            ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Artificial_intelligence" has'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2021-02-04 00:10:07,779 [grpc-request-handler-1] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x";get $x;
+                                                                        ^
+token recognition error at: '";get $x;'
+syntax error at line 1: 
+match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x";get $x;
+                                                                                 ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x'
+syntax error at line 1: 
+match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x";get $x;
+                                                                                 ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x";get $x;
+                                                                        ^
+token recognition error at: '";get $x;'
+syntax error at line 1: 
+match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x";get $x;
+                                                                                 ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x'
+syntax error at line 1: 
+match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x";get $x;
+                                                                                 ^
+no viable alternative at input 'match  $t1 isa Tparent, has title "Artificial_intelligence", has UUID $x'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2021-02-04 00:32:16,209 [grpc-request-handler-1] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-02-04 00:32:16,212 [grpc-request-handler-1] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-02-04 19:16:01,166 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2021-02-04 19:16:06,461 [main] INFO  grakn.core.server.Grakn - Grakn started in 5.155 s
+2021-02-04 19:19:03,492 [grpc-request-handler-5] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: path_depth doesn't have an 'isa', a 'sub' or an 'id'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: path_depth doesn't have an 'isa', a 'sub' or an 'id'
+2021-02-04 19:23:28,165 [grpc-request-handler-7] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: grakn.core.kb.graql.exception.GraqlSemanticException: path_depth doesn't have an 'isa', a 'sub' or an 'id'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: grakn.core.kb.graql.exception.GraqlSemanticException: path_depth doesn't have an 'isa', a 'sub' or an 'id'
+2021-02-04 19:26:14,060 [grpc-request-handler-4] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-02-04 19:28:01,846 [grpc-request-handler-5] ERROR g.core.server.rpc.KeyspaceService - Exception during keyspace deletion.
+java.lang.RuntimeException: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:85)
+	at grakn.core.server.keyspace.KeyspaceManager.delete(KeyspaceManager.java:60)
+	at grakn.core.server.rpc.KeyspaceService.delete(KeyspaceService.java:60)
+	at grakn.protocol.keyspace.KeyspaceServiceGrpc$MethodHandlers.invoke(KeyspaceServiceGrpc.java:281)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at com.datastax.oss.driver.api.core.DriverTimeoutException.copy(DriverTimeoutException.java:34)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:53)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:30)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession.execute(DefaultSession.java:208)
+	at com.datastax.oss.driver.api.core.CqlSession.execute(CqlSession.java:51)
+	at grakn.core.graph.diskstorage.cql.CQLStoreManager.clearStorage(CQLStoreManager.java:363)
+	at grakn.core.graph.diskstorage.Backend.clearStorage(Backend.java:317)
+	at grakn.core.graph.core.JanusGraphFactory.drop(JanusGraphFactory.java:97)
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:83)
+	... 11 common frames omitted
+2021-02-06 16:35:44,828 [main] INFO  grakn.core.server.Grakn - Grakn started in 2.786 s
+2021-02-06 17:35:11,451 [grpc-request-handler-6] ERROR g.core.server.rpc.KeyspaceService - Exception during keyspace deletion.
+java.lang.RuntimeException: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:85)
+	at grakn.core.server.keyspace.KeyspaceManager.delete(KeyspaceManager.java:60)
+	at grakn.core.server.rpc.KeyspaceService.delete(KeyspaceService.java:60)
+	at grakn.protocol.keyspace.KeyspaceServiceGrpc$MethodHandlers.invoke(KeyspaceServiceGrpc.java:281)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at com.datastax.oss.driver.api.core.DriverTimeoutException.copy(DriverTimeoutException.java:34)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:53)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:30)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession.execute(DefaultSession.java:208)
+	at com.datastax.oss.driver.api.core.CqlSession.execute(CqlSession.java:51)
+	at grakn.core.graph.diskstorage.cql.CQLStoreManager.clearStorage(CQLStoreManager.java:363)
+	at grakn.core.graph.diskstorage.Backend.clearStorage(Backend.java:317)
+	at grakn.core.graph.core.JanusGraphFactory.drop(JanusGraphFactory.java:97)
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:83)
+	... 11 common frames omitted
+2021-02-06 17:35:17,924 [grpc-request-handler-4] ERROR g.core.server.rpc.KeyspaceService - Exception during keyspace deletion.
+java.lang.RuntimeException: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:85)
+	at grakn.core.server.keyspace.KeyspaceManager.delete(KeyspaceManager.java:60)
+	at grakn.core.server.rpc.KeyspaceService.delete(KeyspaceService.java:60)
+	at grakn.protocol.keyspace.KeyspaceServiceGrpc$MethodHandlers.invoke(KeyspaceServiceGrpc.java:281)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at com.datastax.oss.driver.api.core.DriverTimeoutException.copy(DriverTimeoutException.java:34)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:53)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:30)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession.execute(DefaultSession.java:208)
+	at com.datastax.oss.driver.api.core.CqlSession.execute(CqlSession.java:51)
+	at grakn.core.graph.diskstorage.cql.CQLStoreManager.clearStorage(CQLStoreManager.java:363)
+	at grakn.core.graph.diskstorage.Backend.clearStorage(Backend.java:317)
+	at grakn.core.graph.core.JanusGraphFactory.drop(JanusGraphFactory.java:97)
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:83)
+	... 11 common frames omitted
+2021-02-06 17:55:26,216 [grpc-request-handler-2] ERROR g.core.server.rpc.KeyspaceService - Exception during keyspace deletion.
+java.lang.RuntimeException: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:85)
+	at grakn.core.server.keyspace.KeyspaceManager.delete(KeyspaceManager.java:60)
+	at grakn.core.server.rpc.KeyspaceService.delete(KeyspaceService.java:60)
+	at grakn.protocol.keyspace.KeyspaceServiceGrpc$MethodHandlers.invoke(KeyspaceServiceGrpc.java:281)
+	at io.grpc.stub.ServerCalls$UnaryServerCallHandler$UnaryServerCallListener.onHalfClose(ServerCalls.java:172)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.halfClosed(ServerCallImpl.java:331)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1HalfClosed.runInContext(ServerImpl.java:814)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: com.datastax.oss.driver.api.core.DriverTimeoutException: Query timed out after PT20S
+	at com.datastax.oss.driver.api.core.DriverTimeoutException.copy(DriverTimeoutException.java:34)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:53)
+	at com.datastax.oss.driver.internal.core.cql.CqlRequestSyncProcessor.process(CqlRequestSyncProcessor.java:30)
+	at com.datastax.oss.driver.internal.core.session.DefaultSession.execute(DefaultSession.java:208)
+	at com.datastax.oss.driver.api.core.CqlSession.execute(CqlSession.java:51)
+	at grakn.core.graph.diskstorage.cql.CQLStoreManager.clearStorage(CQLStoreManager.java:363)
+	at grakn.core.graph.diskstorage.Backend.clearStorage(Backend.java:317)
+	at grakn.core.graph.core.JanusGraphFactory.drop(JanusGraphFactory.java:97)
+	at grakn.core.server.session.JanusGraphFactory.drop(JanusGraphFactory.java:83)
+	... 11 common frames omitted
+2021-02-06 18:03:35,164 [grpc-request-handler-3] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
+	at io.grpc.Status.asRuntimeException(Status.java:524)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:275)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:353)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:341)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:864)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2021-02-06 18:06:22,552 [grpc-request-handler-4] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+match $x isa Tparent has title Artificial_intelligence; get; offset 0; limit 30;
+                     ^
+no viable alternative at input 'match $x isa Tparent has'
+syntax error at line 1: 
+match $x isa Tparent has title Artificial_intelligence; get; offset 0; limit 30;
+                     ^
+no viable alternative at input 'match $x isa Tparent has'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+match $x isa Tparent has title Artificial_intelligence; get; offset 0; limit 30;
+                     ^
+no viable alternative at input 'match $x isa Tparent has'
+syntax error at line 1: 
+match $x isa Tparent has title Artificial_intelligence; get; offset 0; limit 30;
+                     ^
+no viable alternative at input 'match $x isa Tparent has'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted
+2021-02-06 18:06:30,833 [grpc-request-handler-5] ERROR g.c.s.r.SessionService$TransactionListener - Runtime Exception in RPC TransactionListener: 
+java.util.concurrent.ExecutionException: graql.lang.exception.GraqlException: syntax error at line 1: 
+match $x isa Tparent, has title Artificial_intelligence; get; offset 0; limit 30;
+                                ^
+no viable alternative at input 'match $x isa Tparent, has title Artificial_intelligence'
+syntax error at line 1: 
+match $x isa Tparent, has title Artificial_intelligence; get; offset 0; limit 30;
+                                ^
+no viable alternative at input 'match $x isa Tparent, has title Artificial_intelligence'
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at grakn.core.server.rpc.SessionService$TransactionListener.process(SessionService.java:319)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:196)
+	at grakn.core.server.rpc.SessionService$TransactionListener.onNext(SessionService.java:156)
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onMessage(ServerCalls.java:251)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailableInternal(ServerCallImpl.java:309)
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.messagesAvailable(ServerCallImpl.java:292)
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1MessagesAvailable.runInContext(ServerImpl.java:779)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: graql.lang.exception.GraqlException: syntax error at line 1: 
+match $x isa Tparent, has title Artificial_intelligence; get; offset 0; limit 30;
+                                ^
+no viable alternative at input 'match $x isa Tparent, has title Artificial_intelligence'
+syntax error at line 1: 
+match $x isa Tparent, has title Artificial_intelligence; get; offset 0; limit 30;
+                                ^
+no viable alternative at input 'match $x isa Tparent, has title Artificial_intelligence'
+	at graql.lang.exception.GraqlException.create(GraqlException.java:54)
+	at graql.lang.parser.Parser.parseQuery(Parser.java:114)
+	at graql.lang.parser.Parser.parseQueryEOF(Parser.java:122)
+	at graql.lang.Graql.parse(Graql.java:59)
+	at grakn.core.server.rpc.SessionService$TransactionListener.query(SessionService.java:362)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleIterRequest(SessionService.java:278)
+	at grakn.core.server.rpc.SessionService$TransactionListener.handleRequest(SessionService.java:237)
+	at grakn.core.server.rpc.SessionService$TransactionListener.lambda$onNext$1(SessionService.java:196)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 common frames omitted

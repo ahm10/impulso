@@ -7,7 +7,7 @@
 # $[RELATIVE PATH OF GRAKN CONSOLE BASH e.g. .\]grakn console --keyspace [KEYSPACE NAME] --file [RELATIVE PATH TO SCHEMA]
 
 # e.g. 
-# $.\grakn console --keyspace impulso2 --file ../../build_KB/scripts/1_schema.gql
+# $.\grakn console --keyspace impulso0 --file ../../build_KB/scripts/1_schema.gql
 
 
 
@@ -19,7 +19,7 @@ define
         has UUID,
         has title,
         has path_depth, # for quicker compute access from grakn
-         has URL,
+        has URL,
         plays parent;
 
     Tchild sub entity, # topic of type child
@@ -48,7 +48,6 @@ define
     ExplainedIn sub relation,
         has ExplainedInID,
         has content,
-        relates child,
         relates parent,
         relates supplement;
 

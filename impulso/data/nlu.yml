@@ -8,13 +8,6 @@ nlu:
     - Good day
     - Good morning
 
-- intent: query
-  examples: |
-    - New to the field please tell me where to start
-    - Can I ask you a question?
-    - I am looking to learn something
-    - I have a question
-
 - intent: subscribe
   examples: |
     - I want to get the newsletter
@@ -117,6 +110,17 @@ nlu:
     - go on
     - continue
     - yep
+    - yes 
+    - ya
+    - cool
+    - great
+    - totally
+    - lets go
+    - sure
+    - certainly
+    - indeed
+
+
 
 - intent: next_level_deny
   examples: | 
@@ -367,6 +371,7 @@ nlu:
 - synonym: Artificial Intelligence
   examples: | 
     - artificial intelligenz
+    - AI
   
 - synonym: Python (programming language)
   examples: |

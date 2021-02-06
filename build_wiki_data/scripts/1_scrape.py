@@ -54,7 +54,7 @@ def arrange_sections(sections,level=0):
 #topics = ["Machine_learning","Python_(programming_language)","Data_science","Reinforcement_learning","Artificial_intelligence"]
 
 # alternative code - read from csv
-filename = WIKI_DATASTORE_PATH + "parent.csv" # place the name of the CSV to be scrapped
+filename = TOPICS_LIST_PATH + "topics_list.csv" # place the name of the CSV to be scrapped
 
 
 tags_df = pd.read_csv(filename)

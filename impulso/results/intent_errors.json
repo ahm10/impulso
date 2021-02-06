@@ -1,26 +1,178 @@
 [
   {
-    "text": "no thank you",
-    "intent": "thankyou",
+    "text": "Good day",
+    "intent": "greet",
     "intent_prediction": {
-      "name": "reset",
-      "confidence": 0.20735178887844086
+      "name": "next_level_affirm",
+      "confidence": 0.5803332328796387
     }
   },
   {
-    "text": "thanks",
-    "intent": "thankyou",
+    "text": "yes I would like to know more",
+    "intent": "next_level_affirm",
     "intent_prediction": {
-      "name": "reset",
-      "confidence": 0.2795298099517822
+      "name": "next_level",
+      "confidence": 0.8004608154296875
     }
   },
   {
-    "text": "thank you very much",
-    "intent": "thankyou",
+    "text": "not interested",
+    "intent": "next_level_deny",
     "intent_prediction": {
-      "name": "bot_challenge",
-      "confidence": 0.2535466253757477
+      "name": "reset_topic",
+      "confidence": 0.9982446432113647
+    }
+  },
+  {
+    "text": "ttyl",
+    "intent": "bye",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.6825808882713318
+    }
+  },
+  {
+    "text": "indeed",
+    "intent": "next_level_affirm",
+    "intent_prediction": {
+      "name": "next_level_deny",
+      "confidence": 0.795074999332428
+    }
+  },
+  {
+    "text": "get out",
+    "intent": "next_level_deny",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.31964370608329773
+    }
+  },
+  {
+    "text": "I am not interested in data science",
+    "intent": "reset_topic",
+    "intent_prediction": {
+      "name": "know_about",
+      "confidence": 0.996181845664978
+    }
+  },
+  {
+    "text": "Hallo",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "bye",
+      "confidence": 0.760162353515625
+    }
+  },
+  {
+    "text": "I dont want to",
+    "intent": "next_level_deny",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.33421313762664795
+    }
+  },
+  {
+    "text": "lets choose a new topic",
+    "intent": "reset",
+    "intent_prediction": {
+      "name": "reset_topic",
+      "confidence": 0.9973533153533936
+    }
+  },
+  {
+    "text": "see you later",
+    "intent": "bye",
+    "intent_prediction": {
+      "name": "next_level",
+      "confidence": 0.6591808199882507
+    }
+  },
+  {
+    "text": "Hey!",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.9115634560585022
+    }
+  },
+  {
+    "text": "neah",
+    "intent": "next_level_deny",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.48984089493751526
+    }
+  },
+  {
+    "text": "please start over",
+    "intent": "reset",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.48401856422424316
+    }
+  },
+  {
+    "text": "go back",
+    "intent": "reset",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.7063965797424316
+    }
+  },
+  {
+    "text": "thats all",
+    "intent": "bye",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.4534248411655426
+    }
+  },
+  {
+    "text": "not interesting",
+    "intent": "reset_topic",
+    "intent_prediction": {
+      "name": "next_level_deny",
+      "confidence": 0.9747729897499084
+    }
+  },
+  {
+    "text": "Hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.40461820363998413
+    }
+  },
+  {
+    "text": "why not",
+    "intent": "next_level_affirm",
+    "intent_prediction": {
+      "name": "next_level_deny",
+      "confidence": 0.531282365322113
+    }
+  },
+  {
+    "text": "no",
+    "intent": "next_level_deny",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.43386539816856384
+    }
+  },
+  {
+    "text": "i am done",
+    "intent": "bye",
+    "intent_prediction": {
+      "name": "next_level_deny",
+      "confidence": 0.5578462481498718
+    }
+  },
+  {
+    "text": "new topic please?",
+    "intent": "reset_topic",
+    "intent_prediction": {
+      "name": "reset",
+      "confidence": 0.7975250482559204
     }
   }
 ]

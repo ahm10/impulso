@@ -5,11 +5,8 @@ session_config:
 
 intents:
 - greet
-- inform
-- query
 - know_about
 - next_level_affirm
-- deny
 - thankyou
 - next_level
 - subscribe

@@ -16,60 +16,41 @@ rules:
    - action: Tparent_form
    - active_loop: null
    - action: action_s1
-
- - rule: activate Tparent form1
-   condition:
-   - slot_was_set:
-     - Tparent: null
-     - Tchild: null
-     - current_level: null
-   steps:
-   - intent: query
-   - action: Tparent_form
-   - active_loop: Tparent_form
-
- - rule: submit Tparent form
-   condition:
-   - active_loop: Tparent_form
-   steps:
-   - action: Tparent_form
-   - active_loop: null
-   - action: action_s1
    
 
-#  - rule: activate Tchild form
-#    steps:
-#    - intent: next_level_affirm
-#    - action: Tchild_form
-#    - active_loop: Tchild_form
-
-#  - rule: submit Tchild form
-#    condition:
-#    - active_loop: Tchild_form
-#    steps:
-#    - action: Tchild_form
-#    - active_loop: null
-#    - action: action_s2
-
- - rule: activate Tchild form1
-   condition: 
-   - slot_was_set:
-     - Tparent: true
-     - Tchild: null
-     - current_level: true
-
+ - rule: activate Tchild form 1
    steps:
-   - intent: next_level
+   - intent: next_level_affirm
    - action: Tchild_form
    - active_loop: Tchild_form
 
- - rule: submit Tchild form1
+ - rule: submit Tchild form
    condition:
    - active_loop: Tchild_form
    steps:
    - action: Tchild_form
    - active_loop: null
    - action: action_s2
+
+#  - rule: activate Tchild form1
+#    condition: 
+#    - slot_was_set:
+#      - Tparent: true
+#      - Tchild: null
+#      - current_level: true
+
+#    steps:
+#    - intent: next_level
+#    - action: Tchild_form
+#    - active_loop: Tchild_form
+
+#  - rule: submit Tchild form1
+#    condition:
+#    - active_loop: Tchild_form
+#    steps:
+#    - action: Tchild_form
+#    - active_loop: null
+#    - action: action_s2
 
  - rule: bot_challenge
    steps: 

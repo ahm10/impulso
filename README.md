@@ -97,7 +97,7 @@ and then run the schema file,
 ```
 e.g.
 ```ruby 
-$ .\grakn console --keyspace impulso2 --file ../../build_KB/scripts/1_schema.gql
+$ .\grakn console --keyspace ~~impulso2~~impulso0 --file ../../build_KB/scripts/1_schema.gql
 ```
 
 #### Current Schema : :heavy_check_mark:
@@ -126,7 +126,7 @@ $ .\grakn console --keyspace impulso2 --file ../../build_KB/scripts/1_schema.gql
 
 In Grakn all of the above are collectivly referred to as *concepts*. Hence it is also called a concept graph. 
 
-### 3. Ingest the data. :heavy_check_mark:
+### 3. Ingest wikipedia data. :heavy_check_mark:
 
 #### Objective: 
 
@@ -340,12 +340,49 @@ Refer to core and nlu log files for summary reports.
 
 - RASA pipeline : entityanalyzer added in addition to DIET classifier 
 
+# :Medium data Ingestion: :heavy_check_mark:
+
+#### Objective: 
+
+- This is a new ingestion module that is able to ingest *BOTH* medium and wiki data.  
+
+- Custom functions required are scripted under grakn_utils.py with special processing for medium data. 
+
+- For testing the ingestion testing the parsed files for 5 topics are placed under build_medium_data/datastoreparsed_data.
+
+- To test,
+
+#### Run from the root
+```ruby
+$ python ./build_KB/scripts/2_data_ingestion2x.py
+```
+or
+```ruby
+$ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
+```
+#### Input  : 
+- For testing the ingestion testing the parsed files for 5 topics are already placed under build_medium_data/datastore/parsed_data.
+
+*NOTE*
+
+Due to high number of articles, the ingestion module may be slow to run. For testing purpose the no. of articles limit is set to 5. 
+
+In the script, instructions are provided to uncomment, if you wish to run for all articles.
+
+Another factor to be understood is there must be a small delay while inserting data in grakn ( have organized with sleep of 0.1 sec). 
+
+Immidiate insertions of large scale data risks crashing grakn server.
+
+
 # :construction:
 
-- after the wiki ingestion and rasa o/ps done we can get on medium ingestion module writing
+- Change the paths through out all medium components to align it to the central config - as already done in wiki. ( on going)
 
+- Generate training data with medium data for RASA ( user questions). 
 
+- Train RASA with new medium data on top of wiki, tune model, validate intent + entity classifications. 
 
+- Write RASA - Grakn functions to fetch output to RASA queries. 
 
 
 

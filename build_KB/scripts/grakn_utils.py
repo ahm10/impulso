@@ -5,12 +5,12 @@ import json
 import os
 import shortuuid 
 import random
- 
+from time import sleep
 def process_topic_names(topicname):
-    return topicname.replace(' ','_').lower()
+    return topicname.replace(' ','_').lower().replace('"','`').replace("'","`")
 
 def reverse_process_topic_names(topicname):
-    return topicname.replace('_',' ').lower()
+    return topicname.replace('_',' ').lower().replace('"','`').replace("'","`")
 
     
     
@@ -37,6 +37,17 @@ def generate_ConsistsOfID(row):
     ConsistsOfID = str (n) + shortuuid.uuid(name=parent_child_combo)
 
     return ConsistsOfID
+    
+def generate_ExplainedInID(t,art):
+
+
+    parent_art_combo = art + t
+
+    # generate unique combo based on parent, child and rel level
+
+    ExplainedInID = shortuuid.uuid(name=parent_art_combo)
+
+    return ExplainedInID
 
 def fetch_URL(topic,child):
 
@@ -55,7 +66,7 @@ def check_entered(val,listofdict):
     
 def build_impulso_graph(inputs, D):
         with GraknClient(uri="localhost:48555") as client:
-            with client.session(keyspace = "impulso2") as session:
+            with client.session(keyspace = "impulso0") as session:
                 for input in inputs:
                     print("Loading from [" + input["name"] + "] into Grakn ...")
                     load_data_into_grakn(input, D, session)
@@ -63,12 +74,14 @@ def build_impulso_graph(inputs, D):
 def load_data_into_grakn(input, D,  session):
         #items = parse_data_to_dictionaries(input)
         items = D[input["name"]]
+        
         for item in items:
             with session.transaction().write() as transaction:
                 graql_insert_query = input["template"](item)
-                print("Executing Graql Query: " + graql_insert_query)
+                # print("Executing Graql Query: " + graql_insert_query)
                 transaction.query(graql_insert_query)
                 transaction.commit()
+                sleep(0.1)
 
         print("\nInserted " + str(len(items)) + " items from [ " + input["name"] + "] into Grakn.\n")
 
@@ -117,6 +130,30 @@ def ConsistsOf_template(rel1):
         return graql_insert_query
 
 
+def article_template(article):
+
+        q = 'insert $article isa article, has UUID "' + article["UUID"] + '"' + ',' + ' has title ' + '"' +  article["Title"] + '"' + ', '  +' has URL ' + '"' + article["url"] + '"' + ', '  +' has author ' + '"' + article["Author"] + '" '  + ';'
+            
+
+
+        return q
+
+def ExplainedIn_template(rel2):
+
+        # print("~~~~~~")
+        # print(rel2)
+        # match parent
+        graql_insert_query = 'match $topic1 isa Tparent, has UUID "' + rel2["parent"] + '";'
+        # match child
+        graql_insert_query += ' $article isa article, has UUID "' + rel2["supplement"] + '";'
+        # insert rel
+        graql_insert_query += " insert (parent: $topic1, supplement: $article) isa ExplainedIn,"
+
+        graql_insert_query += ' has content "' + rel2["content"] + '", '
+
+        graql_insert_query += ' has ExplainedInID "' + rel2["ExplainedInID"] + '";'
+
+        return graql_insert_query
 
 def create_inputs():
 
@@ -136,6 +173,17 @@ def create_inputs():
             "name" : "ConsistsOf",
             "template": ConsistsOf_template
         },
+
+        {
+            "name" : "article",
+            "template": article_template
+        },
+
+        {
+            "name" : "ExplainedIn",
+            "template": ExplainedIn_template
+        },
+
 
 
     ]

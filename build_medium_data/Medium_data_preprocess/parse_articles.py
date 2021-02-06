@@ -84,8 +84,10 @@ for file in scraped_files:
  
 
         orginal_file_name = os.path.basename(file)
+        
+        data_store_path = './op/'
 
-        op_file = './op/' + "parsed_" + orginal_file_name
+        op_file = data_store_path + "parsed_" + orginal_file_name
         
         content_df.loc[:,['UUID','sentences']].to_csv(op_file,index=False)
 
