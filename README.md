@@ -97,7 +97,7 @@ and then run the schema file,
 ```
 e.g.
 ```ruby 
-$ .\grakn console --keyspace ~~impulso2~~impulso0 --file ../../build_KB/scripts/1_schema.gql
+$ .\grakn console --keyspace impulso0 --file ../../build_KB/scripts/1_schema.gql
 ```
 
 #### Current Schema : :heavy_check_mark:
@@ -311,36 +311,9 @@ Refer to core and nlu log files for summary reports.
 1/ Improve entity and intent classification = better response generation for variety of coversation paths
 
 2/ Optimize response time i.e. minimize the time of fetching / searching data from grakn graph
+ 
 
-## Original task list
-
-- Review test results from users : Awaited from client side
-
-- Build more complex conversation paths  :heavy_check_mark:
-
-- Add couple of preprocessing components in wiki ingestion to enhance match probability of user query and topic names stored in grakn ( e.g same term referred with abbreviations, case sensitivity, tokenizing ) :heavy_check_mark:
-
-- Craft extensive search queries to maximize the match possibilities ( from single word to multiple) :heavy_check_mark:
-
-- Custom RASA components written for Fuzzywuzzy and levenstein distance techniques to improve matching possibilities :heavy_check_mark:
-
-- Prepare abbriviations, spelling mistake work around for user - Added synonym lists in RASA NLU 
-
-- combination questions ( e.g. "can you explain a in context of b") : Raised too many conflicts and response delays
-
-- branching ::heavy_check_mark:
-
-## Additional : 
-
-- Updated the schema with path_depth field: Purpose of this field is to minimize latency in searching the node within the graph. 
-
-- Ingestion module, RASA - grakn functions updated. 
-
-- Each query and function checked and codes optimized. 
-
-- RASA pipeline : entityanalyzer added in addition to DIET classifier 
-
-# :Medium data Ingestion: :heavy_check_mark:
+# Medium data Ingestion :heavy_check_mark:
 
 #### Objective: 
 
@@ -363,16 +336,17 @@ $ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 #### Input  : 
 - For testing the ingestion testing the parsed files for 5 topics are already placed under build_medium_data/datastore/parsed_data.
 
-*NOTE*
+*Important points*
 
-Due to high number of articles, the ingestion module may be slow to run. For testing purpose the no. of articles limit is set to 5. 
+- Due to high number of articles, the ingestion module may be slow to run. For testing purpose the no. of articles limit is set to 5. 
 
-In the script, instructions are provided to uncomment, if you wish to run for all articles.
+- In the script, instructions are provided to uncomment, if you wish to run for all articles.
 
-Another factor to be understood is there must be a small delay while inserting data in grakn ( have organized with sleep of 0.1 sec). 
+- Another factor to be understood is there must be a small delay while inserting data in grakn ( have organized with sleep of 0.1 sec). 
 
-Immidiate insertions of large scale data risks crashing grakn server.
+- Immidiate insertions of large scale data risks crashing grakn server.
 
+- :flashlight: Please ensure constructing new schema with new database name `impulso0`. Instructions are mentioned above.
 
 # :construction:
 
@@ -385,7 +359,7 @@ Immidiate insertions of large scale data risks crashing grakn server.
 - Write RASA - Grakn functions to fetch output to RASA queries. 
 
 
-
+# :construction:
 
 
 
