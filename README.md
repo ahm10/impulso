@@ -348,7 +348,7 @@ $ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 
 - :flashlight: Please ensure constructing new schema with new database name `impulso0`. Instructions are mentioned above.
 
-# :construction:
+# :construction: Under construction
 
 - Change the paths through out all medium components to align it to the central config - as already done in wiki. ( on going)
 
