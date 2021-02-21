@@ -3,12 +3,14 @@ import csv
 import pandas as pd
 import json
 import os
- 
-def process_topic_names(topicname):
-    return topicname.replace(' ','_')
 
-def reverse_process_topic_names(topicname):
-    return topicname.replace('_',' ')
+
+ 
+# def process_topic_names(topicname):
+#     return topicname.replace(' ','_')
+
+# def reverse_process_topic_names(topicname):
+#     return topicname.replace('_',' ')
 
 def fetch_URL(topic,child):
 

@@ -13,9 +13,9 @@ $ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 from grakn.client import GraknClient
 
 with GraknClient(uri="localhost:48555") as client:
-    with client.session(keyspace = "impulso2") as session:
+    with client.session(keyspace = "impulso0") as session:
         with session.transaction().read() as transaction:
-            test_topic = "Machine_learning"
+            test_topic = "applications"
             # query = [
             #     'match',
             #     '  $topic isa topic, has title "' + test_topic +  '" has txt $x;',

@@ -1,5 +1,22 @@
 rules:   
 
+ - rule: activate Tparent form1
+   condition:
+   - slot_was_set:
+     - Tparent: null
+   steps:
+   - intent: research_q
+   - action: Tparent_form
+   - active_loop: Tparent_form
+
+ - rule: submit Tparent form
+   condition:
+   - active_loop: Tparent_form
+   steps:
+   - action: Tparent_form
+   - active_loop: null
+   - action: action_s1
+
  - rule: activate Tparent form
    condition:
    - slot_was_set:
@@ -21,6 +38,7 @@ rules:
  - rule: activate Tchild form 1
    steps:
    - intent: next_level_affirm
+   - action : offer_options
    - action: Tchild_form
    - active_loop: Tchild_form
 
@@ -68,6 +86,7 @@ rules:
    - intent: thankyou
    - action: utter_np
    - action: action_greet
+   
 
  - rule: bye
    steps:
@@ -96,5 +115,31 @@ rules:
    - intent: greet
    - action: utter_greet
    - action: action_greet
+
+ - rule: compliment
+   steps:
+   - intent: compliment
+   - action: utter_take_compliment
+   - action: utter_topic_continue
+
+ - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+   steps:
+   - intent: nlu_fallback
+   - action: utter_please_rephrase
+   - action: utter_reset
+
+
+ - rule: open research 
+   steps:
+   - intent: research_open
+   - action : action_research_open
+   - action: utter_topic_continue
+
+ - rule: know more 
+   steps:
+   - intent: know_more
+   - action : offer_options
+   - action: utter_topic_continue
+
 
 

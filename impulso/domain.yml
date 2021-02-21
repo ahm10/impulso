@@ -16,6 +16,11 @@ intents:
 - next_level_deny
 - stop
 - bye
+- research_q
+- research_q_open
+- compliment
+- know_more
+- research_open
 
 
 entities:
@@ -26,6 +31,11 @@ entities:
 - Tchild_store
 - email
 - current_level
+- TparentID
+- content_type
+- article
+- topic_turn_r
+- topic_turn_w
 
 slots:
   email:
@@ -49,6 +59,21 @@ slots:
   current_level:
     type: unfeaturized
     influence_conversation: false
+  TparentID:
+    type: unfeaturized
+    influence_conversation: false
+  content_type:
+    type: unfeaturized
+    influence_conversation: false
+  article:
+    type: unfeaturized
+    influence_conversation: false
+  topic_turn_w:
+    type: unfeaturized
+    influence_conversation: false
+  topic_turn_r:
+    type: unfeaturized
+    influence_conversation: false
 
 responses:
   utter_greet:
@@ -58,8 +83,21 @@ responses:
   - text: "Sure! Do you have a topic in mind?\n"
   - text: "Cool, What topic you like to know about?"
   - text: "Of course, can you specify a topic to begin with?"
+  - text: "Great, which topic would you like to start with?"
+  utter_take_compliment: 
+  - text: "Thank you for a positive feedback!"
+  - text: "Oh that is kind of you! :)"
+  - text: "Well I am still a noob! thank you!"
+  - text: "Thank you, I am glad I could be of help!"  
   utter_topic_continue: 
-  - text: "\nWould you like to continue learning on this topic ( {Tparent} ) ?"
+  - text: "\nWould you like to continue learning on this topic ( {Tparent})? yes/no?"
+  - text: "\nShould we continue discussing {Tparent}?"
+  - text: "\nShall we explore more on {Tparent}? Pls confirm yes/no to proceed?"
+  - text: "\n You seem to find {Tparent} interesting, Should we continue on it?"
+  - text: "\n This topic seems to be interesting you, am I right?"
+  - text: "\n I am sensing that this seems interesting to you, Shall I continue?"
+  - text: "\n I am new with humans, so still learning :) Am I on right path?"
+  - text: "\n Forgive me asking but I hope you find {Tparent} interesting? (yes/no)..?"
   utter_describe:
   - text: "Ok, let me tell you about {Tparent}"
   - text: "I know that {Tparent} is..."
@@ -69,7 +107,7 @@ responses:
   - text: "Check your inbox at {email} in order to finish subscribing to the newsletter!\n"
   - text: You're all set! Check your inbox at {email} to confirm your subscription.
   utter_ask_Tchild:
-  - text: "What more would you like to know to know more about {Tparent}?\n"
+  - text: "What more would you like to know more about {Tparent}?\n"
   - text: "Which point would you like to know about in {Tparent}?"
   - text: "Does any of above points sound interesting in {Tparent}?"
   utter_ask_continue:
@@ -90,12 +128,24 @@ responses:
   - text: "I am glad to be useful!"
   utter_default: 
   - text: "I think we have missed a step! You can help me with by saying restart anytime!"  
+  utter_please_rephrase:
+  - text: "\n I am afraid I dont understand. Would you perhaps repharse the question?"
+  - text: "\n I am sorry I am not clear on what you are asking. Would you perhaps repharse the question?"
+  - text: "\n Oops, I think I am confused, would you like pose another question?"
+  - text: "\n Oops, I have trouble understanding this. Can you please trying posing a simpler question?"
+utter_reset:
+  - text: "\n Or we can always make a fresh start! Just say restart!"
+  - text: "\n Or Here are some shortcuts [stop, restart, change topic]"
+  - text: "\n Or Would you like to try another topic? change is the word!"
+  - text: "\n You can help me by restarting, just to say restart !"
+
 
 actions:
 - '...'
 - utter_greet
 - utter_subscribed
 - action_greet
+- utter_take_compliment
 - action_reset
 - action_s1
 - action_s2
@@ -105,6 +155,10 @@ actions:
 - utter_bye
 - utter_reset_topic
 - utter_np
+- offer_options
+- utter_please_rephrase
+- utter_reset
+- action_research_open
 
 forms:
   newsletter_form:
@@ -114,6 +168,8 @@ forms:
   Tparent_form:
     Tparent:
     - type: from_text
+    content_type:
+    - type: from_text   
  
   Tchild_form:
     Tchild:

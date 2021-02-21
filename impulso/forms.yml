@@ -7,10 +7,16 @@ forms:
   Tparent_form:
     Tparent:
     - type: from_text
+    content_type:
+    - type: from_text
 
   
   Tchild_form:
     Tchild:
+    - type: from_text
+    content_type:
+    - type: from_text
+    article: 
     - type: from_text
 
   

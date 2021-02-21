@@ -8,7 +8,17 @@ stories:
 #    - action: newsletter_form
 #    - active_loop: newsletter_form
 
-
+ - story: greet and ask research
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - action: action_greet
+   - intent: research_q
+   - action: Tparent_form
+   - active_loop: Tparent_form   
+   - intent: reset_topic
+   - action: utter_reset_topic
+   - action: action_greet
 
  - story: greet and ask2
    steps:
@@ -21,6 +31,42 @@ stories:
    - intent: reset_topic
    - action: utter_reset_topic
    - action: action_greet
+
+ - story: greet and know about research open
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - action: action_greet
+   - intent: know_about
+   - action: Tparent_form
+   - active_loop: Tparent_form   
+   - intent: research_open
+   - action : action_research_open
+   - action: utter_topic_continue
+   - intent: next_level_affirm
+   - action: offer_options
+   - action: Tchild_form
+   - active_loop: Tchild_form
+
+ - story: greet and know about next child research open next 
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - action: action_greet
+   - intent: know_about
+   - action: Tparent_form
+   - active_loop: Tparent_form   
+   - intent: next_level_affirm
+   - action: offer_options
+   - action: Tchild_form
+   - active_loop: Tchild_form
+   - intent: research_open
+   - action : action_research_open
+   - action: utter_topic_continue
+   - intent: next_level_affirm
+   - action: offer_options
+   - action: Tchild_form
+   - active_loop: Tchild_form
  
 
  - story: greet and ask3
@@ -32,11 +78,11 @@ stories:
    - action: Tparent_form
    - active_loop: Tparent_form   
    - intent: next_level_affirm
+   - action: offer_options
    - action: Tchild_form
    - active_loop: Tchild_form
    
-
- - story: greet and ask3
+ - story: greet know about next child know more next
    steps:
    - intent: greet
    - action: utter_greet
@@ -45,9 +91,52 @@ stories:
    - action: Tparent_form
    - active_loop: Tparent_form   
    - intent: next_level_affirm
+   - action: offer_options
+   - action: Tchild_form
+   - active_loop: Tchild_form
+   - intent: know_more
+   - action: offer_options
+   - action: utter_topic_continue
+   - intent: next_level_affirm
+   - action: offer_options
+   - action: Tchild_form
+   - active_loop: Tchild_form
+
+ - story: greet know about next child research open next know more
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - action: action_greet
+   - intent: know_about
+   - action: Tparent_form
+   - active_loop: Tparent_form   
+   - intent: next_level_affirm
+   - action: offer_options
+   - action: Tchild_form
+   - active_loop: Tchild_form
+   - intent: know_more
+   - action: offer_options
+   - action: utter_topic_continue
+   - intent: next_level_affirm
+   - action: offer_options
+   - action: Tchild_form
+   - active_loop: Tchild_form
+
+
+ - story: greet and ask3
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - action: action_greet
+   - intent: know_about/research_q
+   - action: Tparent_form
+   - active_loop: Tparent_form   
+   - intent: next_level_affirm
+   - action: offer_options
    - action: Tchild_form
    - active_loop: Tchild_form
    - intent: next_level_affirm
+   - action: offer_options
    - action: Tchild_form
    - active_loop: Tchild_form
 
@@ -56,16 +145,33 @@ stories:
    - intent: greet
    - action: utter_greet
    - action: action_greet
-   - intent: know_about
+   - intent: know_about/research_q
    - action: Tparent_form
    - active_loop: Tparent_form   
    - intent: next_level_affirm
+   - action: offer_options
    - action: Tchild_form
    - active_loop: Tchild_form
    - intent: next_level_deny
    - action: utter_reset_topic
    - action: action_greet
-   
+
+ - story: greet and ask compliment
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - action: action_greet
+   - intent: know_about/research_q
+   - action: Tparent_form
+   - active_loop: Tparent_form   
+   - intent: next_level_affirm
+   - action: offer_options
+   - action: Tchild_form
+   - active_loop: Tchild_form
+   - intent: next_level_deny
+   - action: utter_reset_topic
+   - action: action_greet
+      
  
  - story: greet ask bot5
    steps:
@@ -76,6 +182,7 @@ stories:
    - action: Tparent_form
    - active_loop: Tparent_form
    - intent: next_level_affirm
+   - action: offer_options
    - action: Tchild_form
    - active_loop: Tchild_form
    - intent: reset_topic

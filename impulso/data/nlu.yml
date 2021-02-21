@@ -21,9 +21,110 @@ nlu:
     - Please send it to anything@example.com
     - Email is something@example.com
 
-- intent: know_about
+
+- intent: research_open
   examples: |
+    - Tell me about latest [research](content_type)?
+    - Can you tell me about [research](content_type)?
+    - What is [happening](content_type) in it?
+    - Can you share some [articles](content_type) on this?
+    - Can you recommend any interesting [articles](content_type) to read on this? 
+    - What is [new](content_type) in here?
+    - Tell me something exciting [happening](content_type) in this field? 
+    - What are the hot [research](content_type) topics in this domain?
+    - current [research](content_type) trends in it? 
+  
+- intent: know_more
+  examples: |
+    - What else do you know?
+    - What more can you tell me?
+    - Tell me more
+    - Lets explore this further
+    - Lets go deeper on this
+    - I find this very interesting
+    - What more can you tell me on this?
+    - Tell me more on this
+    - I want to learn more in depth
+    - can you give me more details
+    - can you explain me more
+    - I know this already
+    - Tell me something new
+    - This is common
+    - how about something new?
+    - Tell me something I dont know
+    - intresting
+    - I see, what more
+    - tell me further
+    - share more
+    - can you tell me about [foundations](Tchild)? 
+    - How about [history](Tchild)?
+    - What do you know about [etymology](Tchild)? 
+
+
+
+- intent: research_q
+  examples: |
+    - Tell me about latest [research](content_type) in [Artificial Intelligence](Tparent)?
+    - What is the latest [update](content_type) in [Artificial Intelligence](Tparent)?
+    - Can you tell me about [research](content_type) [Artificial Intelligence](Tparent)?
+    - What is [happening](content_type) in [Artificial Intelligence](Tparent)?
+    - Can you share some [articles](content_type) on [Artificial Intelligence](Tparent)?
+    - Can you recommend any interesting [articles](content_type) to read on [Artificial Intelligence](Tparent)? 
+    - What is [new](content_type) in [Artificial Intelligence](Tparent)?
+    - Tell me something exciting [happening](content_type) in [Artificial Intelligence](Tparent)? 
+    - What are the hot [research](content_type) topics in [Artificial Intelligence](Tparent)?
+    - current [research](content_type) trends in [Artificial Intelligence](Tparent)? 
+    - Tell me about latest [research](content_type) in [Machine Learning](Tparent)?
+    - Can you tell me about [research](content_type) [Machine Learning](Tparent)?
+    - What is [happening](content_type) in [Machine Learning](Tparent)?
+    - Can you share some [articles](content_type) on [Machine Learning](Tparent)?
+    - Can you recommend any interesting [articles](content_type) to read on [Machine Learning](Tparent)? 
+    - What is [new](content_type) in [Machine Learning](Tparent)?
+    - Tell me something exciting [happening](content_type) in [Machine Learning](Tparent)? 
+    - What are the hot [research](content_type) topics in [Machine Learning](Tparent)?
+    - current [research](content_type) trends in [Machine Learning](Tparent)? 
+    - Tell me about latest [research](content_type) in [Data Science](Tparent)?
+    - Can you tell me about [research](content_type) [Data Science](Tparent)?
+    - What is [happening](content_type) in [Data Science](Tparent)?
+    - What is the latest [update](content_type) in [Data Science](Tparent)?
+    - Can you share some [articles](content_type) on [Data Science](Tparent)?
+    - Can you recommend any interesting [articles](content_type) to read on [Data Science](Tparent)? 
+    - What is [new](content_type) in [Data Science](Tparent)?
+    - Tell me something exciting [happening](content_type) in [Data Science](Tparent)? 
+    - What are the hot [research](content_type) topics in [Data Science](Tparent)?
+    - current [research](content_type) trends in [Data Science](Tparent)? 
+    - Tell me about latest [research](content_type) in [Reinforcement Learning](Tparent)?
+    - Can you tell me about [research](content_type) [Reinforcement Learning](Tparent)?
+    - What is [happening](content_type) in [Reinforcement Learning](Tparent)?
+    - Can you share some [articles](content_type) on [Reinforcement Learning](Tparent)?
+    - Can you recommend any interesting [articles](content_type) to read on [Reinforcement Learning](Tparent)? 
+    - What is [new](content_type) in [Reinforcement Learning](Tparent)?
+    - Tell me something exciting [happening](content_type) in [Reinforcement Learning](Tparent)? 
+    - What are the hot [research](content_type) topics in [Reinforcement Learning](Tparent)?
+    - current [research](content_type) trends in [Reinforcement Learning](Tparent)? 
+    - Tell me about latest [research](content_type) in [Python programming language](Tparent)?
+    - Can you tell me about [research](content_type) [Python programming language](Tparent)?
+    - What is [happening](content_type) in [Python programming language](Tparent)?
+    - Can you share some [articles](content_type) on [Python programming language](Tparent)?
+    - Can you recommend any interesting [articles](content_type) to read on [Python programming language](Tparent)? 
+    - What is [new](content_type) in [Python programming language](Tparent)?
+    - Tell me something exciting [happening](content_type) in [Python programming language](Tparent)? 
+    - What are the hot [research](content_type) topics in [Python programming language](Tparent)?
+    - current [research](content_type) trends in [Python programming language](Tparent)? 
+    - Tell me about latest (research)[content_type] in [Artificial Intelligence](Tparent)?
+    - Can you tell me about (research)[content_type] [Artificial Intelligence](Tparent)?
+    - What is [happening](content_type) in [Artificial Intelligence](Tparent)?
+    - Can you share some (articles)[content_type] on [Artificial Intelligence](Tparent)?
+    - Can you recommend any interesting (articles)[content_type] to read on [Artificial Intelligence](Tparent)? 
+    - What is (new)[content_type] in [Artificial Intelligence](Tparent)?
+    - Tell me something exciting [happening](content_type) in [Artificial Intelligence](Tparent)? 
+    - What are the hot (research)[content_type] topics in [Artificial Intelligence](Tparent)?
+    - current (research)[content_type] trends in [Artificial Intelligence](Tparent)? 
+
+- intent: know_about
+  examples: |    
     - What do you know about [Machine Learning](Tparent)?
+    - What is [Machine Learning](Tparent)?
     - What is [Machine Learning](Tparent)?
     - How about [Machine Learning](Tparent)?
     - Define [Machine Learning](Tparent)?
@@ -97,9 +198,18 @@ nlu:
     - Lets talk about [Artificial Intelligence](Tparent)
     - I don`t know a lot about [Artificial Intelligence](Tparent)
     - Lets explore [Artificial Intelligence](Tparent)
+    - I am really curious to know about [Artificial Intelligence](Tparent)
+    - I find [Artificial Intelligence](Tparent) quite intriguing
+    - Lets begin with [Artificial Intelligence](Tparent)?
+    - I would love to know more on [Artificial Intelligence](Tparent)
+    - If you can tell me about [Artificial Intelligence](Tparent)?
 
+  
 - intent: next_level_affirm
   examples: |
+    - OK
+    - okies
+    - ok
     - Ok sure
     - yes please
     - yes I would like to know more
@@ -119,6 +229,47 @@ nlu:
     - sure
     - certainly
     - indeed
+    - yes it is
+    - correct
+    - it is
+    - you are right
+    - right
+    - true
+    - that is correct
+    - you are absolutely right
+    - you got it right
+    - bingo
+    - I guess
+    - mostly
+    - almost
+    - may be
+    - I think so
+    - yes, dont worry
+    - got it
+    - understood
+    - fine
+    - yo
+
+
+- intent: compliment
+  examples: |   
+    - you are great!
+    - you are good!
+    - cool!
+    - nice!
+    - that is a good one! 
+    - good find! 
+    - good read!
+    - that is useful!
+    - awesome!
+    - you are amazing!
+    - you are smart!
+    - you are intelligent!
+    - this is superb!
+    - you are wonderful, impulso!
+    - it is interesting!
+    - yes very interesting! 
+    - you rock my friend!
 
 
 
@@ -130,6 +281,14 @@ nlu:
     - not interested
     - neah
     - get out
+    - no this is boring
+    - eh
+    - i dont find it interesting
+    - i already know this
+    - this is nothing new
+    - skip it
+    - forget it
+    
     
 
 - intent: next_level
@@ -326,7 +485,6 @@ nlu:
     - reset
     - restart
     - please start over
-    - lets choose a new topic
     - back to start
     - go back
 
@@ -366,13 +524,33 @@ nlu:
     - something else
     - change
     - not interesting
+    - lets choose a new topic
+    - this is boring
+    - not helping
+    - I want to try another topic
+    - [data science](Tparent) is not so intresting
+    - What other topics do you know about?
+    - Apart from [data science](Tparent) what else do you know?
 
 
 - synonym: Artificial Intelligence
   examples: | 
     - artificial intelligenz
     - AI
-  
+    - artifical intelligene
+    - AE
+    - machine intelligence
+
+- synonym: Machine learning
+  examples: | 
+    - learning
+    - ML
+    - macine learning
+    - ML
+    - machin learning
+    - machine lerning
+
+
 - synonym: Python (programming language)
   examples: |
     - python
@@ -395,4 +573,62 @@ nlu:
     - Overview
     - History and relationships to other fields
     - Theory
+    - foundations
+    - etymology
+    - impacts of data science
+    - basics
+    - approach
+    - approaches
+    - limitations
+    - approaches
+    - limitations
+    - hardware
+    - model assessments
+    - ethics
+    - external links
+    - conferences
+    - further reading
+    - overview
+    - see also
+    - references
+    - software
+    - applications
+    - introduction
+    - history and relationships to other fields
+    - theory
+    - journals
+    - history 
+    - challenges 
+    - basics 
+    - tools 
+    - impact 
+    - approaches 
+    - explanatory notes 
+    - in fiction 
+    - see also 
+    - references 
+    - external links 
+    - further reading 
+    - introduction 
+    - philosophy and ethics 
+    - regulation 
+    - applications 
+
+- lookup : content_type
+  examples: |
+    - research
+    - articles
+    - trends
+    - new
+    - news
+    - innovation
+    - innovations
+    - applications
+    - application
+    - example
+    - examples
+    - update
+    - updates
+  
+
 

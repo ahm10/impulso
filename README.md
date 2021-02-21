@@ -1,3 +1,75 @@
+# Latest update [:hatching_chick: > :hatched_chick:]
+
+The new agent can handle larger variety of scenarios*
+
+1. More elegent step wise explanation of chosen topic
+2. Multi-turn conversation prompts 
+3. Offer variety of options based on user's choices ( wiki / medium)
+4. Longer engagement of user with multiple switch possibilities
+5. Prompt sibling nodes / reserch articles on the topic 
+6. The agent learns from scenarios it handles and forms its search queries dynamically
+7. Graceful fallbacks to minimize crashes in unforeseen scenarios
+
+
+*Tested scenarios can be found under folder v1.1_conversations_21022020. 
+
+Note that there is large variety of permutation / combinations that the assistant has learnt from. Hence more testing is encouraged. 
+
+# Next improvements plan [:baby_chick:]
+
+# :construction:
+
+1. Build article ranking mechanism. The score can be based on
+
+- last articles seen by the user
+
+- from same author 
+
+- on similar subject lines
+
+- depending on popularity (claps / comments)
+
+- deeper corelation with the topic chain followed by the user
+
+
+2. Build subtopic recommendation mechanism. The score can be based on
+
+- topic chain followed by the user
+
+- articles read by the user 
+
+- analysing user's feedback in ongoing conversation (responses to turns taken)
+
+3. Enable deeper level network navigation
+
+- currently bot is able to go till 2 levels while exploring a topic, Going till leaf need would require adding more complex recursive scenarios 
+
+4. Making the bot more friendly
+
+- compile a small-talk DB (from public dataset)
+
+- arrange in the rasa training format and train the bot on it
+
+- essential to ensure graceful handling of unseen scenarios 
+
+5. Rearrange the folder structure for centralized control ( done partially)
+
+6. Add more and more synonyms / acronyms to help the assistant point to relevent sources. 
+
+7. Test current version and, 
+
+- identify the scenarios where the assistant struggles 
+
+- improve those conversation paths with tuning / story realignment / training / custom actions
+
+- add new more complex conversation paths (e.g. multi-entity intents)
+
+
+
+# :construction:
+
+
+
 # Folder structure
 
 
@@ -244,65 +316,15 @@ This makes sure all the intents and entities are correctly registered and that t
 Refer to core and nlu log files for summary reports. 
 
 
+### Possible Conversation paths :rocket:
+
+Major upgrade with intertwined conversation paths 
 
 
-### Possible Conversation paths
+- Old conversations can be reviewed under folder v1.0
 
-#### Greet and ask for main topic
+- New conversations are under folder v1.1.
 
-![Greet and ask for main topic](./test0.PNG)
-
-#### Explain main topic 
-
-![explain main topic](./test1.PNG)
-
-
-#### Confirm (yes/no) before going next level within the topic
-
-![Confirm (yes/no) before going next level within the topic](./test2.PNG)
-
-
-##### No : Go back to resetting topic 
-
-![No : Go back to resetting topic](./testX.PNG)
-
-##### Yes: ask for inner topic choice (*)
-
-![Yes: ask for inner topic choice](./test3.PNG)
-
-##### Explain the inner topic + Check for user's interest in main topic (yes / No )
-
-![Explain the inner topic](./test4.PNG)
-
-#### Offer shortcuts to reset / change topic / stop
-
-![change topic](./test5.PNG)
-
-#### Keep exploring multiple inner topics on a given main topic
-
-![multiple sub topics](./testM.PNG)
-
-#### Courtesy chitchat : thank you / bot question / bye
-
-![chitchat](./test6.PNG)
-
-![chitchat](./test7.PNG)
-
-![chitchat](./test8.PNG)
-
-#### Query on inner topics 
-
-![inner topic question](./test09.PNG)
-
-
-
-
-(*) Possible choices:  
-
-- Current search queries for inner topics are limited to single word. 
-
-- Branching is only done upto one level. 
-  
 
 # Wiki pipeline optimization : :heavy_check_mark:
 
@@ -347,28 +369,6 @@ $ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 - Immidiate insertions of large scale data risks crashing grakn server.
 
 - :flashlight: Please ensure constructing new schema with new database name `impulso0`. Instructions are mentioned above.
-
-# :construction: Under construction
-
-- Change the paths through out all medium components to align it to the central config - as already done in wiki. ( on going)
-
-- Generate training data with medium data for RASA ( user questions). 
-
-- Train RASA with new medium data on top of wiki, tune model, validate intent + entity classifications. 
-
-- Write RASA - Grakn functions to fetch output to RASA queries. 
-
-
-# :construction:
-
-
-
-
-
-
-
-
-
 
 # Medium data collection and organization 
 
