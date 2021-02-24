@@ -233,7 +233,14 @@ def describe_research(topic_UUID,Tchild_grakn,current_level,topic_turn_r,topic_t
 
             result_str = process_result_bullets(result[:n_articles]) 
 
-            a = ["Here is an interesting article, ", " An interesting read for you-", " You might like this too.."]
+            a = [
+                "I found something that might interest you in the field.",
+                "Here’s a great article to serve your interest.",
+                "I think this might be an interesting read for you!",
+                "Here is an interesting article, ", 
+                "An interesting read for you-", 
+                "On this topic, you might like this too..", 
+                "You should also check out this article while we are on this topic!"]
 
             random.shuffle(a)
 
@@ -340,6 +347,8 @@ def get_valid_Tchild_list(parent_topic,current_topic,level):
         '  (parent: $t1, child: $t2) isa ConsistsOf;',
         'get $x;'
     ]
+
+    q = "".join(q)
     result = query_grakn(q)
 
     return result
@@ -402,6 +411,37 @@ def get_Tchild_list(parent_topic,current_topic,current_level):
     q = "".join(q)
     result = query_grakn(q)
 
+
+    return result
+
+
+def get_additional(parent_topic,current_topic,current_level): 
+
+
+    # q = [
+    #     'match',
+    #     '  $t1 isa Tparent, has title "' + test_topic + '";',
+    #     '  $t2 isa Tchild, has title $x;'
+    #     '  (parent: $t1, child: $t2) isa ConsistsOf;',
+    #     'get $x;'
+    # ]
+    
+    url = "https://en.wikipedia.org/wiki/" + parent_topic + "#" + current_topic
+
+    q = [
+        'match',
+        '  $t1 isa Tparent, has title "' + parent_topic + '";',
+        '  $t2 isa Tchild, has title "' + current_topic + '", has path_depth "' + str(current_level) + '";'
+        '  (parent: $t1, child: $t2) isa ConsistsOf, has content $x;',
+        'get $x;'
+    ]
+
+
+
+    q = "".join(q)
+    result = query_grakn(q)
+
+    result = q
 
     return result
 
@@ -481,11 +521,29 @@ def process_result_bullets(list):
     # get bullets 
 
     bullet = "- "
+
+    list = [l.replace(" ", "_") for l in list]
     
     bulleted_list = [bullet + item for item in list if item not in additional] 
 
 
     list_str = ',\n'.join([str(elem) for elem in bulleted_list if elem not in additional]) 
+
+    list_str = list_str.replace("_", " ")
+
+    return list_str
+
+def process_result_bullets1(list):
+
+
+    # get bullets 
+
+    bullet = "- "
+    
+    bulleted_list = [bullet + item for item in list] 
+
+
+    list_str = ',\n'.join([str(elem) for elem in bulleted_list]) 
 
     list_str = list_str.replace("_", " ")
 

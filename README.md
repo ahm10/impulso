@@ -362,6 +362,8 @@ $ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 
 - Due to high number of articles, the ingestion module may be slow to run. For testing purpose the no. of articles limit is set to 5. 
 
+[EDIT] new limit is 50. The value for this can be directly set by variable called `n_articles` in the script.
+
 - In the script, instructions are provided to uncomment, if you wish to run for all articles.
 
 - Another factor to be understood is there must be a small delay while inserting data in grakn ( have organized with sleep of 0.1 sec). 

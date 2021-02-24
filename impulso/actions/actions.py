@@ -21,7 +21,7 @@ import helpers as h1
 
 import random
 
-additional = ["see_also", "references", "journals", "further_reading", "conferences"]
+additional = ["see_also", "references", "journals", "further_reading"]
 
 reseach_types = ['reserch','research','happening','article','articles','trends','trend','update','updates','new', 'news','example','examples','application','applications','innovation','innovations']
 class ActionGreet(Action):
@@ -455,47 +455,73 @@ class ActionS4(Action):
 
             desc = random.sample(positive,1)[0] + random.sample(source_check,1)[0]
 
-
-
-
             if (content_type=='wiki'): 
 
                 desc = ''
 
-                if (topic_turn_w < 3): # first produce the list of subtopics
-                    desc += h1.describe_wiki_Tparent(Tparent_grakn,'1',topic_turn_w,intent)
-                
-                    desc += "\n Would you like to know the latest research?" 
-                    topic_turn_w = topic_turn_w + 1
-                
-                else: # get an additional child topic
-                    desc += "\n Perhaps I can bring some extra details for you to read,\n"
-                    additional_child_topic = random.sample(additional,1)[0] # pick a random add on topic
-                    desc += h1.describe_wiki_Tchild(Tparent_grakn,additional_child_topic,'2',topic_turn_r,topic_turn_w,content_type,intent)
+                # check if it is topic request
 
-                    additional_child_topic = h1.get_Tchild_list(additional_child_topic,'','2')
+                if (intent=='next_level'):
 
-                    additional_child_topic_desc = h1.process_result_bullets(additional_child_topic)
-                    desc+= additional_child_topic_desc
+                    if (Tchild_grakn): 
 
-                    if (len(desc) <3): 
-                        desc = "Sorry, did not find much, May be we can start over? please say restart to do so."
+                        desc+= h1.describe_wiki_Tchild(Tparent_grakn,Tchild_grakn,current_level,topic_turn_r,topic_turn_w,content_type,intent)
 
-    
-            else: # look in medium
-
-                desc_art = ''
-                desc_art += h1.describe_research(TparentID, Tchild_grakn ,'1',topic_turn_r,topic_turn_w,content_type,intent).split(']')[0]
-                desc += desc_art
-
-                if (len(desc) > 3 and '-' in desc and '[' in desc):
-                    article = desc.split('[')[0].split('-')[1].lstrip().rstrip()
-                
-
-                topic_turn_r = topic_turn_r + 1
+                        if (len(desc) < 3): 
+                            desc+="\n I am not sure which topic are you referring to. Could I help you on any of the following on this topic?\n"
+                            desc += h1.describe_wiki_Tparent(Tparent_grakn,'1',topic_turn_w,intent)
 
 
+                    else: 
+                        desc+="\n I am not sure I fully understand your request. May be I can try telling about any of these-\n"
+                        desc += h1.describe_wiki_Tparent(Tparent_grakn,'1',topic_turn_w,intent)
 
+####### alternate
+                else:
+                    if (topic_turn_w < 3): # first produce the list of subtopics
+                        # desc += h1.describe_wiki_Tparent(Tparent_grakn,'1',topic_turn_w,intent)
+                    
+                        desc += "\n Would you like to know the latest research?" 
+                        topic_turn_w = topic_turn_w + 1
+                    
+                    else: # get an additional child topic
+
+                        
+
+                        a = ["\n Perhaps I can bring some more options for you,\n", "\n You can also check out more options like-\n", "\n Since you seem very interested, may I suggest other points!\n"]
+                        random.shuffle(a)
+
+
+                        
+                        res_sib= h1.get_adjacents(Tparent_grakn,Tchild_grakn,current_level)
+
+                        desc+=res_sib
+
+                        if (len(desc)>3):
+                            desc += "\nOn "+ Tparent_user + ", " + a[0]
+
+                        topic_turn_w = topic_turn_w + 1
+
+                        if (len(desc) <3): 
+                            desc = "Sorry, did not find much, May be we can start over? please say restart to do so."
+
+        
+                        else: # look in medium
+
+                            desc_art = ''
+                            desc_art += h1.describe_research(TparentID, Tchild_grakn ,'1',topic_turn_r,topic_turn_w,content_type,intent).split(']')[0]
+                            desc += desc_art
+
+                            if (len(desc) > 3 and '-' in desc and '[' in desc):
+                                article = desc.split('[')[0].split('-')[1].lstrip().rstrip()
+                            
+
+                            topic_turn_r = topic_turn_r + 1
+#### alternate
+
+
+        if (len(desc) < 3): 
+            desc+= "I am sorry but I had trouble understanding what you are looking for! Could we please start over? Just say restart!"
         dispatcher.utter_message(text=desc)
 
         ## clear child for new instance

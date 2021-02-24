@@ -21,7 +21,7 @@ intents:
 - compliment
 - know_more
 - research_open
-
+- inform
 
 entities:
 - Tparent

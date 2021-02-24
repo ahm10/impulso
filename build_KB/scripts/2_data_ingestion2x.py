@@ -50,7 +50,7 @@ parent_ids = []
 
 med_cols = ['Title', 'Author','url','Tag','Claps','Comment']
 med_ingest_cols = ['Title', 'Author','url']
-n_articles = 5
+n_articles = 50
 n_topics = 5
 for filename in parsed_files:
     # print("Collecting data from...",filename)

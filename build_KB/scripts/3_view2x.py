@@ -74,7 +74,7 @@ with GraknClient(uri="localhost:48555") as client:
             ]
 
             print("\nExecuting Query:\n", "\n".join(query2))
-            query2 = "".join(query2)
+            query2 = "".join(query2) 
 
             iterator = transaction.query(query2)
             answers = [ans.get("x") for ans in iterator]

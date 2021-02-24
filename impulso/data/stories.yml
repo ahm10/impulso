@@ -128,7 +128,7 @@ stories:
    - intent: greet
    - action: utter_greet
    - action: action_greet
-   - intent: know_about/research_q
+   - intent: know_about
    - action: Tparent_form
    - active_loop: Tparent_form   
    - intent: next_level_affirm
@@ -145,7 +145,7 @@ stories:
    - intent: greet
    - action: utter_greet
    - action: action_greet
-   - intent: know_about/research_q
+   - intent: know_about
    - action: Tparent_form
    - active_loop: Tparent_form   
    - intent: next_level_affirm
@@ -161,7 +161,7 @@ stories:
    - intent: greet
    - action: utter_greet
    - action: action_greet
-   - intent: know_about/research_q
+   - intent: know_about
    - action: Tparent_form
    - active_loop: Tparent_form   
    - intent: next_level_affirm
@@ -188,6 +188,56 @@ stories:
    - intent: reset_topic
    - action: utter_reset_topic
    - action: action_greet
+
+ - story: greet and ask31
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - action: action_greet
+   - intent: research_q
+   - action: Tparent_form
+   - active_loop: Tparent_form   
+   - intent: next_level_affirm
+   - action: offer_options
+   - action: Tchild_form
+   - active_loop: Tchild_form
+   - intent: next_level_affirm
+   - action: offer_options
+   - action: Tchild_form
+   - active_loop: Tchild_form
+
+ - story: greet and ask41
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - action: action_greet
+   - intent: research_q
+   - action: Tparent_form
+   - active_loop: Tparent_form   
+   - intent: next_level_affirm
+   - action: offer_options
+   - action: Tchild_form
+   - active_loop: Tchild_form
+   - intent: next_level_deny
+   - action: utter_reset_topic
+   - action: action_greet
+
+ - story: greet and ask compliment1
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - action: action_greet
+   - intent: research_q
+   - action: Tparent_form
+   - active_loop: Tparent_form   
+   - intent: next_level_affirm
+   - action: offer_options
+   - action: Tchild_form
+   - active_loop: Tchild_form
+   - intent: next_level_deny
+   - action: utter_reset_topic
+   - action: action_greet
+
 
  
 
