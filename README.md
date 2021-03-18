@@ -209,9 +209,10 @@ In Grakn all of the above are collectivly referred to as *concepts*. Hence it is
 - Custom functions required are scripted under grakn_utils.py.
 
 #### Ingestion
-Updated: Refer to [combined data ingestion in following sections](#Wiki+Medium-data-Ingestion) 
 
-~~
+Updated: Refer to [combined data ingestion in following sections](#wikimedium-data-ingestion) 
+
+<!-- 
 #### Run from the root
 ```ruby
 $ python ./build_KB/scripts/2_data_ingestion.py
@@ -239,10 +240,9 @@ or
 ```ruby
 $ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 ```
-![View_grakn_data](./test_q.PNG)
+![View_grakn_data](./test_q.PNG) -->
 
 
-~~
 
 # RASA Assistant :heavy_check_mark:
 
