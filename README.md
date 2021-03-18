@@ -198,7 +198,7 @@ $ .\grakn console --keyspace impulso0 --file ../../build_KB/scripts/1_schema.gql
 
 In Grakn all of the above are collectivly referred to as *concepts*. Hence it is also called a concept graph. 
 
-### 3. Ingest wikipedia data. :heavy_check_mark:
+### 3. Ingest wikipedia data.
 
 #### Objective: 
 
@@ -208,6 +208,10 @@ In Grakn all of the above are collectivly referred to as *concepts*. Hence it is
 
 - Custom functions required are scripted under grakn_utils.py.
 
+#### Ingestion
+Updated: Refer to [combined data ingestion in following sections](#Wiki+Medium-data-Ingestion) 
+
+~~
 #### Run from the root
 ```ruby
 $ python ./build_KB/scripts/2_data_ingestion.py
@@ -236,6 +240,9 @@ or
 $ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 ```
 ![View_grakn_data](./test_q.PNG)
+
+
+~~
 
 # RASA Assistant :heavy_check_mark:
 
@@ -335,9 +342,11 @@ Major upgrade with intertwined conversation paths
 2/ Optimize response time i.e. minimize the time of fetching / searching data from grakn graph
  
 
-# Medium data Ingestion :heavy_check_mark:
+# Wiki+Medium data Ingestion 
+
 
 #### Objective: 
+
 
 - This is a new ingestion module that is able to ingest *BOTH* medium and wiki data.  
 
@@ -346,6 +355,7 @@ Major upgrade with intertwined conversation paths
 - For testing the ingestion testing the parsed files for 5 topics are placed under build_medium_data/datastoreparsed_data.
 
 - To test,
+
 
 #### Run from the root
 ```ruby
