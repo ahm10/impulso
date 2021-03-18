@@ -21,7 +21,7 @@ WIKI_DATASTORE_PATH = WIKI_BASE_DIR_PATH + config['WIKI_PATHS']['datastoredir']
 SCRAPPED_PATH = WIKI_DATASTORE_PATH + config['WIKI_PATHS']['scrapped']
 PARSED_PATH = WIKI_DATASTORE_PATH + config['WIKI_PATHS']['parsed']
 STRUCTURED_PATH = WIKI_DATASTORE_PATH + config['WIKI_PATHS']['structured']
-
+TOPICS_LIST_PATH = ROOT_BASE_DIR_PATH + config['TOPICS_LIST_PATH']['basedir']
 ###################
 
 # import the libraries
