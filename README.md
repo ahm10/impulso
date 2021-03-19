@@ -75,7 +75,7 @@ i.e.
 
 
 
-## Sumplimentary tests 
+## Supplementary tests 
 
 ### 1. Validating Data and Stories
 
