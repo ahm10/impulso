@@ -4,6 +4,12 @@
 
 This covers both NLU and core testing. 
 
+### Run the test
+
+```ruby
+ $ rasa test
+```
+
 ### Interpreting test outputs
 
 ** Found in `results` folder**
@@ -19,6 +25,14 @@ This covers both NLU and core testing.
 - The histogram allows you to visualize the confidence for all predictions, with the correct and incorrect predictions being displayed by blue and red bars respectively. 
 
 - In case the numbers are not workable, for achieving better results, most promising solution is to manually generate more training data.  
+
+#### Entity Extraction
+
+- rasa test reports recall, precision, and f1-score for each entity type that your trainable entity extractors are trained to recognize.
+
+- Only trainable entity extractors, such as the DIETClassifier and CRFEntityExtractor are evaluated by rasa test.
+
+
 
 ## Tensorboard visualization test - To validate the training cycle accuracy 
 1. Enable tensorboard logging in `config.yml`.
@@ -53,11 +67,11 @@ i.e.
 
 #### Outputs 
 
-![Folder structure](./tb1.PNG)
+![Folder structure](./tb1.png)
 
-![Folder structure](./tb2.PNG)
+![Folder structure](./tb2.png)
 
-![Folder structure](./tb3.PNG)
+![Folder structure](./tb3.png)
 
 
 
@@ -117,40 +131,74 @@ Next, you can see how well your trained NLU model predicts the data from the tes
 #### Test output
 
 > 2021-03-19 13:17:39 INFO     rasa.model  - Loading model models\> 20210221-194337.tar.gz...
+>
 > 2021-03-19 13:17:46 INFO     rasa.shared.utils.validation  - The 'version' key is missing in the training data file 
+>
 > 2021-03-19 13:17:46 INFO     rasa.nlu.test  - Running model for predictions:
-100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 466/466 > [00:03<00:00, 121.86it/s]
+
+>100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 466/466 > [00:03<00:00, 121.86it/s]
+>
 > 2021-03-19 13:17:50 INFO     rasa.nlu.test  - Intent evaluation results:
+>
 > 2021-03-19 13:17:50 INFO     rasa.nlu.test  - Intent Evaluation: Only considering those 466 examples that have a defined intent out of 466 examples.
+>
 > 2021-03-19 13:17:50 INFO     rasa.nlu.test  - ** Classification report saved to results\intent_report.json **.
+>
 > 2021-03-19 13:17:50 INFO     rasa.nlu.test  - ** Incorrect intent predictions saved to results\intent_errors.json **.
+>
 > 2021-03-19 13:17:50 INFO     rasa.utils.plotting  - Confusion matrix, without normalization:
+>
 > [ [  2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
- > [  0   7   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
- > [  0   0  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
- > [  0   0   0   5   0   0   0   0   0   0   0   0   0   0   0   0   0]
- > [  0   0   0   0   4   0   0   0   0   0   0   0   0   0   0   0   0]
- > [  0   0   0   0   0  79   0   0   0   0   0   0   0   0   0   0   0]
- > [  0   0   0   0   0   0  22   0   0   1   0   0   0   0   0   0   0]
- > [  0   0   0   0   0   0   0 180   0   0   0   0   0   0   0   0   0]
- > [  0   0   1   0   0   0   0   0  40   0   0   0   0   0   0   0   0]
- > [  0   0   0   0   0   0   0   0   0  13   0   0   0   0   0   0   0]
- > [  0   0   0   0   0   0   0   0   0   0   9   0   0   0   0   0   0]
- > [  0   0   0   0   0   3   0   0   0   0   0  51   0   0   0   0   0]
- > [  0   0   0   0   0   0   0   0   0   0   0   0   5   0   0   0   0]
- > [  0   0   0   0   0   0   0   0   0   0   0   0   0  19   0   0   0]
- > [  0   0   0   0   0   0   0   0   0   0   0   0   0   0   2   0   0]
- > [  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   3   0]
- > [  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   3]]
- > 2021-03-19 13:17:52 INFO     rasa.nlu.test  - Entity evaluation results:
- > 2021-03-19 13:17:52 INFO     rasa.nlu.test  - Evaluation for entity extractor: DIETClassifier
- > 2021-03-19 13:17:52 INFO     rasa.nlu.test  - Classification report saved to results\DIETClassifier_report.json.
- > 2021-03-19 13:17:52 INFO     rasa.nlu.test  - Every entity was predicted correctly by the model.
- > 2021-03-19 13:17:53 INFO     rasa.utils.plotting  - Confusion matrix, without normalization:
- > [ [ 348    0    0    0]
- > [   0  266    0    0]
- > [   0    0   56    0]
- > [   0    0    0 1529]]
+>
+> [  0   7   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+>
+> [  0   0  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+>
+> [  0   0   0   5   0   0   0   0   0   0   0   0   0   0   0   0   0]
+>
+> [  0   0   0   0   4   0   0   0   0   0   0   0   0   0   0   0   0]
+>
+> [  0   0   0   0   0  79   0   0   0   0   0   0   0   0   0   0   0]
+>
+> [  0   0   0   0   0   0  22   0   0   1   0   0   0   0   0   0   0]
+>
+> [  0   0   0   0   0   0   0 180   0   0   0   0   0   0   0   0   0]
+>
+> [  0   0   1   0   0   0   0   0  40   0   0   0   0   0   0   0   0]
+>
+> [  0   0   0   0   0   0   0   0   0  13   0   0   0   0   0   0   0]
+>
+> [  0   0   0   0   0   0   0   0   0   0   9   0   0   0   0   0   0]
+> 
+> [  0   0   0   0   0   3   0   0   0   0   0  51   0   0   0   0   0]
+>
+> [  0   0   0   0   0   0   0   0   0   0   0   0   5   0   0   0   0]
+>
+> [  0   0   0   0   0   0   0   0   0   0   0   0   0  19   0   0   0]
+>
+> [  0   0   0   0   0   0   0   0   0   0   0   0   0   0   2   0   0]
+>
+> [  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   3   0]
+>
+> [  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   3]]
+
+> 2021-03-19 13:17:52 INFO     rasa.nlu.test  - Entity evaluation results:
+>
+> 2021-03-19 13:17:52 INFO     rasa.nlu.test  - Evaluation for entity extractor: DIETClassifier
+>
+> 2021-03-19 13:17:52 INFO     rasa.nlu.test  - Classification report saved to results\DIETClassifier_report.json.
+>
+> 2021-03-19 13:17:52 INFO     rasa.nlu.test  - Every entity was predicted correctly by the model.
+>
+> 2021-03-19 13:17:53 INFO     rasa.utils.plotting  - Confusion matrix, without normalization:
+>
+> [ [ 348    0    0    0]
+>
+> [   0  266    0    0]
+>
+> [   0    0   56    0]
+>
+> [   0    0    0 1529]]
 
 ### 3. Full NLU evaluation with cross validation
 
