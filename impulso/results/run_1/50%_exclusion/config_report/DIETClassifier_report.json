@@ -1,0 +1,41 @@
+{
+  "content_type": {
+    "precision": 0.9,
+    "recall": 1.0,
+    "f1-score": 0.9473684210526316,
+    "support": 9,
+    "confused_with": {}
+  },
+  "Tchild": {
+    "precision": 0.9722222222222222,
+    "recall": 0.9859154929577465,
+    "f1-score": 0.979020979020979,
+    "support": 71,
+    "confused_with": {}
+  },
+  "Tparent": {
+    "precision": 0.9811320754716981,
+    "recall": 1.0,
+    "f1-score": 0.9904761904761905,
+    "support": 52,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.9703703703703703,
+    "recall": 0.9924242424242424,
+    "f1-score": 0.9812734082397003,
+    "support": 132
+  },
+  "macro avg": {
+    "precision": 0.9511180992313069,
+    "recall": 0.9953051643192489,
+    "f1-score": 0.972288530183267,
+    "support": 132
+  },
+  "weighted avg": {
+    "precision": 0.9708079219871673,
+    "recall": 0.9924242424242424,
+    "f1-score": 0.9813755091267051,
+    "support": 132
+  }
+}

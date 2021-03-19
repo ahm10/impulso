@@ -1,0 +1,158 @@
+[
+  {
+    "text": "What do you know about etymology?",
+    "entities": [
+      {
+        "start": 23,
+        "end": 32,
+        "value": "etymology",
+        "entity": "Tchild"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "yes, dont worry",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 10,
+        "end": 15,
+        "confidence_entity": 0.9314771294593811,
+        "value": "worry",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "this is superb!",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 8,
+        "end": 14,
+        "confidence_entity": 0.9876787066459656,
+        "value": "superb",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "you are intelligent!",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "Tparent",
+        "start": 8,
+        "end": 19,
+        "confidence_entity": 0.9875281453132629,
+        "value": "intelligent",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "\tHow supervised learning algorithms work",
+    "entities": [
+      {
+        "start": 1,
+        "end": 40,
+        "value": "How supervised learning algorithms work",
+        "entity": "Tchild"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 5,
+        "end": 40,
+        "confidence_entity": 0.9983596205711365,
+        "value": "supervised learning algorithms work",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What is new in here?",
+    "entities": [
+      {
+        "start": 8,
+        "end": 11,
+        "value": "new",
+        "entity": "content_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How about history?",
+    "entities": [
+      {
+        "start": 10,
+        "end": 17,
+        "value": "history",
+        "entity": "Tchild"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "you are wonderful, impulso!",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 19,
+        "end": 26,
+        "confidence_entity": 0.5941046476364136,
+        "value": "impulso",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "\tI don\u2019t know a lot about How supervised learning algorithms work",
+    "entities": [
+      {
+        "start": 26,
+        "end": 65,
+        "value": "How supervised learning algorithms work",
+        "entity": "Tchild"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 14,
+        "end": 15,
+        "confidence_entity": 0.5228478908538818,
+        "value": "a",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "Tchild",
+        "start": 26,
+        "end": 65,
+        "confidence_entity": 0.9988038539886475,
+        "value": "How supervised learning algorithms work",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "lets choose a new topic",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "content_type",
+        "start": 14,
+        "end": 17,
+        "confidence_entity": 0.6203389763832092,
+        "value": "new",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

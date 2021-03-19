@@ -1,0 +1,58 @@
+[
+  {
+    "text": "I see, what more",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 2,
+        "end": 5,
+        "confidence_entity": 0.9995299577713013,
+        "value": "see",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "\\tHow supervised learning algorithms work",
+    "entities": [
+      {
+        "start": 2,
+        "end": 41,
+        "value": "How supervised learning algorithms work",
+        "entity": "Tchild"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 6,
+        "end": 41,
+        "confidence_entity": 0.9973190426826477,
+        "value": "supervised learning algorithms work",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "\\tGeneral issues",
+    "entities": [
+      {
+        "start": 2,
+        "end": 16,
+        "value": "General issues",
+        "entity": "Tchild"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 10,
+        "end": 16,
+        "confidence_entity": 0.999432384967804,
+        "value": "issues",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

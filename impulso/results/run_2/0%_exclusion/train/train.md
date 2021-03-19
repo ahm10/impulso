@@ -1,0 +1,391 @@
+## intent:greet
+- Good morning
+- Hallo
+- Hey!
+
+## intent:reset
+- go back
+- please start over
+- back to start
+
+## intent:bye
+- i am done
+- bye
+- thats all
+- see you later
+
+## intent:research_open
+- What is [happening](content_type) in it?
+- Can you recommend any interesting [articles](content_type) to read on this?
+- current [research](content_type) trends in it?
+- Tell me something exciting [happening](content_type) in this field?
+- Can you tell me about [research](content_type)?
+- What are the hot [research](content_type) topics in this domain?
+
+## intent:next_level_deny
+- not interested
+- this is nothing new
+- neah
+- get out
+- i already know this
+- forget it
+- I dont want to
+- eh
+- no this is boring
+- skip it
+
+## intent:compliment
+- you rock my friend!
+- good find!
+- you are amazing!
+- yes very interesting!
+- good read!
+- you are wonderful, impulso!
+- awesome!
+- that is useful!
+- you are intelligent!
+- it is interesting!
+- you are good!
+- this is superb!
+
+## intent:reset_topic
+- Apart from [data science](Tparent) what else do you know?
+- new topic please?
+- do you know any other topics execept this one?
+- what other topics do you know?
+- change the topic
+- not interesting
+- something else
+- this is boring
+- change
+- lets look at something else
+- I am not interested in [data science](Tparent)
+- can I please change the subject
+- lets choose a new topic
+- [data science](Tparent) is not so intresting
+- What other topics do you know about?
+
+## intent:know_more
+- Lets go deeper on this
+- can you give me more details
+- How about [history](Tchild)?
+- can you explain me more
+- Tell me something new
+- I know this already
+- What else do you know?
+- I want to learn more in depth
+- I find this very interesting
+- can you tell me about [foundations](Tchild)?
+- Tell me more
+- intresting
+- how about something new?
+- share more
+- What more can you tell me on this?
+- What more can you tell me?
+- Tell me something I dont know
+
+## intent:next_level_affirm
+- fine
+- certainly
+- that is correct
+- cool
+- yep
+- bingo
+- please continue
+- Ok sure
+- go on
+- yes I would like to know more
+- true
+- yes please
+- I guess
+- ok
+- great
+- OK
+- yes, dont worry
+- okies
+- sure
+- you are right
+- may be
+- right
+- correct
+- mostly
+- almost
+- you are absolutely right
+- ya
+- yes
+- it is
+- why not
+- got it
+- yes it is
+
+## intent:research_q
+- Tell me about latest [research](content_type) in [Reinforcement Learning](Tparent)?
+- What is [happening](content_type) in [Data Science](Tparent)?
+- Tell me about latest [research](content_type) in [Data Science](Tparent)?
+- Tell me about latest (research)[content_type] in [Artificial Intelligence](Tparent)?
+- Can you share some [articles](content_type) on [Artificial Intelligence](Tparent)?
+- Can you recommend any interesting [articles](content_type) to read on [Reinforcement Learning](Tparent)?
+- Can you recommend any interesting (articles)[content_type] to read on [Artificial Intelligence](Tparent)?
+- What is [new](content_type) in [Artificial Intelligence](Tparent)?
+- Tell me something exciting [happening](content_type) in [Data Science](Tparent)?
+- Can you tell me about [research](content_type) [Data Science](Tparent)?
+- Can you tell me about [research](content_type) [Python programming language](Tparent)?
+- Can you tell me about [research](content_type) [Reinforcement Learning](Tparent)?
+- What is [happening](content_type) in [Artificial Intelligence](Tparent)?
+- Can you recommend any interesting [articles](content_type) to read on [Data Science](Tparent)?
+- What are the hot (research)[content_type] topics in [Artificial Intelligence](Tparent)?
+- Tell me about latest [research](content_type) in [Artificial Intelligence](Tparent)?
+- What is [happening](content_type) in [Python programming language](Tparent)?
+- current [research](content_type) trends in [Reinforcement Learning](Tparent)?
+- Tell me something exciting [happening](content_type) in [Artificial Intelligence](Tparent)?
+- What is (new)[content_type] in [Artificial Intelligence](Tparent)?
+- What is [new](content_type) in [Reinforcement Learning](Tparent)?
+- Tell me something exciting [happening](content_type) in [Python programming language](Tparent)?
+- What is [happening](content_type) in [Reinforcement Learning](Tparent)?
+- What are the hot [research](content_type) topics in [Machine Learning](Tparent)?
+- What is the latest [update](content_type) in [Artificial Intelligence](Tparent)?
+- Can you tell me about [research](content_type) [Artificial Intelligence](Tparent)?
+- What are the hot [research](content_type) topics in [Python programming language](Tparent)?
+- What are the hot [research](content_type) topics in [Reinforcement Learning](Tparent)?
+- Tell me something exciting [happening](content_type) in [Machine Learning](Tparent)?
+- current [research](content_type) trends in [Artificial Intelligence](Tparent)?
+- Can you recommend any interesting [articles](content_type) to read on [Python programming language](Tparent)?
+- Tell me about latest [research](content_type) in [Machine Learning](Tparent)?
+- Can you tell me about (research)[content_type] [Artificial Intelligence](Tparent)?
+- Can you share some (articles)[content_type] on [Artificial Intelligence](Tparent)?
+- What is [new](content_type) in [Machine Learning](Tparent)?
+- Can you recommend any interesting [articles](content_type) to read on [Artificial Intelligence](Tparent)?
+- What are the hot [research](content_type) topics in [Data Science](Tparent)?
+- What is the latest [update](content_type) in [Data Science](Tparent)?
+- Tell me something exciting [happening](content_type) in [Reinforcement Learning](Tparent)?
+- Can you share some [articles](content_type) on [Python programming language](Tparent)?
+- What are the hot [research](content_type) topics in [Artificial Intelligence](Tparent)?
+- Tell me about latest [research](content_type) in [Python programming language](Tparent)?
+
+## intent:know_about
+- Can you tell me about [Machine Learning](Tparent)?
+- I would want to learn about [Python](Tparent).
+- What do you know about [Python](Tparent)?
+- I would love to know more on [Artificial Intelligence](Tparent)
+- Describe [Python](Tparent)?
+- Lets explore [Python](Tparent)
+- How about [Reinforcement Learning](Tparent)?
+- I don`t know a lot about [Data Science](Tparent)
+- Lets talk about [Python](Tparent)
+- Lets begin with [Artificial Intelligence](Tparent)?
+- Please explain [Reinforcement Learning](Tparent)
+- Please explain [Machine Learning](Tparent)
+- What do you know about [Machine Learning](Tparent)?
+- Lets explore [Reinforcement Learning](Tparent)
+- Tell me about [Artificial Intelligence](Tparent)?
+- [Python](Tparent)
+- Lets explore [Machine Learning](Tparent)
+- Lets talk about [Artificial Intelligence](Tparent)
+- What do you know about [Data Science](Tparent)?
+- What is [Machine Learning](Tparent)?
+- Lets talk about [Data Science](Tparent)
+- Describe [Artificial Intelligence](Tparent)?
+- Define [Machine Learning](Tparent)?
+- If you can tell me about [Artificial Intelligence](Tparent)?
+- Perhaps [Python](Tparent)
+- Can you explain [Artificial Intelligence](Tparent) to me?
+- How about [Machine Learning](Tparent)?
+- What is [Artificial Intelligence](Tparent)?
+- Define [Artificial Intelligence](Tparent)?
+- I don`t know a lot about [Machine Learning](Tparent)
+- Can you tell me about [Artificial Intelligence](Tparent)?
+- I would want to learn about [Reinforcement Learning](Tparent).
+- Can you tell me about [Python](Tparent)?
+- Perhaps [Data Science](Tparent)
+- Lets explore [Artificial Intelligence](Tparent)
+- Perhaps [Machine Learning](Tparent)
+- Can you explain [Data Science](Tparent) to me?
+- Define [Reinforcement Learning](Tparent)?
+- I don`t know a lot about [Reinforcement Learning](Tparent)
+- I would want to learn about [Artificial Intelligence](Tparent).
+- Tell me about [Machine Learning](Tparent)?
+- Tell me about [Python](Tparent)?
+- Describe [Data Science](Tparent)?
+- What is [Python](Tparent)?
+- I don`t know a lot about [Artificial Intelligence](Tparent)
+- Please explain [Python](Tparent)
+- What do you know about [Artificial Intelligence](Tparent)?
+- What is [Reinforcement Learning](Tparent)?
+- [Artificial Intelligence](Tparent)
+- [Machine Learning](Tparent)
+- What is [Data Science](Tparent)?
+- Define [Data Science](Tparent)?
+- How about [Python](Tparent)?
+- Can you explain [Reinforcement Learning](Tparent) to me?
+- How about [Data Science](Tparent)?
+- Please explain [Data Science](Tparent)
+- Lets talk about [Machine Learning](Tparent)
+- Can you tell me about [Reinforcement Learning](Tparent)?
+- Describe [Machine Learning](Tparent)?
+- How about [Artificial Intelligence](Tparent)?
+- Lets talk about [Reinforcement Learning](Tparent)
+- I would want to learn about [Data Science](Tparent).
+
+## intent:next_level
+- \tI would want to learn about [References](Tchild).
+- \tI don’t know a lot about [Algorithm choice](Tchild)
+- \t[Generalizations](Tchild)
+- \tCan you explain [References](Tchild) to me?
+- \tTell me about [Applications](Tchild)?
+- \tLets talk about [introduction](Tchild)
+- \tPerhaps [Approaches and algorithms](Tchild)
+- \tTell me about [Algorithm choice](Tchild)?
+- \tLets talk about [General issues](Tchild)
+- \tCan you tell me about [Generalizations](Tchild)?
+- \tLets explore [Generative training](Tchild)
+- \tI don’t know a lot about [Steps](Tchild)
+- \tWhat do you know about [Generative training](Tchild)?
+- \tDescribe [How supervised learning algorithms work](Tchild)?
+- \tWhat do you know about [References](Tchild)?
+- \tLets explore [Generalizations](Tchild)
+- \tDefine [External links](Tchild)?
+- \tLets explore [Approaches and algorithms](Tchild)
+- \tPlease explain [Steps](Tchild)
+- \tPerhaps [Applications](Tchild)
+- \tHow about [External links](Tchild)?
+- \tDescribe [Steps](Tchild)?
+- \tLets explore [Steps](Tchild)
+- \tDefine [See also](Tchild)?
+- \tDefine [How supervised learning algorithms work](Tchild)?
+- \tLets talk about [See also](Tchild)
+- \tDescribe [introduction](Tchild)?
+- \t[Approaches and algorithms](Tchild)
+- \tCan you tell me about [See also](Tchild)?
+- \tCan you explain [See also](Tchild) to me?
+- \tI don’t know a lot about [How supervised learning algorithms work](Tchild)
+- \tLets explore [introduction](Tchild)
+- \tI don’t know a lot about [Approaches and algorithms](Tchild)
+- \tCan you tell me about [External links](Tchild)?
+- \tWhat is [External links](Tchild)?
+- \tLets explore [References](Tchild)
+- \tDescribe [Approaches and algorithms](Tchild)?
+- \tDescribe [Algorithm choice](Tchild)?
+- \tWhat do you know about [How supervised learning algorithms work](Tchild)?
+- \tI would want to learn about [introduction](Tchild).
+- \tI would want to learn about [Applications](Tchild).
+- \t[General issues](Tchild)
+- \tPerhaps [References](Tchild)
+- \t[introduction](Tchild)
+- \tPerhaps [See also](Tchild)
+- \tTell me about [Approaches and algorithms](Tchild)?
+- \tPlease explain [How supervised learning algorithms work](Tchild)
+- \tWhat is [See also](Tchild)?
+- \tPlease explain [Algorithm choice](Tchild)
+- \tLets talk about [Applications](Tchild)
+- \tHow about [Steps](Tchild)?
+- \tWhat do you know about [Algorithm choice](Tchild)?
+- \tPerhaps [Steps](Tchild)
+- \tI don’t know a lot about [See also](Tchild)
+- \tPlease explain [References](Tchild)
+- \tLets explore [How supervised learning algorithms work](Tchild)
+- \t[How supervised learning algorithms work](Tchild)
+- \tCan you explain [Generalizations](Tchild) to me?
+- \tI would want to learn about [See also](Tchild).
+- \tI would want to learn about [Generalizations](Tchild).
+- \tLets talk about [References](Tchild)
+- \tCan you explain [External links](Tchild) to me?
+- \tLets talk about [Algorithm choice](Tchild)
+- \tWhat do you know about [See also](Tchild)?
+- \t[See also](Tchild)
+- \tCan you explain [introduction](Tchild) to me?
+- \tPlease explain [Generative training](Tchild)
+- \tTell me about [External links](Tchild)?
+- \tTell me about [See also](Tchild)?
+- \tWhat do you know about [General issues](Tchild)?
+- \tI don’t know a lot about [introduction](Tchild)
+- \tDefine [Approaches and algorithms](Tchild)?
+- \tCan you explain [General issues](Tchild) to me?
+- \tLets explore [External links](Tchild)
+- \t[Algorithm choice](Tchild)
+- \tLets talk about [Approaches and algorithms](Tchild)
+- \tCan you tell me about [References](Tchild)?
+- \tCan you tell me about [introduction](Tchild)?
+- \tWhat is [Approaches and algorithms](Tchild)?
+- \t[External links](Tchild)
+- \tLets talk about [External links](Tchild)
+- \tTell me about [How supervised learning algorithms work](Tchild)?
+- \tWhat is [How supervised learning algorithms work](Tchild)?
+- \tWhat is [Generalizations](Tchild)?
+- \tWhat is [Generative training](Tchild)?
+- \tI would want to learn about [External links](Tchild).
+- \tLets explore [General issues](Tchild)
+- \tPerhaps [General issues](Tchild)
+- \tPlease explain [Generalizations](Tchild)
+- \tPlease explain [introduction](Tchild)
+- \tPlease explain [External links](Tchild)
+- \tDescribe [Generalizations](Tchild)?
+- \t[Generative training](Tchild)
+- \tDefine [Generative training](Tchild)?
+- \tCan you tell me about [Approaches and algorithms](Tchild)?
+- \tTell me about [introduction](Tchild)?
+- \tWhat do you know about [Generalizations](Tchild)?
+- \tTell me about [Generative training](Tchild)?
+- \tLets explore [Applications](Tchild)
+- \tI would want to learn about [General issues](Tchild).
+- \tCan you explain [Algorithm choice](Tchild) to me?
+- \tWhat is [References](Tchild)?
+- \tHow about [introduction](Tchild)?
+- \t[Steps](Tchild)
+- \tDefine [References](Tchild)?
+- \tCan you explain [Generative training](Tchild) to me?
+- \tHow about [General issues](Tchild)?
+- \tTell me about [Steps](Tchild)?
+- \tPerhaps [Generative training](Tchild)
+- \tI don’t know a lot about [Applications](Tchild)
+- \tDefine [introduction](Tchild)?
+- \tHow about [Generative training](Tchild)?
+- \tPerhaps [How supervised learning algorithms work](Tchild)
+- \tTell me about [General issues](Tchild)?
+- \tPlease explain [General issues](Tchild)
+- \tI would want to learn about [Approaches and algorithms](Tchild).
+- \t[References](Tchild)
+- \tHow about [How supervised learning algorithms work](Tchild)?
+- \tHow about [Approaches and algorithms](Tchild)?
+- \tDefine [General issues](Tchild)?
+- \tHow about [Applications](Tchild)?
+- \tCan you explain [How supervised learning algorithms work](Tchild) to me?
+- \tI would want to learn about [Generative training](Tchild).
+- \tWhat is [Algorithm choice](Tchild)?
+- \tCan you tell me about [How supervised learning algorithms work](Tchild)?
+- \tDescribe [General issues](Tchild)?
+- \tHow about [Algorithm choice](Tchild)?
+- \tPlease explain [See also](Tchild)
+- \tWhat is [Applications](Tchild)?
+- \tDescribe [External links](Tchild)?
+- \tCan you explain [Applications](Tchild) to me?
+- \tCan you tell me about [Generative training](Tchild)?
+- \tWhat do you know about [introduction](Tchild)?
+- \tPerhaps [Algorithm choice](Tchild)
+- \tDescribe [See also](Tchild)?
+- \tTell me about [References](Tchild)?
+- \tI would want to learn about [How supervised learning algorithms work](Tchild).
+- \tDefine [Steps](Tchild)?
+- \tHow about [References](Tchild)?
+- \tWhat do you know about [Applications](Tchild)?
+- \tTell me about [Generalizations](Tchild)?
+- \tCan you tell me about [Applications](Tchild)?
+- \tCan you tell me about [Algorithm choice](Tchild)?
+
+## synonym:Artificial Intelligence
+- artificial intelligenz
+- AI
+- artifical intelligene
+- AE
+- machine intelligence
+
+## synonym:Machine learning
+- learning
+- ML
+- macine learning
+- machin learning
+- machine lerning
+
+## synonym:Python (programming language)
+- python
+- python programming
+- programming with python

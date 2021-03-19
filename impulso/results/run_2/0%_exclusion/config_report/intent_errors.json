@@ -1,0 +1,90 @@
+[
+  {
+    "text": "Good day",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.9536040425300598
+    }
+  },
+  {
+    "text": "reset",
+    "intent": "reset",
+    "intent_prediction": {
+      "name": "research_open",
+      "confidence": 0.33129188418388367
+    }
+  },
+  {
+    "text": "Tell me about latest research?",
+    "intent": "research_open",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.931210458278656
+    }
+  },
+  {
+    "text": "nope",
+    "intent": "next_level_deny",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.8472157716751099
+    }
+  },
+  {
+    "text": "i dont find it interesting",
+    "intent": "next_level_deny",
+    "intent_prediction": {
+      "name": "know_more",
+      "confidence": 0.6104771494865417
+    }
+  },
+  {
+    "text": "nice!",
+    "intent": "compliment",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.9444705247879028
+    }
+  },
+  {
+    "text": "you are great!",
+    "intent": "compliment",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.6217713952064514
+    }
+  },
+  {
+    "text": "tell me further",
+    "intent": "know_more",
+    "intent_prediction": {
+      "name": "reset_topic",
+      "confidence": 0.5660435557365417
+    }
+  },
+  {
+    "text": "Lets explore this further",
+    "intent": "know_more",
+    "intent_prediction": {
+      "name": "reset_topic",
+      "confidence": 0.48664799332618713
+    }
+  },
+  {
+    "text": "understood",
+    "intent": "next_level_affirm",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.9016543030738831
+    }
+  },
+  {
+    "text": "I think so",
+    "intent": "next_level_affirm",
+    "intent_prediction": {
+      "name": "reset_topic",
+      "confidence": 0.7327641844749451
+    }
+  }
+]

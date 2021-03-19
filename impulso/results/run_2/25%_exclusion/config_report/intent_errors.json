@@ -1,0 +1,114 @@
+[
+  {
+    "text": "Good day",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.9956047534942627
+    }
+  },
+  {
+    "text": "reset",
+    "intent": "reset",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.3627161979675293
+    }
+  },
+  {
+    "text": "ok bye",
+    "intent": "bye",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.6950294375419617
+    }
+  },
+  {
+    "text": "Tell me about latest research?",
+    "intent": "research_open",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.9759241342544556
+    }
+  },
+  {
+    "text": "Can you share some articles on this?",
+    "intent": "research_open",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.8268468379974365
+    }
+  },
+  {
+    "text": "i dont find it interesting",
+    "intent": "next_level_deny",
+    "intent_prediction": {
+      "name": "know_more",
+      "confidence": 0.8977497220039368
+    }
+  },
+  {
+    "text": "nice!",
+    "intent": "compliment",
+    "intent_prediction": {
+      "name": "next_level_deny",
+      "confidence": 0.22360971570014954
+    }
+  },
+  {
+    "text": "you are great!",
+    "intent": "compliment",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.8953651189804077
+    }
+  },
+  {
+    "text": "What do you know about etymology?",
+    "intent": "know_more",
+    "intent_prediction": {
+      "name": "know_about",
+      "confidence": 0.722205638885498
+    }
+  },
+  {
+    "text": "This is common",
+    "intent": "know_more",
+    "intent_prediction": {
+      "name": "research_open",
+      "confidence": 0.38622400164604187
+    }
+  },
+  {
+    "text": "Lets explore this further",
+    "intent": "know_more",
+    "intent_prediction": {
+      "name": "know_about",
+      "confidence": 0.5328472852706909
+    }
+  },
+  {
+    "text": "understood",
+    "intent": "next_level_affirm",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.9022546410560608
+    }
+  },
+  {
+    "text": "I think so",
+    "intent": "next_level_affirm",
+    "intent_prediction": {
+      "name": "reset_topic",
+      "confidence": 0.7032829523086548
+    }
+  },
+  {
+    "text": "totally",
+    "intent": "next_level_affirm",
+    "intent_prediction": {
+      "name": "bye",
+      "confidence": 0.25376173853874207
+    }
+  }
+]

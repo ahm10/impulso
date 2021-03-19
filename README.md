@@ -1,3 +1,175 @@
+# Testing guidelines
+
+## Standard Combined test NLU + Core - Most recommended
+
+This covers both NLU and core testing. 
+
+### Interpreting test outputs
+
+** Found in `results` folder**
+
+#### Intent Classifiers
+
+- The rasa test script will produce a report (intent_report.json), confusion matrix (intent_confusion_matrix.png) and confidence histogram (intent_histogram.png) for your intent classification model.
+
+- The report logs precision, recall and f1-score for each intent, as well as providing an overall average. You can save these reports as JSON files using the --report argument.
+
+- The confusion matrix shows which intents are mistaken for others. Any samples which have been incorrectly predicted are logged and saved to a file called errors.json for easier debugging.
+
+- The histogram allows you to visualize the confidence for all predictions, with the correct and incorrect predictions being displayed by blue and red bars respectively. 
+
+- In case the numbers are not workable, for achieving better results, most promising solution is to manually generate more training data.  
+
+## Tensorboard visualization test - To validate the training cycle accuracy 
+1. Enable tensorboard logging in `config.yml`.
+
+- Commented code is placed already (lines 13-17) in the pipeline. 
+
+2. After uncommenting the code, ensure that log directory exists with correct name and in correct location. Currently the log directory is `.tensorboard` already present in same folder. 
+
+
+#### To run the test- 
+First train a new model with, 
+
+```ruby
+ $ rasa train
+```
+
+After the training is completed, 
+
+```ruby
+ $ tensorboard --logdir=YOUR_LOG_DIR --host=127.0.0.1
+```
+
+i.e. 
+
+```ruby
+ $ tensorboard --logdir=.tensorboard --host=127.0.0.1
+```
+
+#### Visualize the training and test results- 
+
+- To access the tensorboard on http://127.0.0.1:6006/
+
+#### Outputs 
+
+![Folder structure](./tb1.PNG)
+
+![Folder structure](./tb2.PNG)
+
+![Folder structure](./tb3.PNG)
+
+
+
+## Sumplimentary tests 
+
+### 1. Validating Data and Stories
+
+Data validation verifies that no mistakes or major inconsistencies appear in the training data i.e. domain, NLU data, or story data. 
+
+#### To run the test- 
+```ruby
+ $ rasa data validate
+```
+
+#### Test output
+
+> 2021-03-19 12:57:14 INFO     rasa.validator  - Validating intents...
+>
+> 2021-03-19 12:57:14 INFO     rasa.validator  - Validating uniqueness of intents and stories...
+>
+> 2021-03-19 12:57:14 INFO     rasa.validator  - Validating utterances...
+>
+> 2021-03-19 12:57:14 INFO     rasa.validator  - Story structure validation...
+>
+> Processed story blocks: 100%|███████████████████████████████████████████| 14/14 [00:00<00:00, 875.00it/s, # trackers=1]
+>
+> 2021-03-19 12:57:14 INFO     rasa.core.training.story_conflict  - Considering all preceding turns for conflict analysis.2021-03-19 12:57:14 INFO     rasa.validator  - No story structure conflicts found.
+>
+
+#### For more options on this test 
+[See this](https://rasa.com/docs/rasa/command-line-interface#rasa-data-validate)
+
+
+### 2. Evaluating an NLU Model
+
+In addition to testing stories, you can also test the natural language understanding (NLU) model separately. 
+
+Once your assistant is deployed in the real world, it will be processing messages that it hasn't seen in the training data. 
+
+To simulate this, you should always set aside some part of your data for testing. You can split your NLU data into train and test sets using:
+
+
+#### To create the split- 
+```ruby
+ $ rasa data split nlu --training-fraction 0.8
+```
+#### For more options on split command 
+[See this](https://rasa.com/docs/rasa/command-line-interface#rasa-data-split)
+
+Next, you can see how well your trained NLU model predicts the data from the test set you generated, with following- 
+
+#### Run the test 
+```ruby
+ $ rasa test nlu
+```
+
+#### Test output
+
+> 2021-03-19 13:17:39 INFO     rasa.model  - Loading model models\> 20210221-194337.tar.gz...
+> 2021-03-19 13:17:46 INFO     rasa.shared.utils.validation  - The 'version' key is missing in the training data file 
+> 2021-03-19 13:17:46 INFO     rasa.nlu.test  - Running model for predictions:
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 466/466 > [00:03<00:00, 121.86it/s]
+> 2021-03-19 13:17:50 INFO     rasa.nlu.test  - Intent evaluation results:
+> 2021-03-19 13:17:50 INFO     rasa.nlu.test  - Intent Evaluation: Only considering those 466 examples that have a defined intent out of 466 examples.
+> 2021-03-19 13:17:50 INFO     rasa.nlu.test  - ** Classification report saved to results\intent_report.json **.
+> 2021-03-19 13:17:50 INFO     rasa.nlu.test  - ** Incorrect intent predictions saved to results\intent_errors.json **.
+> 2021-03-19 13:17:50 INFO     rasa.utils.plotting  - Confusion matrix, without normalization:
+> [ [  2   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ > [  0   7   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ > [  0   0  17   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ > [  0   0   0   5   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ > [  0   0   0   0   4   0   0   0   0   0   0   0   0   0   0   0   0]
+ > [  0   0   0   0   0  79   0   0   0   0   0   0   0   0   0   0   0]
+ > [  0   0   0   0   0   0  22   0   0   1   0   0   0   0   0   0   0]
+ > [  0   0   0   0   0   0   0 180   0   0   0   0   0   0   0   0   0]
+ > [  0   0   1   0   0   0   0   0  40   0   0   0   0   0   0   0   0]
+ > [  0   0   0   0   0   0   0   0   0  13   0   0   0   0   0   0   0]
+ > [  0   0   0   0   0   0   0   0   0   0   9   0   0   0   0   0   0]
+ > [  0   0   0   0   0   3   0   0   0   0   0  51   0   0   0   0   0]
+ > [  0   0   0   0   0   0   0   0   0   0   0   0   5   0   0   0   0]
+ > [  0   0   0   0   0   0   0   0   0   0   0   0   0  19   0   0   0]
+ > [  0   0   0   0   0   0   0   0   0   0   0   0   0   0   2   0   0]
+ > [  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   3   0]
+ > [  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   3]]
+ > 2021-03-19 13:17:52 INFO     rasa.nlu.test  - Entity evaluation results:
+ > 2021-03-19 13:17:52 INFO     rasa.nlu.test  - Evaluation for entity extractor: DIETClassifier
+ > 2021-03-19 13:17:52 INFO     rasa.nlu.test  - Classification report saved to results\DIETClassifier_report.json.
+ > 2021-03-19 13:17:52 INFO     rasa.nlu.test  - Every entity was predicted correctly by the model.
+ > 2021-03-19 13:17:53 INFO     rasa.utils.plotting  - Confusion matrix, without normalization:
+ > [ [ 348    0    0    0]
+ > [   0  266    0    0]
+ > [   0    0   56    0]
+ > [   0    0    0 1529]]
+
+### 3. Full NLU evaluation with cross validation
+
+** Extensive cross validation ** with multiple permutation combinations of train - CV and configuration combinations. 
+
+It creates multiple models with different splits and configuration settings. In present example, A dummy config file (config1.yml) is created to make a comparision along with our current configuration (config.yml). 
+
+- The `results` folder would contain 3 `run` folders. 
+
+- Each `run` contains split scenarios in step of 25%. 
+
+#### Run the test 
+```ruby
+ $ rasa test nlu --nlu data/nlu.yml --config config.yml config1.yml
+```
+
+Similar tests can also be conducted on RASA core if required. [See](https://rasa.com/docs/rasa/testing-your-assistant/#comparing-policy-configurations) 
+
+ 
 # Latest update [:hatching_chick: > :hatched_chick:]
 
 The new agent can handle larger variety of scenarios*

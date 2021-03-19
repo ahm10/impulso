@@ -1,0 +1,98 @@
+[
+  {
+    "text": "Good morning",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.5239028930664062
+    }
+  },
+  {
+    "text": "see you later",
+    "intent": "bye",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.6733720898628235
+    }
+  },
+  {
+    "text": "thats all",
+    "intent": "bye",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.6390100121498108
+    }
+  },
+  {
+    "text": "Can you share some articles on this?",
+    "intent": "research_open",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.6423428654670715
+    }
+  },
+  {
+    "text": "What are the hot research topics in this domain?",
+    "intent": "research_open",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.9096707701683044
+    }
+  },
+  {
+    "text": "eh",
+    "intent": "next_level_deny",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.5961411595344543
+    }
+  },
+  {
+    "text": "skip it",
+    "intent": "next_level_deny",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.9824886918067932
+    }
+  },
+  {
+    "text": "yes very interesting!",
+    "intent": "compliment",
+    "intent_prediction": {
+      "name": "know_more",
+      "confidence": 0.9678213000297546
+    }
+  },
+  {
+    "text": "you are intelligent!",
+    "intent": "compliment",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.44438856840133667
+    }
+  },
+  {
+    "text": "not interesting",
+    "intent": "reset_topic",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.5415659546852112
+    }
+  },
+  {
+    "text": "Lets go deeper on this",
+    "intent": "know_more",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.4245857000350952
+    }
+  },
+  {
+    "text": "fine",
+    "intent": "next_level_affirm",
+    "intent_prediction": {
+      "name": "bye",
+      "confidence": 0.3460131883621216
+    }
+  }
+]

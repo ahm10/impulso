@@ -1,0 +1,154 @@
+[
+  {
+    "text": "Good morning",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "bye",
+      "confidence": 0.22705896198749542
+    }
+  },
+  {
+    "text": "see you later",
+    "intent": "bye",
+    "intent_prediction": {
+      "name": "next_level",
+      "confidence": 0.6450678110122681
+    }
+  },
+  {
+    "text": "thats all",
+    "intent": "bye",
+    "intent_prediction": {
+      "name": "next_level",
+      "confidence": 0.24877940118312836
+    }
+  },
+  {
+    "text": "Can you share some articles on this?",
+    "intent": "research_open",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.6269975304603577
+    }
+  },
+  {
+    "text": "What are the hot research topics in this domain?",
+    "intent": "research_open",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.9690675735473633
+    }
+  },
+  {
+    "text": "eh",
+    "intent": "next_level_deny",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.704740047454834
+    }
+  },
+  {
+    "text": "skip it",
+    "intent": "next_level_deny",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.95947265625
+    }
+  },
+  {
+    "text": "good read!",
+    "intent": "compliment",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.7666698694229126
+    }
+  },
+  {
+    "text": "you are intelligent!",
+    "intent": "compliment",
+    "intent_prediction": {
+      "name": "know_about",
+      "confidence": 0.434043824672699
+    }
+  },
+  {
+    "text": "you are good!",
+    "intent": "compliment",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.9099635481834412
+    }
+  },
+  {
+    "text": "lets choose a new topic",
+    "intent": "reset_topic",
+    "intent_prediction": {
+      "name": "next_level",
+      "confidence": 0.2654821574687958
+    }
+  },
+  {
+    "text": "not interesting",
+    "intent": "reset_topic",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.4347939193248749
+    }
+  },
+  {
+    "text": "I see, what more",
+    "intent": "know_more",
+    "intent_prediction": {
+      "name": "next_level",
+      "confidence": 0.2904595732688904
+    }
+  },
+  {
+    "text": "Lets go deeper on this",
+    "intent": "know_more",
+    "intent_prediction": {
+      "name": "next_level",
+      "confidence": 0.5643168687820435
+    }
+  },
+  {
+    "text": "please continue",
+    "intent": "next_level_affirm",
+    "intent_prediction": {
+      "name": "reset_topic",
+      "confidence": 0.4057875871658325
+    }
+  },
+  {
+    "text": "Please explain Python",
+    "intent": "know_about",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.26275113224983215
+    }
+  },
+  {
+    "text": "Lets explore Python",
+    "intent": "know_about",
+    "intent_prediction": {
+      "name": "next_level",
+      "confidence": 0.3847891688346863
+    }
+  },
+  {
+    "text": "Describe Python?",
+    "intent": "know_about",
+    "intent_prediction": {
+      "name": "next_level",
+      "confidence": 0.724900484085083
+    }
+  },
+  {
+    "text": "What do you know about Python?",
+    "intent": "know_about",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.3472186326980591
+    }
+  }
+]

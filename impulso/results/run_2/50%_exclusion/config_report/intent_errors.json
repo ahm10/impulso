@@ -1,0 +1,130 @@
+[
+  {
+    "text": "Good day",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.8937896490097046
+    }
+  },
+  {
+    "text": "reset",
+    "intent": "reset",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.57965487241745
+    }
+  },
+  {
+    "text": "ok bye",
+    "intent": "bye",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.9990172982215881
+    }
+  },
+  {
+    "text": "will talk later",
+    "intent": "bye",
+    "intent_prediction": {
+      "name": "next_level",
+      "confidence": 0.24853533506393433
+    }
+  },
+  {
+    "text": "Tell me about latest research?",
+    "intent": "research_open",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.9307034611701965
+    }
+  },
+  {
+    "text": "Can you share some articles on this?",
+    "intent": "research_open",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.9778728485107422
+    }
+  },
+  {
+    "text": "nope",
+    "intent": "next_level_deny",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.7482732534408569
+    }
+  },
+  {
+    "text": "i dont find it interesting",
+    "intent": "next_level_deny",
+    "intent_prediction": {
+      "name": "know_more",
+      "confidence": 0.4385446608066559
+    }
+  },
+  {
+    "text": "nice!",
+    "intent": "compliment",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.637722909450531
+    }
+  },
+  {
+    "text": "you are great!",
+    "intent": "compliment",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.982591986656189
+    }
+  },
+  {
+    "text": "you are smart!",
+    "intent": "compliment",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.43396827578544617
+    }
+  },
+  {
+    "text": "What do you know about etymology?",
+    "intent": "know_more",
+    "intent_prediction": {
+      "name": "next_level_deny",
+      "confidence": 0.3272259831428528
+    }
+  },
+  {
+    "text": "tell me further",
+    "intent": "know_more",
+    "intent_prediction": {
+      "name": "reset_topic",
+      "confidence": 0.2618725895881653
+    }
+  },
+  {
+    "text": "understood",
+    "intent": "next_level_affirm",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.4360567629337311
+    }
+  },
+  {
+    "text": "I think so",
+    "intent": "next_level_affirm",
+    "intent_prediction": {
+      "name": "know_more",
+      "confidence": 0.7931528687477112
+    }
+  },
+  {
+    "text": "Can you tell me about research Machine Learning?",
+    "intent": "research_q",
+    "intent_prediction": {
+      "name": "know_about",
+      "confidence": 0.843327522277832
+    }
+  }
+]

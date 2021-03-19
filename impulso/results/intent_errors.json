@@ -1,0 +1,42 @@
+[
+  {
+    "text": "I know this already",
+    "intent": "know_more",
+    "intent_prediction": {
+      "name": "next_level_deny",
+      "confidence": 0.6347064971923828
+    }
+  },
+  {
+    "text": "Can you tell me about (research)[content_type] Artificial Intelligence?",
+    "intent": "research_q",
+    "intent_prediction": {
+      "name": "know_about",
+      "confidence": 0.7294359803199768
+    }
+  },
+  {
+    "text": "What is (new)[content_type] in Artificial Intelligence?",
+    "intent": "research_q",
+    "intent_prediction": {
+      "name": "know_about",
+      "confidence": 0.7390773296356201
+    }
+  },
+  {
+    "text": "current (research)[content_type] trends in Artificial Intelligence?",
+    "intent": "research_q",
+    "intent_prediction": {
+      "name": "know_about",
+      "confidence": 0.5811944007873535
+    }
+  },
+  {
+    "text": "cool",
+    "intent": "next_level_affirm",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.6715759038925171
+    }
+  }
+]

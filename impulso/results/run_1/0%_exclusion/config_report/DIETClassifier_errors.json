@@ -1,0 +1,65 @@
+[
+  {
+    "text": "you are intelligent!",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "Tparent",
+        "start": 8,
+        "end": 19,
+        "confidence_entity": 0.7875639200210571,
+        "value": "intelligent",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "lets choose a new topic",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "content_type",
+        "start": 14,
+        "end": 17,
+        "confidence_entity": 0.6778538227081299,
+        "value": "new",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I see, what more",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 2,
+        "end": 5,
+        "confidence_entity": 0.9994696974754333,
+        "value": "see",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "\\tHow supervised learning algorithms work",
+    "entities": [
+      {
+        "start": 2,
+        "end": 41,
+        "value": "How supervised learning algorithms work",
+        "entity": "Tchild"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 6,
+        "end": 41,
+        "confidence_entity": 0.9984405636787415,
+        "value": "supervised learning algorithms work",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "text": "Good day",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.9822458624839783
+    }
+  },
+  {
+    "text": "reset",
+    "intent": "reset",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.4752802550792694
+    }
+  },
+  {
+    "text": "ok bye",
+    "intent": "bye",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.8939080238342285
+    }
+  },
+  {
+    "text": "will talk later",
+    "intent": "bye",
+    "intent_prediction": {
+      "name": "next_level",
+      "confidence": 0.3700021803379059
+    }
+  },
+  {
+    "text": "Tell me about latest research?",
+    "intent": "research_open",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.9996256232261658
+    }
+  },
+  {
+    "text": "Can you share some articles on this?",
+    "intent": "research_open",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.9938667416572571
+    }
+  },
+  {
+    "text": "nope",
+    "intent": "next_level_deny",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.7060651183128357
+    }
+  },
+  {
+    "text": "nice!",
+    "intent": "compliment",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.8642503619194031
+    }
+  },
+  {
+    "text": "not helping",
+    "intent": "reset_topic",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.8587650656700134
+    }
+  },
+  {
+    "text": "tell me further",
+    "intent": "know_more",
+    "intent_prediction": {
+      "name": "reset_topic",
+      "confidence": 0.3133541941642761
+    }
+  },
+  {
+    "text": "This is common",
+    "intent": "know_more",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.3077692687511444
+    }
+  },
+  {
+    "text": "Lets explore this further",
+    "intent": "know_more",
+    "intent_prediction": {
+      "name": "know_about",
+      "confidence": 0.8295823335647583
+    }
+  },
+  {
+    "text": "understood",
+    "intent": "next_level_affirm",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.9356823563575745
+    }
+  },
+  {
+    "text": "I think so",
+    "intent": "next_level_affirm",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.3200511634349823
+    }
+  },
+  {
+    "text": "What is happening in Machine Learning?",
+    "intent": "research_q",
+    "intent_prediction": {
+      "name": "know_about",
+      "confidence": 0.9035593867301941
+    }
+  }
+]

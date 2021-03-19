@@ -1,0 +1,65 @@
+[
+  {
+    "text": "you are wonderful, impulso!",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 19,
+        "end": 26,
+        "confidence_entity": 0.5188711285591125,
+        "value": "impulso",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "how about something new?",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "content_type",
+        "start": 20,
+        "end": 23,
+        "confidence_entity": 0.9286887645721436,
+        "value": "new",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I see, what more",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 2,
+        "end": 5,
+        "confidence_entity": 0.9956873059272766,
+        "value": "see",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "\\tHow supervised learning algorithms work",
+    "entities": [
+      {
+        "start": 2,
+        "end": 41,
+        "value": "How supervised learning algorithms work",
+        "entity": "Tchild"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 6,
+        "end": 41,
+        "confidence_entity": 0.9272604584693909,
+        "value": "supervised learning algorithms work",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

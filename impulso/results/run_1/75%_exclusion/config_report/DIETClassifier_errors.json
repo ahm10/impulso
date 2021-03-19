@@ -1,0 +1,223 @@
+[
+  {
+    "text": "Good morning",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "Tparent",
+        "start": 5,
+        "end": 12,
+        "confidence_entity": 0.598954975605011,
+        "value": "morning",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "see you later",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.7799786329269409,
+        "value": "see",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "you are intelligent!",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "Tparent",
+        "start": 8,
+        "end": 19,
+        "confidence_entity": 0.9646583199501038,
+        "value": "intelligent",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "lets choose a new topic",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "content_type",
+        "start": 14,
+        "end": 17,
+        "confidence_entity": 0.8915084004402161,
+        "value": "new",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tell me something new",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "content_type",
+        "start": 18,
+        "end": 21,
+        "confidence_entity": 0.5179895162582397,
+        "value": "new",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I see, what more",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 2,
+        "end": 5,
+        "confidence_entity": 0.9659494161605835,
+        "value": "see",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tell me about latest (research)[content_type] in Artificial Intelligence?",
+    "entities": [
+      {
+        "start": 49,
+        "end": 72,
+        "value": "Artificial Intelligence",
+        "entity": "Tparent"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "content_type",
+        "start": 22,
+        "end": 44,
+        "confidence_entity": 0.9978088736534119,
+        "value": "research)[content_type",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "Tparent",
+        "start": 49,
+        "end": 72,
+        "confidence_entity": 0.9991040825843811,
+        "value": "Artificial Intelligence",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Can you share some (articles)[content_type] on Artificial Intelligence?",
+    "entities": [
+      {
+        "start": 47,
+        "end": 70,
+        "value": "Artificial Intelligence",
+        "entity": "Tparent"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "content_type",
+        "start": 20,
+        "end": 42,
+        "confidence_entity": 0.9928268194198608,
+        "value": "articles)[content_type",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "Tparent",
+        "start": 47,
+        "end": 70,
+        "confidence_entity": 0.9990710020065308,
+        "value": "Artificial Intelligence",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "current (research)[content_type] trends in Artificial Intelligence?",
+    "entities": [
+      {
+        "start": 43,
+        "end": 66,
+        "value": "Artificial Intelligence",
+        "entity": "Tparent"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "content_type",
+        "start": 9,
+        "end": 31,
+        "confidence_entity": 0.9974843263626099,
+        "value": "research)[content_type",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "Tparent",
+        "start": 43,
+        "end": 66,
+        "confidence_entity": 0.9991187453269958,
+        "value": "Artificial Intelligence",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Can you recommend any interesting (articles)[content_type] to read on Artificial Intelligence?",
+    "entities": [
+      {
+        "start": 70,
+        "end": 93,
+        "value": "Artificial Intelligence",
+        "entity": "Tparent"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "content_type",
+        "start": 35,
+        "end": 57,
+        "confidence_entity": 0.9927749633789062,
+        "value": "articles)[content_type",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "Tparent",
+        "start": 70,
+        "end": 93,
+        "confidence_entity": 0.9990235567092896,
+        "value": "Artificial Intelligence",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "\\tHow supervised learning algorithms work",
+    "entities": [
+      {
+        "start": 2,
+        "end": 41,
+        "value": "How supervised learning algorithms work",
+        "entity": "Tchild"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 6,
+        "end": 41,
+        "confidence_entity": 0.8028355836868286,
+        "value": "supervised learning algorithms work",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

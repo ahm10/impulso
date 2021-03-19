@@ -1,0 +1,122 @@
+[
+  {
+    "text": "Good day",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.6353290677070618
+    }
+  },
+  {
+    "text": "restart",
+    "intent": "reset",
+    "intent_prediction": {
+      "name": "next_level_deny",
+      "confidence": 0.37793460488319397
+    }
+  },
+  {
+    "text": "ttyl",
+    "intent": "bye",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.2514735162258148
+    }
+  },
+  {
+    "text": "ok bye",
+    "intent": "bye",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.6088801622390747
+    }
+  },
+  {
+    "text": "Can you share some articles on this?",
+    "intent": "research_open",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.997382640838623
+    }
+  },
+  {
+    "text": "What is new in here?",
+    "intent": "research_open",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.18061025440692902
+    }
+  },
+  {
+    "text": "nope",
+    "intent": "next_level_deny",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.34360387921333313
+    }
+  },
+  {
+    "text": "yes very interesting!",
+    "intent": "compliment",
+    "intent_prediction": {
+      "name": "know_more",
+      "confidence": 0.5281926393508911
+    }
+  },
+  {
+    "text": "it is interesting!",
+    "intent": "compliment",
+    "intent_prediction": {
+      "name": "know_more",
+      "confidence": 0.8663158416748047
+    }
+  },
+  {
+    "text": "data science is not so intresting",
+    "intent": "reset_topic",
+    "intent_prediction": {
+      "name": "know_about",
+      "confidence": 0.9720422625541687
+    }
+  },
+  {
+    "text": "lets look at something else",
+    "intent": "reset_topic",
+    "intent_prediction": {
+      "name": "know_more",
+      "confidence": 0.7011975049972534
+    }
+  },
+  {
+    "text": "can we discuss something else",
+    "intent": "reset_topic",
+    "intent_prediction": {
+      "name": "know_more",
+      "confidence": 0.9542691111564636
+    }
+  },
+  {
+    "text": "Tell me something exciting happening in Machine Learning?",
+    "intent": "research_q",
+    "intent_prediction": {
+      "name": "know_about",
+      "confidence": 0.7679649591445923
+    }
+  },
+  {
+    "text": "What is new in Artificial Intelligence?",
+    "intent": "research_q",
+    "intent_prediction": {
+      "name": "know_about",
+      "confidence": 0.9910708665847778
+    }
+  },
+  {
+    "text": "Tell me something exciting happening in Data Science?",
+    "intent": "research_q",
+    "intent_prediction": {
+      "name": "know_about",
+      "confidence": 0.6751044988632202
+    }
+  }
+]

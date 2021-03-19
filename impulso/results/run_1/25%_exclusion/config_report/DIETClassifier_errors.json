@@ -1,0 +1,101 @@
+[
+  {
+    "text": "see you later",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.6533030271530151,
+        "value": "see",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "you are intelligent!",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "Tparent",
+        "start": 8,
+        "end": 19,
+        "confidence_entity": 0.9957524538040161,
+        "value": "intelligent",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "lets choose a new topic",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "content_type",
+        "start": 14,
+        "end": 17,
+        "confidence_entity": 0.9835432767868042,
+        "value": "new",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Tell me something new",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "content_type",
+        "start": 18,
+        "end": 21,
+        "confidence_entity": 0.7183524370193481,
+        "value": "new",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I see, what more",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 2,
+        "end": 5,
+        "confidence_entity": 0.9988007545471191,
+        "value": "see",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "\\tHow supervised learning algorithms work",
+    "entities": [
+      {
+        "start": 2,
+        "end": 41,
+        "value": "How supervised learning algorithms work",
+        "entity": "Tchild"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "Tchild",
+        "start": 6,
+        "end": 25,
+        "confidence_entity": 0.9941423535346985,
+        "value": "supervised learning",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "Tchild",
+        "start": 37,
+        "end": 41,
+        "confidence_entity": 0.9993380904197693,
+        "value": "work",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

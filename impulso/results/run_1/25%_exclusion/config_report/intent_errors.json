@@ -1,0 +1,90 @@
+[
+  {
+    "text": "Good morning",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.9549387097358704
+    }
+  },
+  {
+    "text": "thats all",
+    "intent": "bye",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.5110257863998413
+    }
+  },
+  {
+    "text": "Can you share some articles on this?",
+    "intent": "research_open",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.9609413743019104
+    }
+  },
+  {
+    "text": "What are the hot research topics in this domain?",
+    "intent": "research_open",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.8857274055480957
+    }
+  },
+  {
+    "text": "eh",
+    "intent": "next_level_deny",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.7721325159072876
+    }
+  },
+  {
+    "text": "skip it",
+    "intent": "next_level_deny",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.9902632832527161
+    }
+  },
+  {
+    "text": "yes very interesting!",
+    "intent": "compliment",
+    "intent_prediction": {
+      "name": "know_more",
+      "confidence": 0.9379860758781433
+    }
+  },
+  {
+    "text": "you are intelligent!",
+    "intent": "compliment",
+    "intent_prediction": {
+      "name": "know_about",
+      "confidence": 0.6900141835212708
+    }
+  },
+  {
+    "text": "not interesting",
+    "intent": "reset_topic",
+    "intent_prediction": {
+      "name": "next_level_deny",
+      "confidence": 0.9385995268821716
+    }
+  },
+  {
+    "text": "Tell me something new",
+    "intent": "know_more",
+    "intent_prediction": {
+      "name": "research_open",
+      "confidence": 0.3555087447166443
+    }
+  },
+  {
+    "text": "fine",
+    "intent": "next_level_affirm",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.474909245967865
+    }
+  }
+]

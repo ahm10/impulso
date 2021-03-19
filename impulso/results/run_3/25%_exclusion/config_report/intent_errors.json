@@ -1,0 +1,74 @@
+[
+  {
+    "text": "Good day",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "compliment",
+      "confidence": 0.8827963471412659
+    }
+  },
+  {
+    "text": "ttyl",
+    "intent": "bye",
+    "intent_prediction": {
+      "name": "next_level_affirm",
+      "confidence": 0.2306286245584488
+    }
+  },
+  {
+    "text": "Can you share some articles on this?",
+    "intent": "research_open",
+    "intent_prediction": {
+      "name": "research_q",
+      "confidence": 0.7027013897895813
+    }
+  },
+  {
+    "text": "yes very interesting!",
+    "intent": "compliment",
+    "intent_prediction": {
+      "name": "reset_topic",
+      "confidence": 0.9209468364715576
+    }
+  },
+  {
+    "text": "it is interesting!",
+    "intent": "compliment",
+    "intent_prediction": {
+      "name": "reset_topic",
+      "confidence": 0.9716821312904358
+    }
+  },
+  {
+    "text": "data science is not so intresting",
+    "intent": "reset_topic",
+    "intent_prediction": {
+      "name": "know_about",
+      "confidence": 0.9737939238548279
+    }
+  },
+  {
+    "text": "This is common",
+    "intent": "know_more",
+    "intent_prediction": {
+      "name": "next_level_deny",
+      "confidence": 0.6462433934211731
+    }
+  },
+  {
+    "text": "bingo",
+    "intent": "next_level_affirm",
+    "intent_prediction": {
+      "name": "next_level_deny",
+      "confidence": 0.4879198372364044
+    }
+  },
+  {
+    "text": "certainly",
+    "intent": "next_level_affirm",
+    "intent_prediction": {
+      "name": "next_level_deny",
+      "confidence": 0.4199150800704956
+    }
+  }
+]
