@@ -298,13 +298,13 @@ Note that there is large variety of permutation / combinations that the assistan
 ![Folder structure](./folder_structure.PNG)
 
 
-# Configurations
+# Configurations 
 
-At the root level, the *config.ini* is defined. 
+- At the root level, the *config.ini* is defined. 
 
-This file contains the folder structure and data storage paths. 
+- This file contains the folder structure and data storage paths. 
 
-With this, all scripts can be run at the root level. 
+- With this, all scripts can be run at the root level.  
 
 # Wiki Scrapping and graph tree structure construction :heavy_check_mark:
 
