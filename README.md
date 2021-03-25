@@ -28,9 +28,11 @@ This covers both NLU and core testing.
 
 #### Entity Extraction
 
-- rasa test reports recall, precision, and f1-score for each entity type that your trainable entity extractors are trained to recognize.
+- rasa test reports `recall`, `precision`, and `f1-score` for each entity type that your trainable entity extractors are trained to recognize.
 
 - Only trainable entity extractors, such as the DIETClassifier and CRFEntityExtractor are evaluated by rasa test.
+
+- More tests on Entity extraction are on in progress. [RASA forum](https://github.com/RasaHQ/rasa/issues/1472)
 
 
 
