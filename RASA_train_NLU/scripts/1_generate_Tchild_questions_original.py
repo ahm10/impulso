@@ -3,7 +3,7 @@ Objective:
 To construct structured tree from wiki topics and content.
 
 Run from the root
-$ python ./RASA_train_NLU/scripts/1_generate_Tchild_questions.py
+$ python ./RASA_train_NLU/scripts/1_generate_topic_questions.py
 $ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 
 '''
@@ -58,10 +58,8 @@ direct_children_qs = dict()
 
 direct_children_seq = dict()
 
-q_seq_file = RASA_TRAIN_DATASTORE_PATH + "TchildQs50.txt"
-print(STRUCTURED_PATH)
-print(len(os.listdir(STRUCTURED_PATH)))
-childList = []     
+q_seq_file = RASA_TRAIN_DATASTORE_PATH + "TchildQs.txt"
+      
 for filename in os.listdir(STRUCTURED_PATH): 
 
     # topic = topics[t]
@@ -80,46 +78,37 @@ for filename in os.listdir(STRUCTURED_PATH):
 ### read topic tree
     topic_tree_df = pd.read_csv(STRUCTURED_PATH + filename)
 
-    #direct_children = topic_tree_df['parent'] == topic
+    direct_children = topic_tree_df['parent'] == topic
 
-    #direct_children_df = topic_tree_df[direct_children]
-    
+    direct_children_df = topic_tree_df[direct_children]
+
     # make direct children questions 
-    try:
-        for child in topic_tree_df['child']:
-            if child not in childList:
-                childList.append(child)
 
-                for topic_q in topic_q_list:
-    
-    
-                    #new_q = topic_q.replace('X', str(child))
-                    #new_q = new_q.replace('Tparent','Tchild')
+    for child in direct_children_df['child']: 
+
+
+        for topic_q in topic_q_list:
+
+
+            new_q = topic_q.replace('X', child)
+            new_q = new_q.replace('Tparent','Tchild')
+
+            direct_children_qs[topic].append(new_q)
+
+            new_q = topic_q.replace('X', child)
+            new_q = new_q.replace('Tparent','Tchild')
+
+            if (new_q not in direct_children_qs[topic]):
+
+                direct_children_qs[topic].append(new_q)
+     
+
+
+    with open( q_seq_file, 'w') as f1:
+
+        for item in direct_children_qs[topic]:
+            f1.write("%s\n" % item)
         
-                    #direct_children_qs[topic].append(new_q)
-        
-                    new_q = topic_q.replace('X', str(child))
-                    new_q = new_q.replace('Tparent','Tchild')
-        
-                    if (new_q not in direct_children_qs[topic]):
-        
-                        direct_children_qs[topic].append(new_q)
-             
-        
-        
-        with open( q_seq_file, 'a+') as f1:
-        
-            for item in direct_children_qs[topic]:
-                try:
-                    f1.write(item +'\n')
-                    # print(item)
-                except:
-                    print('****Exception at',item)
-            print("Successfully written in ",q_seq_file)
-        f1.close()
-    except Exception as e:
-        print('Exception : ', str(e))
-print(len(childList))        
 
     
 
