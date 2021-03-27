@@ -6,7 +6,18 @@ import os
 import shortuuid 
 import random
  
+import configparser
 
+
+config = configparser.ConfigParser()
+
+config_path = '../config.ini'
+
+config.read(config_path)
+
+GRAKN_URI = config['GRAKN_CONNECTION']['uri']
+
+GRAKN_KS = config['GRAKN_CONNECTION']['ks']
     
     
 def get_uuid(url):
@@ -56,8 +67,8 @@ def check_entered(val,listofdict):
     
     
 def build_impulso_graph(inputs, D):
-        with GraknClient(uri="localhost:48555") as client:
-            with client.session(keyspace = "impulso2") as session:
+        with GraknClient(uri=GRAKN_URI) as client:
+            with client.session(keyspace = GRAKN_KS) as session:
                 for input in inputs:
                     print("Loading from [" + input["name"] + "] into Grakn ...")
                     load_data_into_grakn(input, D, session)

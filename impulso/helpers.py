@@ -9,6 +9,20 @@ import random
 
 import re
 
+import configparser
+
+
+config = configparser.ConfigParser()
+
+config_path = '../config.ini'
+
+config.read(config_path)
+
+GRAKN_URI = config['GRAKN_CONNECTION']['uri']
+
+GRAKN_KS = config['GRAKN_CONNECTION']['ks']
+
+
 additional = ["see_also", "references", "journals", "external_links", "further_reading", "conferences"]
 
 dont_know = "\nI am afraid I dont know much about it. \n Would you like to rephrase your question?"
@@ -100,8 +114,8 @@ def describe(topic_val):
 
 
 def query_grakn(q): 
-    with GraknClient(uri="localhost:48555") as client:
-        with client.session(keyspace = "impulso0") as session:
+    with GraknClient(uri=GRAKN_URI) as client:
+        with client.session(keyspace = GRAKN_KS) as session:
             with session.transaction().read() as transaction:
  
 

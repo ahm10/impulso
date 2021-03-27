@@ -1,3 +1,56 @@
+# Deployment guidelines 
+
+Curernt setup is for working in local servers. 
+
+If you want to host it with ngrok or on cloud, following are the key files. 
+
+## Important config files - 
+
+1. config.ini
+
+Centralized control for,
+
+- paths of all modules and data 
+
+- Grakn connection details
+
+1. impulso/endpoints.yml
+
+
+Specifies location of models, action server, trackers, event brockers for communication between the assistant and RASA. 
+
+By default the action server end point is set as below- 
+
+> action_endpoint:
+>  url: "http://localhost:5055/webhook"
+
+1. impulso/credentials.yml
+
+Specifies the communication creds in case of integration with messanger services like Telegram/FB/Slack etc. 
+
+Also contains credentials for RASA X. 
+
+It is recommended to change these files carefully, depending on the deployment scenarios. 
+
+
+## Deployment on local 
+
+
+(RASA official tutorial)[https://www.youtube.com/watch?v=vhkFq-Jjvd8]
+
+
+## Deployment on cloud
+
+
+A complete guide for setup on GCP is provided at -
+(RASA official tutorial)[https://www.youtube.com/watch?v=IUYdwy8HPVc]
+
+Steps for AWS would be mostly identical. 
+
+Also quite helpful is - (next addition)[https://www.youtube.com/watch?v=LWzsS5Q-RoI].
+
+
+
 # Testing guidelines
 
 ## Standard Combined test NLU + Core - Most recommended

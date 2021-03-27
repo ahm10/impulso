@@ -6,14 +6,25 @@ $ python ./build_KB/scripts/3_view.py
 $ python ROOT_DIR/WIKI_DIR/SCRIPTS_DIR/filename.py
 
 '''
+import configparser
 
+
+config = configparser.ConfigParser()
+
+config_path = '../config.ini'
+
+config.read(config_path)
+
+GRAKN_URI = config['GRAKN_CONNECTION']['uri']
+
+GRAKN_KS = config['GRAKN_CONNECTION']['ks']
 
 
 
 from grakn.client import GraknClient
 
-with GraknClient(uri="localhost:48555") as client:
-    with client.session(keyspace = "impulso0") as session:
+with GraknClient(uri=GRAKN_URI) as client:
+    with client.session(keyspace = GRAKN_KS) as session:
         with session.transaction().read() as transaction:
             test_topic = "Artificial_intelligence"
             # query = [

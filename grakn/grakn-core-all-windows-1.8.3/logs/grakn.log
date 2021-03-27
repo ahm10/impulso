@@ -6596,3 +6596,6 @@ io.grpc.StatusRuntimeException: CANCELLED: cancelled before receiving half close
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
+2021-03-27 21:04:49,676 [main] INFO  grakn.core.server.Grakn - Grakn started in 4.001 s
+2021-03-27 21:34:22,092 [main] WARN  grakn.core.server.util.PIDManager - Pid file already exists: '[C:\Users\kunja\AppData\Local\Temp\grakn-core-server.pid]'. Overwriting...
+2021-03-27 21:34:26,248 [main] INFO  grakn.core.server.Grakn - Grakn started in 4.114 s

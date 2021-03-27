@@ -6,6 +6,20 @@ import os
 import shortuuid 
 import random
 from time import sleep
+
+import configparser
+
+
+config = configparser.ConfigParser()
+
+config_path = '../config.ini'
+
+config.read(config_path)
+
+GRAKN_URI = config['GRAKN_CONNECTION']['uri']
+
+GRAKN_KS = config['GRAKN_CONNECTION']['ks']
+
 def process_topic_names(topicname):
     return topicname.replace(' ','_').lower().replace('"','`').replace("'","`")
 
@@ -65,8 +79,8 @@ def check_entered(val,listofdict):
     
     
 def build_impulso_graph(inputs, D):
-        with GraknClient(uri="localhost:48555") as client:
-            with client.session(keyspace = "impulso0") as session:
+        with GraknClient(uri=GRAKN_URI) as client:
+            with client.session(keyspace = GRAKN_KS) as session:
                 for input in inputs:
                     print("Loading from [" + input["name"] + "] into Grakn ...")
                     load_data_into_grakn(input, D, session)
