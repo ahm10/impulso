@@ -6,7 +6,7 @@ If you want to host it with ngrok or on cloud, following are the key files.
 
 ## Important config files - 
 
-1. config.ini
+### 1. config.ini
 
 Centralized control for,
 
@@ -14,7 +14,7 @@ Centralized control for,
 
 - Grakn connection details
 
-1. impulso/endpoints.yml
+### 2. impulso/endpoints.yml
 
 
 Specifies location of models, action server, trackers, event brockers for communication between the assistant and RASA. 
@@ -24,14 +24,13 @@ By default the action server end point is set as below-
 > action_endpoint:
 >  url: "http://localhost:5055/webhook"
 
-1. impulso/credentials.yml
+### 3. impulso/credentials.yml
 
 Specifies the communication creds in case of integration with messanger services like Telegram/FB/Slack etc. 
 
 Also contains credentials for RASA X. 
 
 It is recommended to change these files carefully, depending on the deployment scenarios. 
-
 
 ## Deployment on local 
 
